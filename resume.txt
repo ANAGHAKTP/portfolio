@@ -1,0 +1,91 @@
+Anagha K T P
+
+Student
+anaghaktp@gmail.com | 8590840633 | Paanjajanyam House, Kandamkulangara, Kunhimangalam, Payyanur,
+Kerala, India
+Linkedin | GitHub
+Education
+Payyanur,Kerala
+2019 - 2020
+
+P.E.S.Vidyalaya
+Degree in High School
+Percentage: 81%
+SSGHSS Payyanur
+Bio-science Higher Secondary
+Percentage: 90%
+
+Payyanur, Kerala
+June,2020 - May,2022
+
+Srinivas Institute of Technology
+Artificial Intelligence And Machine Learning Bachelors
+CGPA: 8.0
+
+Manglore,India
+September/2022 - 2026
+
+Experience
+Blueprism | Intelligent Automation Intern
+Google for Developers | AI-ML Virtual Intern
+AWS Academy | Data Engineer Intern
+MICROCHIP | Embedded System Developer Intern
+Google for Developers | Android Developer Intern
+Juniper NETWORKS | Networking Cloud Intern
+Codec Technologies | AI Intern
+Skills
+Programming Languages:
+Libraries/Frameworks:
+Tools / Platforms:
+Databases:
+
+Virtual | September 2023 - November 2023
+Virtual | January 2024 - March 2024
+Virtual | April 2024 - June 2024
+Virtual | July 2024 - September 2024
+Virtual | october 2024 - December 2024
+Virtual | January 2025 - March 2025
+Virtual | April 2025 - May 2025
+
+Python, Java, C language, Flutter
+Django, NumPy, Pandas, Matplotlib, Seaborn, Flask, NLP
+Git, Vs Code, Excel, Power BI, Tableau, Git, Jupyter Notebook, Anaconda
+SQL, MongoDB
+
+Projects / Open-Source
+Feature-Extraction | Link
+Jupyter Notebook, Python
+Extract and visualize features such as boundaries and patterns from aerial or satellite images
+Intrusion-Detection-System-Using-ML | Link
+Jupyter Notebook, HTML, Python, CSS
+The system is built using Flask for the web interface and scikit-learn for the machine learning models.
+Customer_Churn_Prediction | Link
+Jupyter Notebook
+This project aims to figure out why customers leave a telecommunications company and to create a
+model that can predict which customers might leave in the future.
+Stock_Price_Predictor | Link
+Python
+Is a simple tool that uses Python to forecast stock prices. It looks at past stock data to make predictions
+about future prices, helping users understand market trends and make better investment choices.
+Image-Enhancement-Toolkit | Link
+Python
+The imagetocartoon project uses Python and OpenCV to turn regular images into cartoons. It includes
+a script and a Jupyter Notebook that show how to apply effects like edge detection to create a cartoon
+look. Users can easily compare the original and cartoon images.
+Certifications
+• Lead Generation Messenger ChatBot Using Chatfuel - Coursera
+
+• TCS iON Career Edge - Young Professional - TCS
+• Technology and Digital - Job Simulation - Forage
+• Software Engineering JobSimulation - Forage
+• Google Cloud Career Launchpad Cloud Learning Services Cloud Engineer track - Google Cloud
+• Artificial Intelligence - Pearson, Certiport
+• Generative models for developers - Infosys Springboard.
+• Introduction to Networking for Cyber Professionals - Zscaler Academy
+• Fundamentals of Cybersecurity (EDU-102) - Zscaler Training
+Achievements & Activities
+• Participated In GDSC WOW Happened In SIT,Manglore
+• Participated In Various IEEE Events
+• Participated In Data Unleashed: AI,ML & Beyond! In NITK Surathkal
+
+
