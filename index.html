@@ -3,325 +3,1306 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anagha K T P - AI/ML Student & Tech Enthusiastic</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Anagha KTP - AI/ML Innovator</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* General Styling and Variables */
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --background-color: #121212;
+            --surface-color: #1e1e1e;
+            --text-color: #e0e0e0;
+            --text-secondary-color: #b0b0b0;
+            --accent-color: #03dac6;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 80px 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            color: white;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        /* Header */
+        #main-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            transition: all 0.3s ease;
+        }
+
+        #main-header.scrolled {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #navbar .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        
+        #navbar .logo span {
+            color: var(--accent-color);
+        }
+
+        #navbar ul {
+            display: flex;
+            list-style: none;
+        }
+
+        #navbar ul li a {
+            color: var(--text-color);
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+
+        #navbar ul li a:hover, #navbar ul li a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 0 5%;
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            background: -webkit-linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            color: var(--text-secondary-color);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 0 10px;
+            border: 2px solid var(--accent-color);
+            border-radius: 50px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-color);
+            color: var(--background-color);
+        }
+
+        /* About Section */
+        #about .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        #about .about-image {
+            text-align: center;
+        }
+
+        #about .about-image img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--surface-color);
+            box-shadow: 0 0 25px rgba(106, 17, 203, 0.5);
+        }
+
+        #about .bio h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        #about .bio p {
+            margin-bottom: 20px;
+            color: var(--text-secondary-color);
+        }
+
+        .personality-highlights {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .highlight-item {
+            background: var(--surface-color);
+            padding: 10px 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            transition: transform 0.3s;
+        }
+        .highlight-item:hover {
+            transform: translateY(-5px);
+        }
+        .highlight-item i {
+            color: var(--accent-color);
+        }
+
+        /* Skills Bars */
+        .skills-bars {
+            margin-top: 30px;
+        }
+        .skill {
+            margin-bottom: 15px;
+        }
+        .skill-name {
+            font-weight: 600;
+        }
+        .skill-bar {
+            height: 10px;
+            background: var(--surface-color);
+            border-radius: 5px;
+            margin-top: 5px;
+            overflow: hidden;
+        }
+        .skill-level {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 5px;
+            width: 0;
+            transition: width 1.5s cubic-bezier(0.77,0,0.175,1);
+        }
+
+        /* Education Timeline */
+        .education-timeline {
+            margin-top: 40px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid var(--border-color);
+        }
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -9px;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            border: 3px solid var(--background-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+        }
+        .timeline-toggle {
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: color 0.3s;
+        }
+        .timeline-toggle:focus {
+            outline: 2px solid var(--accent-color);
+        }
+        .timeline-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, margin-top 0.5s;
+            margin-top: 0;
+        }
+        .timeline-item.active .timeline-details {
+            max-height: 100px;
+            margin-top: 10px;
+        }
+
+        /* Skills & Technologies Section */
+        #skills {
+            background: var(--surface-color);
+        }
+        .skills-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .skill-category {
+            margin-bottom: 20px;
+        }
+        .skill-category h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+            text-align: center;
+        }
+        .skill-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .skill-tag {
+            background: var(--background-color);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+        }
+        .skill-tag:hover {
+            transform: translateY(-5px);
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+        }
+
+        /* Certifications */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .cert-badge {
+            background: var(--background-color);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s;
+        }
+        .cert-badge:hover {
+            transform: translateY(-5px);
+        }
+        .cert-badge h4 {
+            font-size: 1.1rem;
+            color: white;
+            margin-bottom: 5px;
+        }
+        .cert-badge p {
+            font-size: 0.9rem;
+            color: var(--text-secondary-color);
+        }
+
+        /* Projects Section */
+        .project-filters {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--text-secondary-color);
+            color: var(--text-secondary-color);
+            padding: 8px 20px;
+            margin: 0 5px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent-color);
+            color: var(--background-color);
+            border-color: var(--accent-color);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .project-card {
+            background: var(--surface-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(106, 17, 203, 0.5);
+        }
+        .project-image {
+            height: 200px;
+            background-color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .project-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+        .project-info p {
+            color: var(--text-secondary-color);
+            font-size: 0.95rem;
+            flex-grow: 1;
+            margin-bottom: 15px;
+        }
+        .project-tech {
+            margin-bottom: 15px;
+        }
+        .tech-badge {
+            background: var(--background-color);
+            color: var(--accent-color);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .project-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: 600;
+        }
+        .project-links a i {
+            margin-right: 5px;
+        }
+
+        /* Experience Section */
+        #experience {
+            background: var(--surface-color);
+        }
+        .experience-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .experience-timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(var(--primary-color), var(--secondary-color));
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+        .exp-card {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+        }
+        .exp-card.left {
+            left: 0;
+        }
+        .exp-card.right {
+            left: 50%;
+        }
+        .exp-card::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: white;
+            border: 4px solid var(--accent-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .exp-card.right::after {
+            left: -10px;
+        }
+        .exp-content {
+            padding: 20px 30px;
+            background: var(--background-color);
+            position: relative;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .exp-content h3 {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+        .exp-content h4 {
+            color: white;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+        .exp-content .date {
+            color: var(--text-secondary-color);
+            font-size: 0.9rem;
+        }
+        .exp-toggle {
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: color 0.3s;
+        }
+        .exp-toggle:focus {
+            outline: 2px solid var(--accent-color);
+        }
+        .exp-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, margin-top 0.5s;
+            margin-top: 0;
+        }
+        .exp-card.active .exp-details {
+            max-height: 120px;
+            margin-top: 10px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .contact-info p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        .contact-info .email, .social-links a {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-secondary-color);
+            text-decoration: none;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+        .contact-info .email:hover, .social-links a:hover {
+            color: var(--accent-color);
+        }
+        .contact-info i {
+            font-size: 1.5rem;
+            width: 30px;
+            text-align: center;
+        }
+        .social-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .social-links a {
+            font-size: 1.8rem;
+        }
+
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .form-group {
+            position: relative;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        #contact-form button {
+            padding: 15px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        #contact-form button:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--surface-color);
+            color: var(--text-secondary-color);
+        }
+
+        /* Modal for Project Details */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            background: rgba(18,18,18,0.85);
+            backdrop-filter: blur(4px);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: var(--surface-color);
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            position: relative;
+            color: var(--text-color);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        }
+        .close-modal {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            font-size: 2rem;
+            color: var(--accent-color);
+            cursor: pointer;
+        }
+        .modal-content h3 {
+            margin-top: 0;
+        }
+        #modal-tech .tech-badge {
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h2 { font-size: 2rem; }
+            .hero-content h1 { font-size: 2.8rem; }
+            .hero-content p { font-size: 1.2rem; }
+            
+            #about .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            #about .about-image { margin-bottom: 30px; }
+            .personality-highlights { justify-content: center; }
+
+            .contact-container { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            #navbar ul {
+                display: none; /* Simplification for this example. A real site would use a hamburger menu. */
+            }
+            .hero-content h1 { font-size: 2.2rem; }
+            .hero-content p { font-size: 1rem; }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            .experience-timeline::after { left: 20px; }
+            .exp-card { width: 100%; padding-left: 50px; padding-right: 10px; }
+            .exp-card.right { left: 0; }
+            .exp-card::after { left: 11px; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 60px 0; }
+            h2 { font-size: 1.8rem; }
+            .hero-content h1 { font-size: 1.8rem; }
+            .cta-button { padding: 10px 20px; font-size: 0.9rem; }
+            .personality-highlights { flex-direction: column; align-items: center; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div>Anagha K T P</div>
-            <div id="mobile-nav-menu"> <!-- This div wraps the mobile menu UL -->
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <button id="mobile-menu-button" aria-label="Open menu">
-                <svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16" /><path d="M4 18h16" /><path d="M4 6h16" /></svg>
-                <svg class="icon-x hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
-            </button>
+
+    <!-- Header -->
+    <header id="main-header">
+        <nav id="navbar" class="container">
+            <a href="#hero" class="logo">Anagha KTP<span>.</span></a>
+            <ul>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <section id="home">
-            <div class="hero-background-image"></div>
-            <div class="hero-overlay"></div>
-            <div class="hero-content animate-on-scroll">
-                <h1 class="text-gradient">Anagha K T P</h1>
-                <p class="typing-animation">AI/ML Student & Tech Innovator</p>
-                <p>Passionate about bridging AI/ML theory with practical applications. Experienced in multiple tech domains with a focus on innovation and continuous learning.</p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="button button-primary glow-effect"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>View Projects</a>
-                    <a href="resume.pdf" class="button button-outline" download><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Download Resume</a>
-                </div>
-                <div class="scroll-down-chevron animate-on-scroll">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div id="particles-js"></div>
+        <div class="hero-content">
+            <h1>AI/ML Innovator | Problem Solver | Open Source Contributor</h1>
+            <p>Passionate about building intelligent systems and driving technological advancement.</p>
+            <div>
+                <a href="#projects" class="cta-button">View Projects</a>
+                <a href="#contact" class="cta-button">Contact Me</a>
             </div>
-        </section>
-        <section id="about">
-            <div class="section-title animate-on-scroll">
-                <h2 class="text-gradient">About Me</h2>
-                <p>A passionate AI/ML student with hands-on experience across multiple technology domains</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <!-- IMPORTANT: Replace this placeholder with the actual photo URL -->
+                <img src="https://placehold.co/250x250/6a11cb/ffffff?text=Anagha+KTP" alt="Anagha KTP">
             </div>
-            <div class="about-content">
-                <div class="about-column-left animate-on-scroll">
-                    <img src="assets/portfolio_about_illustration.png" alt="About Anagha Illustration" class="floating-animation">
+            <div class="bio">
+                <h3>A Passion for Intelligent Solutions</h3>
+                <p>
+                    I am a dedicated and ambitious Artificial Intelligence and Machine Learning student with a diverse tech background and a relentless drive to solve complex problems. My journey through various internships, from AI and Data Engineering to Android Development and Networking, has equipped me with a robust skill set and a practical understanding of how technology can be leveraged to create impactful solutions. I am a continuous learner, always eager to explore new technologies and contribute to the open-source community.
+                </p>
+                <div class="personality-highlights">
+                    <div class="highlight-item"><i class="fas fa-lightbulb"></i> Problem Solver</div>
+                    <div class="highlight-item"><i class="fas fa-book-open"></i> Continuous Learner</div>
+                    <div class="highlight-item"><i class="fab fa-github"></i> Open Source Contributor</div>
                 </div>
-                <div class="about-column-right animate-on-scroll">
-                    <h3>Hello! I'm Anagha K T P</h3>
-                    <p>I'm a final-year AI/ML student at Srinivas Institute of Technology with a passion for turning complex problems into innovative solutions. With a strong academic foundation (8.0 CGPA) and hands-on experience through 7 virtual internships with industry leaders like Google, AWS, and Microchip, I bring both theoretical knowledge and practical expertise.</p>
-                    <p>My journey spans multiple domains - from machine learning and data analysis to mobile app development and embedded systems. I'm particularly passionate about open-source contributions and have developed several projects that bridge the gap between AI/ML theory and real-world applications.</p>
-                    <div class="stats animate-on-scroll">
-                        <div class="animate-on-scroll">
-                            <div class="stat-number text-gradient">7+</div>
-                            <div class="stat-label">Internships</div>
+                
+                <div class="skills-bars">
+                    <div class="skill">
+                        <p class="skill-name">Python</p>
+                        <div class="skill-bar"><div class="skill-level" data-level="90%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <p class="skill-name">Java</p>
+                        <div class="skill-bar"><div class="skill-level" data-level="75%"></div></div>
+                    </div>
+                     <div class="skill">
+                        <p class="skill-name">C Language</p>
+                        <div class="skill-bar"><div class="skill-level" data-level="70%"></div></div>
+                    </div>
+                </div>
+
+                <div class="education-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"><i class="fas fa-university"></i></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>Srinivas Institute of Technology</h4>
+                                <span class="timeline-date">2022 - 2026</span>
+                                <button class="timeline-toggle" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                            <div class="timeline-details">
+                                <p>B.E. in Artificial Intelligence & Machine Learning</p>
+                                <p>CGPA: 8.0</p>
+                            </div>
                         </div>
-                        <div class="animate-on-scroll">
-                            <div class="stat-number text-gradient">5+</div>
-                            <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"><i class="fas fa-flask"></i></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>SSGHSS Payyanur</h4>
+                                <span class="timeline-date">2020 - 2022</span>
+                                <button class="timeline-toggle" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                            <div class="timeline-details">
+                                <p>Bio-science Higher Secondary</p>
+                                <p>Percentage: 90%</p>
+                            </div>
                         </div>
-                        <div class="animate-on-scroll">
-                            <div class="stat-number text-gradient">8.0</div>
-                            <div class="stat-label">CGPA</div>
-                        </div>
-                        <div class="animate-on-scroll">
-                            <div class="stat-number text-gradient">6+</div>
-                            <div class="stat-label">Certifications</div>
-                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section id="skills">
-            <div class="section-title animate-on-scroll">
-                <h2 class="text-gradient">Skills & Technologies</h2>
-                <p>A comprehensive toolkit spanning programming languages, frameworks, and cutting-edge technologies</p>
-            </div>
-            <div class="skill-bars animate-on-scroll">
-                <!-- Python -->
-                <div class="skill animate-on-scroll">
-                    <div class="skill-info">
-                        <span>Python</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <!-- Java -->
-                <div class="skill animate-on-scroll">
-                    <div class="skill-info">
-                        <span>Java</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <!-- C Language -->
-                <div class="skill animate-on-scroll">
-                    <div class="skill-info">
-                        <span>C Language</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <!-- Flutter -->
-                <div class="skill animate-on-scroll">
-                    <div class="skill-info">
-                        <span>Flutter</span>
-                        <span>75%</span>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar" style="width: 75%;"></div>
-                    </div>
-                </div>
-                <!-- Machine Learning -->
-                <div class="skill animate-on-scroll">
-                    <div class="skill-info">
-                        <span>Machine Learning</span>
-                        <span>88%</span>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar" style="width: 88%;"></div>
-                    </div>
-                </div>
-                <!-- Django/Flask -->
-                <div class="skill animate-on-scroll">
-                    <div class="skill-info">
-                        <span>Django/Flask</span>
-                        <span>82%</span>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div class.progress-bar" style="width: 82%;"></div>
-                    </div>
-                </div>
-                <!-- Data Analysis -->
-                <div class="skill animate-on-scroll">
-                    <div class="skill-info">
-                        <span>Data Analysis</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <!-- Git/GitHub -->
-                <div class="skill animate-on-scroll">
-                    <div class="skill-info">
-                        <span>Git/GitHub</span>
-                        <span>90%</span>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar" style="width: 90%;"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="skill-categories animate-on-scroll">
-                <div class="skill-category animate-on-scroll">
-                    <div class="icon-container"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg></div>
-                    <h3>Programming</h3>
-                    <p>Python, Java, C, Flutter</p>
-                </div>
-                <div class="skill-category animate-on-scroll">
-                    <div class="icon-container"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg></div>
-                    <h3>AI/ML</h3>
-                    <p>NumPy, Pandas, Scikit-learn</p>
-                </div>
-                <div class="skill-category animate-on-scroll">
-                    <div class="icon-container"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
-                    <h3>Web Frameworks</h3>
-                    <p>Django, Flask, HTML/CSS</p>
-                </div>
-                <div class="skill-category animate-on-scroll">
-                    <div class="icon-container"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg></div>
-                    <h3>Tools & Platforms</h3>
-                    <p>Git, VS Code, Jupyter, Power BI</p>
-                </div>
-            </div>
-        </section>
-        <section id="projects">
-            <div class="section-title animate-on-scroll">
-                <h2 class="text-gradient">Featured Projects</h2>
-                <p>A showcase of innovative solutions spanning AI/ML, web development, and data analysis</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card card card-hover animate-on-scroll">
-                    <div class="project-icon-title"><div class="icon-container"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M19.967 17.484A4 4 0 0 1 18 18"/></svg></div> <h3>Feature Extraction System</h3></div>
-                    <p>Extract and visualize features such as boundaries and patterns from aerial or satellite images using advanced computer vision techniques.</p>
-                    <div class="tech-stack"><span>Python</span> <span>OpenCV</span> <span>Jupyter Notebook</span></div>
-                    <a href="#" class="button button-outline"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>View Project</a>
-                </div>
-                <div class="project-card card card-hover animate-on-scroll">
-                    <div class="project-icon-title"><div class="icon-container"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg></div> <h3>Intrusion Detection System</h3></div>
-                    <p>ML-powered security system built with Flask web interface and scikit-learn models for real-time threat detection.</p>
-                    <div class="tech-stack"><span>Python</span> <span>Flask</span> <span>Scikit-learn</span> <span>HTML/CSS</span></div>
-                    <a href="#" class="button button-outline"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>View Project</a>
-                </div>
-                <div class="project-card card card-hover animate-on-scroll">
-                    <div class="project-icon-title"><div class="icon-container"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg></div> <h3>Customer Churn Prediction</h3></div>
-                    <p>Predictive analytics model to identify customers likely to leave telecommunications services using machine learning.</p>
-                    <div class="tech-stack"><span>Python</span> <span>Pandas</span> <span>Jupyter Notebook</span></div>
-                    <a href="#" class="button button-outline"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>View Project</a>
-                </div>
-                <div class="project-card card card-hover animate-on-scroll">
-                    <div class="project-icon-title"><div class="icon-container"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div> <h3>Stock Price Predictor</h3></div>
-                    <p>Financial forecasting tool that analyzes historical data to predict stock market trends and investment opportunities.</p>
-                    <div class="tech-stack"><span>Python</span> <span>NumPy</span> <span>Matplotlib</span></div>
-                    <a href="#" class="button button-outline"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>View Project</a>
-                </div>
-                <div class="project-card card card-hover animate-on-scroll">
-                    <div class="project-icon-title"><div class="icon-container"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></div> <h3>Image Enhancement Toolkit</h3></div>
-                    <p>Computer vision application that transforms regular images into cartoon-style artwork using OpenCV and Python.</p>
-                    <div class="tech-stack"><span>Python</span> <span>OpenCV</span> <span>Jupyter Notebook</span></div>
-                    <a href="#" class="button button-outline"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>View Project</a>
-                </div>
-            </div>
-        </section>
-        <section id="experience">
-            <div class="section-title animate-on-scroll">
-                <h2 class="text-gradient">Experience</h2>
-                <p>Professional journey through leading tech companies and innovative projects</p>
-            </div>
-            <div class="experience-list">
-                <div class="experience-card card card-hover animate-on-scroll">
-                    <div class="card-header">
-                        <h4>AI Intern</h4>
-                        <h5>Codec Technologies</h5>
-                        <span class="period-badge">April 2025 - May 2025</span>
-                    </div>
-                    <p class="card-content">Working on cutting-edge AI solutions and machine learning implementations.</p>
-                </div>
-                <div class="experience-card card card-hover animate-on-scroll">
-                     <div class="card-header">
-                        <h4>Networking Cloud Intern</h4>
-                        <h5>Juniper Networks</h5>
-                        <span class="period-badge">January 2025 - March 2025</span>
-                    </div>
-                    <p class="card-content">Developing cloud networking solutions and infrastructure optimization.</p>
-                </div>
-                <div class="experience-card card card-hover animate-on-scroll">
-                     <div class="card-header">
-                        <h4>Android Developer Intern</h4>
-                        <h5>Google for Developers</h5>
-                        <span class="period-badge">October 2024 - December 2024</span>
-                    </div>
-                    <p class="card-content">Built mobile applications using Flutter and Android development frameworks.</p>
-                </div>
-                <div class="experience-card card card-hover animate-on-scroll">
-                     <div class="card-header">
-                        <h4>Embedded System Developer Intern</h4>
-                        <h5>Microchip</h5>
-                        <span class="period-badge">July 2024 - September 2024</span>
-                    </div>
-                    <p class="card-content">Developed embedded systems and IoT solutions for industrial applications.</p>
-                </div>
-                <div class="experience-card card card-hover animate-on-scroll">
-                     <div class="card-header">
-                        <h4>Data Engineer Intern</h4>
-                        <h5>AWS Academy</h5>
-                        <span class="period-badge">April 2024 - June 2024</span>
-                    </div>
-                    <p class="card-content">Worked with cloud data pipelines and big data processing on AWS platform.</p>
-                </div>
-            </div>
-            <div class="certifications-card card card-hover animate-on-scroll">
-                <h3 class="card-header"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>Certifications & Achievements</h3>
-                <ul class="card-content">
-                    <li class="animate-on-scroll">Lead Generation Messenger ChatBot Using Chatfuel - Coursera</li>
-                    <li class="animate-on-scroll">TCS iON Career Edge - Young Professional - TCS</li>
-                    <li class="animate-on-scroll">Google Cloud Career Launchpad Cloud Learning Services</li>
-                    <li class="animate-on-scroll">Artificial Intelligence - Pearson, Certiport</li>
-                    <li class="animate-on-scroll">Generative models for developers - Infosys Springboard</li>
-                    <li class="animate-on-scroll">Introduction to Networking for Cyber Professionals - Zscaler Academy</li>
-                </ul>
-            </div>
-        </section>
-        <section id="contact">
-            <div class="section-title animate-on-scroll">
-                <h2 class="text-gradient">Let's Connect</h2>
-                <p>Ready to collaborate on innovative projects or discuss opportunities in AI/ML and tech</p>
-            </div>
-            <div class="contact-card card card-hover animate-on-scroll">
-                <div class="contact-columns card-content">
-                    <div class="contact-left">
-                        <h3>Get in Touch</h3>
-                        <p>I'm always open to discussing new opportunities, collaborating on exciting projects, or simply connecting with fellow tech enthusiasts.</p>
-                        <a href="mailto:anaghaktp@gmail.com" class="contact-link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>anaghaktp@gmail.com</a>
-                        <a href="#" class="contact-link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn Profile</a>
-                        <a href="#" class="contact-link"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>GitHub Profile</a>
-                    </div>
-                    <div class="contact-right">
-                        <div class="animate-on-scroll">
-                            <h4>Location</h4>
-                            <p>Payyanur, Kerala, India</p>
-                        </div>
-                        <div class="animate-on-scroll">
-                            <h4>Availability</h4>
-                            <p>Open to remote opportunities and collaborations</p>
-                        </div>
-                        <div class="animate-on-scroll">
-                            <h4>Interests</h4>
-                            <p>AI/ML, Data Science, Mobile Development, Open Source</p>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"><i class="fas fa-school"></i></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <h4>P.E.S. Vidyalaya</h4>
+                                <span class="timeline-date">2019 - 2020</span>
+                                <button class="timeline-toggle" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                            </div>
+                            <div class="timeline-details">
+                                <p>High School</p>
+                                <p>Percentage: 81%</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="send-message-container">
-                     <a href="mailto:anaghaktp@gmail.com" class="button button-primary glow-effect animate-on-scroll"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>Send Message</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Technologies Section -->
+    <section id="skills" class="container">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Programming & Databases</h3>
+                <div class="skill-cloud">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">Flutter</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">MongoDB</span>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="skill-category">
+                <h3>Libraries & Frameworks</h3>
+                <div class="skill-cloud">
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">Matplotlib</span>
+                    <span class="skill-tag">Seaborn</span>
+                    <span class="skill-tag">Natural Language Processing (NLP)</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Platforms</h3>
+                <div class="skill-cloud">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Jupyter Notebook</span>
+                    <span class="skill-tag">Anaconda</span>
+                    <span class="skill-tag">Power BI</span>
+                    <span class="skill-tag">Tableau</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">Google Cloud</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Certifications</h3>
+                <div class="certifications-grid">
+                    <div class="cert-badge"><h4>Generative models for developers</h4><p>Infosys Springboard</p></div>
+                    <div class="cert-badge"><h4>Artificial Intelligence</h4><p>Pearson, Certiport</p></div>
+                    <div class="cert-badge"><h4>Google Cloud Career Launchpad</h4><p>Google Cloud</p></div>
+                    <div class="cert-badge"><h4>Software Engineering Job Simulation</h4><p>Forage</p></div>
+                    <div class="cert-badge"><h4>TCS ION Career Edge</h4><p>TCS</p></div>
+                    <div class="cert-badge"><h4>Lead Generation Messenger ChatBot</h4><p>Coursera</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Showcase -->
+    <section id="projects" class="container">
+        <h2>Projects Showcase</h2>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+            <button class="filter-btn" data-filter="web">Web Dev</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card" data-category="ai-ml python" data-title="Intrusion Detection System" data-description="A web-based IDS using Flask for the UI and Scikit-learn to detect network intrusions, showcasing practical application of ML in cybersecurity." data-tech="Python, Flask, Scikit-learn, HTML/CSS" data-img="https://placehold.co/400x250/1e1e1e/ffffff?text=Intrusion+Detection" data-github="#" data-demo="#">
+                <div class="project-image"><img src="https://placehold.co/400x250/1e1e1e/ffffff?text=Intrusion+Detection" alt="Project Thumbnail"></div>
+                <div class="project-info">
+                    <h3>Intrusion Detection System</h3>
+                    <p>A web-based IDS using Flask for the UI and Scikit-learn to detect network intrusions, showcasing practical application of ML in cybersecurity.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span><span class="tech-badge">Flask</span><span class="tech-badge">Scikit-learn</span><span class="tech-badge">HTML/CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="ai-ml python" data-title="Customer Churn Prediction" data-description="Developed machine learning models to predict customer churn for a telecom company, helping to identify at-risk customers proactively." data-tech="Python, Jupyter, Pandas, ML Models" data-img="https://placehold.co/400x250/1e1e1e/ffffff?text=Customer+Churn" data-github="#" data-demo="#">
+                <div class="project-image"><img src="https://placehold.co/400x250/1e1e1e/ffffff?text=Customer+Churn" alt="Project Thumbnail"></div>
+                <div class="project-info">
+                    <h3>Customer Churn Prediction</h3>
+                    <p>Developed machine learning models to predict customer churn for a telecom company, helping to identify at-risk customers proactively.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span><span class="tech-badge">Jupyter</span><span class="tech-badge">Pandas</span><span class="tech-badge">ML Models</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="ai-ml python" data-title="Image Feature Extraction" data-description="A tool to extract and visualize key features like boundaries and patterns from aerial or satellite imagery for analysis." data-tech="Python, Jupyter, OpenCV" data-img="https://placehold.co/400x250/1e1e1e/ffffff?text=Feature+Extraction" data-github="#" data-demo="#">
+                <div class="project-image"><img src="https://placehold.co/400x250/1e1e1e/ffffff?text=Feature+Extraction" alt="Project Thumbnail"></div>
+                <div class="project-info">
+                    <h3>Image Feature Extraction</h3>
+                    <p>A tool to extract and visualize key features like boundaries and patterns from aerial or satellite imagery for analysis.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span><span class="tech-badge">Jupyter</span><span class="tech-badge">OpenCV</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="python" data-title="Image Enhancement Toolkit" data-description="A fun project using Python and OpenCV to apply creative effects to images, such as cartoonifying and edge detection." data-tech="Python, OpenCV" data-img="https://placehold.co/400x250/1e1e1e/ffffff?text=Image+Toolkit" data-github="#" data-demo="#">
+                <div class="project-image"><img src="https://placehold.co/400x250/1e1e1e/ffffff?text=Image+Toolkit" alt="Project Thumbnail"></div>
+                <div class="project-info">
+                    <h3>Image Enhancement Toolkit</h3>
+                    <p>A fun project using Python and OpenCV to apply creative effects to images, such as cartoonifying and edge detection.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span><span class="tech-badge">OpenCV</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="project-card" data-category="ai-ml python" data-title="Stock Price Predictor" data-description="Forecasts stock prices using historical data and fundamental machine learning algorithms. A great entry into financial time-series analysis." data-tech="Python, ML Algorithms" data-img="https://placehold.co/400x250/1e1e1e/ffffff?text=Stock+Predictor" data-github="#" data-demo="#">
+                <div class="project-image"><img src="https://placehold.co/400x250/1e1e1e/ffffff?text=Stock+Predictor" alt="Project Thumbnail"></div>
+                <div class="project-info">
+                    <h3>Stock Price Predictor</h3>
+                    <p>Forecasts stock prices using historical data and fundamental machine learning algorithms. A great entry into financial time-series analysis.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span><span class="tech-badge">ML Algorithms</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="container">
+        <h2>Internship Experience</h2>
+        <div class="experience-timeline">
+            <div class="exp-card left">
+                <div class="exp-content">
+                    <h3><i class="fas fa-robot"></i> AI Intern</h3>
+                    <h4>Codec Technologies</h4>
+                    <p class="date">Apr 2025 - May 2025</p>
+                    <button class="exp-toggle" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Worked on ML model deployment and optimization.</li>
+                            <li>Collaborated with a team to build AI solutions for clients.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="exp-card right">
+                <div class="exp-content">
+                    <h3><i class="fas fa-network-wired"></i> Networking Cloud Intern</h3>
+                    <h4>Juniper Networks</h4>
+                    <p class="date">Jan 2025 - Mar 2025</p>
+                    <button class="exp-toggle" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Configured and managed cloud network infrastructure.</li>
+                            <li>Automated network monitoring tasks.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="exp-card left">
+                <div class="exp-content">
+                    <h3><i class="fab fa-android"></i> Android Developer Intern</h3>
+                    <h4>Google for Developers</h4>
+                    <p class="date">Oct 2024 - Dec 2024</p>
+                    <button class="exp-toggle" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Developed Android apps using Kotlin and Java.</li>
+                            <li>Implemented UI/UX improvements and bug fixes.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="exp-card right">
+                <div class="exp-content">
+                    <h3><i class="fas fa-microchip"></i> Embedded System Developer Intern</h3>
+                    <h4>MICROCHIP</h4>
+                    <p class="date">Jul 2024 - Sep 2024</p>
+                    <button class="exp-toggle" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Designed and tested embedded systems for IoT devices.</li>
+                            <li>Worked with microcontrollers and sensors.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="exp-card left">
+                <div class="exp-content">
+                    <h3><i class="fas fa-database"></i> Data Engineer Intern</h3>
+                    <h4>AWS Academy</h4>
+                    <p class="date">Apr 2024 - Jun 2024</p>
+                    <button class="exp-toggle" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Built ETL pipelines for big data projects.</li>
+                            <li>Worked with AWS cloud services.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="exp-card right">
+                <div class="exp-content">
+                    <h3><i class="fas fa-brain"></i> AI-ML Virtual Intern</h3>
+                    <h4>Google for Developers</h4>
+                    <p class="date">Jan 2024 - Mar 2024</p>
+                    <button class="exp-toggle" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Completed virtual projects in AI/ML.</li>
+                            <li>Explored NLP and computer vision tasks.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="exp-card left">
+                <div class="exp-content">
+                    <h3><i class="fas fa-robot"></i> Intelligent Automation Intern</h3>
+                    <h4>Blueprism</h4>
+                    <p class="date">Sep 2023 - Nov 2023</p>
+                    <button class="exp-toggle" aria-label="Expand details"><i class="fas fa-chevron-down"></i></button>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Automated business processes using RPA tools.</li>
+                            <li>Developed bots for workflow optimization.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>I'm currently seeking new opportunities and am open to collaborations. Feel free to reach out if you have a project in mind or just want to connect!</p>
+                <a href="mailto:anaghaktp@gmail.com" class="email">
+                    <i class="fas fa-envelope"></i>
+                    <span>anaghaktp@gmail.com</span>
+                </a>
+                <div class="social-links">
+                    <a href="https://github.com/anaghaktp" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/anaghaktp" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/anaghaktp" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/anaghaktp" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/anaghaktp" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <form id="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                    <span class="error-message" id="message-error"></span>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p class="animate-on-scroll">&copy; 2025 Anagha K T P. Built with HTML, CSS, and JavaScript.</p>
+        <p>&copy; 2024 Anagha KTP. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+
+    <!-- JS for particles background -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Interactive Education Timeline
+        const timelineToggles = document.querySelectorAll('.timeline-toggle');
+        timelineToggles.forEach(toggle => {
+            toggle.addEventListener('click', function (e) {
+                const item = toggle.closest('.timeline-item');
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.timeline-item.active').forEach(activeItem => {
+                        activeItem.classList.remove('active');
+                    });
+                    item.classList.add('active');
+                }
+            });
+        });
+        // Interactive Experience Timeline
+        const expToggles = document.querySelectorAll('.exp-toggle');
+        expToggles.forEach(toggle => {
+            toggle.addEventListener('click', function (e) {
+                const card = toggle.closest('.exp-card');
+                if (card.classList.contains('active')) {
+                    card.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.exp-card.active').forEach(activeCard => {
+                        activeCard.classList.remove('active');
+                    });
+                    card.classList.add('active');
+                }
+            });
+        });
+        // Contact form real-time validation
+        const contactForm = document.getElementById('contact-form');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+        const messageError = document.getElementById('message-error');
+
+        function validateName() {
+            if (nameInput.value.trim().length < 2) {
+                nameError.textContent = "Please enter your name.";
+                return false;
+            } else {
+                nameError.textContent = "";
+                return true;
+            }
+        }
+
+        function validateEmail() {
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailInput.value.trim())) {
+                emailError.textContent = "Please enter a valid email address.";
+                return false;
+            } else {
+                emailError.textContent = "";
+                return true;
+            }
+        }
+
+        function validateMessage() {
+            if (messageInput.value.trim().length < 10) {
+                messageError.textContent = "Message should be at least 10 characters.";
+                return false;
+            } else {
+                messageError.textContent = "";
+                return true;
+            }
+        }
+
+        nameInput.addEventListener('input', validateName);
+        emailInput.addEventListener('input', validateEmail);
+        messageInput.addEventListener('input', validateMessage);
+
+        contactForm.addEventListener('submit', (e) => {
+            let valid = true;
+            if (!validateName()) valid = false;
+            if (!validateEmail()) valid = false;
+            if (!validateMessage()) valid = false;
+            if (!valid) {
+                e.preventDefault();
+                return;
+            }
+            e.preventDefault();
+            alert('Thank you for your message! This is a demo form.');
+            contactForm.reset();
+        });
+        // Animated skill bars on scroll
+        const skillBars = document.querySelectorAll('.skill-level');
+        const skillsSection = document.querySelector('.skills-bars');
+        let skillsAnimated = false;
+        function animateSkills() {
+            if (!skillsSection) return;
+            const sectionTop = skillsSection.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            if (sectionTop < windowHeight - 100 && !skillsAnimated) {
+                skillBars.forEach(bar => {
+                    bar.style.width = bar.dataset.level;
+                });
+                skillsAnimated = true;
+            } else if (sectionTop > windowHeight && skillsAnimated) {
+                skillBars.forEach(bar => {
+                    bar.style.width = '0';
+                });
+                skillsAnimated = false;
+            }
+        }
+        window.addEventListener('scroll', animateSkills);
+        animateSkills(); // Initial check
+
+        // Project Modal Popups
+        const projectCards = document.querySelectorAll('.project-card');
+        const modal = document.getElementById('project-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDesc = document.getElementById('modal-description');
+        const modalTech = document.getElementById('modal-tech');
+        const modalLinks = document.getElementById('modal-links');
+        const closeModal = document.querySelector('.close-modal');
+
+        projectCards.forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Prevent link clicks from triggering modal
+                if (e.target.closest('a')) return;
+                modal.style.display = 'flex';
+                modalImg.src = card.dataset.img;
+                modalTitle.textContent = card.dataset.title;
+                modalDesc.textContent = card.dataset.description;
+                // Tech badges
+                modalTech.innerHTML = '';
+                if (card.dataset.tech) {
+                    card.dataset.tech.split(',').forEach(tech => {
+                        const span = document.createElement('span');
+                        span.className = 'tech-badge';
+                        span.textContent = tech.trim();
+                        modalTech.appendChild(span);
+                    });
+                }
+                // Links
+                modalLinks.innerHTML = '';
+                if (card.dataset.github && card.dataset.github !== '#') {
+                    const githubLink = document.createElement('a');
+                    githubLink.href = card.dataset.github;
+                    githubLink.target = '_blank';
+                    githubLink.innerHTML = '<i class="fab fa-github"></i> GitHub';
+                    modalLinks.appendChild(githubLink);
+                }
+                if (card.dataset.demo && card.dataset.demo !== '#') {
+                    const demoLink = document.createElement('a');
+                    demoLink.href = card.dataset.demo;
+                    demoLink.target = '_blank';
+                    demoLink.innerHTML = '<i class="fas fa-external-link-alt"></i> Live Demo';
+                    modalLinks.appendChild(demoLink);
+                }
+            });
+        });
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+    </script>
+
+    <!-- Modal for Project Details -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-img" src="" alt="Project Image" style="width:100%;border-radius:8px;margin-bottom:20px;">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <div id="modal-tech" style="margin-bottom:15px;"></div>
+            <div id="modal-links"></div>
+        </div>
+    </div>
 </body>
 </html>
