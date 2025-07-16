@@ -73,19 +73,67 @@ document.addEventListener('DOMContentLoaded', function () {
     emailInput.addEventListener('input', validateEmail);
     messageInput.addEventListener('input', validateMessage);
 
-    contactForm.addEventListener('submit', (e) => {
-        let valid = true;
-        if (!validateName()) valid = false;
-        if (!validateEmail()) valid = false;
-        if (!validateMessage()) valid = false;
-        if (!valid) {
-            e.preventDefault();
-            return;
+    // EmailJS integration for contact form
+    (function() {
+        // Replace these with your actual EmailJS values
+        const EMAILJS_SERVICE_ID = 'your_service_id';
+        const EMAILJS_TEMPLATE_ID = 'your_template_id';
+        const EMAILJS_PUBLIC_KEY = 'your_public_key';
+
+        // Initialize EmailJS
+        if (window.emailjs) {
+            emailjs.init(EMAILJS_PUBLIC_KEY);
         }
-        e.preventDefault();
-        alert('Thank you for your message! This is a demo form.');
-        contactForm.reset();
-    });
+
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            // Create feedback message element
+            let feedbackMsg = document.createElement('div');
+            feedbackMsg.id = 'form-feedback';
+            feedbackMsg.style.marginTop = '15px';
+            feedbackMsg.style.fontWeight = 'bold';
+            contactForm.appendChild(feedbackMsg);
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Validate again before sending
+                let valid = true;
+                if (typeof validateName === 'function' && !validateName()) valid = false;
+                if (typeof validateEmail === 'function' && !validateEmail()) valid = false;
+                if (typeof validateMessage === 'function' && !validateMessage()) valid = false;
+                if (!valid) return;
+
+                // Show loading state
+                submitButton.disabled = true;
+                submitButton.textContent = 'Sending...';
+                feedbackMsg.textContent = '';
+                feedbackMsg.style.color = '';
+
+                // Prepare params for EmailJS
+                const params = {
+                    from_name: contactForm.name.value,
+                    from_email: contactForm.email.value,
+                    message: contactForm.message.value
+                };
+
+                emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
+                    .then(function(response) {
+                        feedbackMsg.textContent = 'Message sent successfully!';
+                        feedbackMsg.style.color = 'green';
+                        contactForm.reset();
+                    }, function(error) {
+                        feedbackMsg.textContent = 'Failed to send message. Please try again later.';
+                        feedbackMsg.style.color = 'red';
+                    })
+                    .finally(function() {
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Send Message';
+                    });
+            });
+        }
+    })();
+
     // Animated skill bars on scroll
     const skillBars = document.querySelectorAll('.skill-level');
     const skillsSection = document.querySelector('.skills-bars');
