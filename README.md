@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Anagha K T P - AI & Machine Learning Engineer Portfolio
 
-## Getting Started
+Welcome to my personal portfolio repository! This project showcases my journey as an AI & Machine Learning Engineer, featuring my projects, skills, experience, and certifications.
 
-First, run the development server:
+## 🚀 Built With
+
+- **[Next.js 16](https://nextjs.org/)** - The React Framework for the Web.
+- **[React 19](https://react.dev/)** - The library for web and native user interfaces.
+- **[Tailwind CSS 4](https://tailwindcss.com/)** - A utility-first CSS framework for rapid UI development.
+- **[Next Themes](https://github.com/pacocoursey/next-themes)** - Perfect dark mode in 5 lines of code.
+
+## ✨ Features
+
+- **Dynamic Content**: All portfolio data (projects, skills, experience) is centralized in `src/data/portfolio.js` for easy updates.
+- **Responsive Design**: Fully responsive UI tailored for all devices.
+- **Contact Integration**: Integrated Google Forms for seamless contact submissions.
+- **Modern UI**: Clean and minimal interface with dark mode support.
+
+## 🛠️ Getting Started
+
+Follow these steps to set up the project locally.
+
+### Prerequisites
+
+- Node.js (Latest LTS recommended)
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ANAGHAKTP/portfolio.git
+   cd portfolio
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
+
+4. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+
+## 📁 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+📦 src
+ ┣ 📂 app          # Next.js App Router pages
+ ┣ 📂 components   # Reusable UI components
+ ┣ 📂 data         # Centralized portfolio data (portfolio.js)
+ ┗ ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📄 License
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+This project is open-source and available under the [MIT License](LICENSE).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Made with ❤️ by [Anagha K T P](https://github.com/ANAGHAKTP)
