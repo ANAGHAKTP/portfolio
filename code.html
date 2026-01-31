@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tech Portfolio | Digital Scrapbook</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&amp;family=Gaegu:wght@400;700&amp;family=Quicksand:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#7FB3D5", // Soft Blue
+              "background-light": "#FDF9F3", // Creamy Paper
+              "background-dark": "#1A1C1E",
+              accent: {
+                mint: "#D5E8D4",
+                yellow: "#FFF2CC",
+                pink: "#F8CECC",
+                lavender: "#E1D5E7"
+              }
+            },
+            fontFamily: {
+              handwriting: ["Caveat", "cursive"],
+              playful: ["Gaegu", "display"],
+              display: ["Quicksand", "sans-serif"],
+            },
+            borderRadius: {
+              'xl': '2rem',
+              'blob': '30% 70% 70% 30% / 30% 30% 70% 70%',
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .dark body {
+            background-image: radial-gradient(#374151 0.5px, transparent 0.5px);
+        }
+        .scribble-border {
+            border: 2px solid #000;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        }
+        .organic-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .polaroid {
+            background: white;
+            padding: 1rem 1rem 3rem 1rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            transform: rotate(-2deg);
+        }
+        .tape {
+            background-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(2px);
+            width: 100px;
+            height: 30px;
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%) rotate(2deg);
+        }
+        .star-doodle {
+            position: absolute;
+            color: #FFD700;
+            font-size: 24px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md px-8 py-3 rounded-full border-2 border-slate-900 dark:border-slate-100 flex gap-8 font-playful text-lg shadow-lg">
+<a class="hover:text-primary transition-colors" href="#about">About</a>
+<a class="hover:text-primary transition-colors" href="#skills">Stack</a>
+<a class="hover:text-primary transition-colors" href="#projects">Work</a>
+<a class="hover:text-primary transition-colors" href="#contact">Hello!</a>
+<button class="ml-4" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons text-xl">dark_mode</span>
+</button>
+</nav>
+<section class="min-h-screen flex flex-col items-center justify-center relative overflow-hidden pt-20 px-4">
+<div class="absolute top-20 left-10 animate-bounce opacity-20 dark:opacity-40">
+<span class="material-icons text-6xl rotate-12">terminal</span>
+</div>
+<div class="absolute bottom-20 right-10 animate-pulse opacity-20 dark:opacity-40">
+<span class="material-icons text-6xl -rotate-12">code</span>
+</div>
+<div class="relative z-10 text-center max-w-4xl">
+<div class="relative inline-block mb-8">
+<div class="absolute -inset-4 bg-accent-mint dark:bg-emerald-900/30 organic-shape animate-pulse"></div>
+<img alt="Tech Student Avatar" class="w-64 h-64 object-cover rounded-full border-4 border-white shadow-2xl relative z-10 grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvJdRAtIjoPUti30B04WvRvXHT3Z_7fSMbBRLx8OA92LZfGyXwwyOdPsmq88xW6f7AMs7ybKB-_-Lh9gJnG4YgMRvgd0-rGW85YTahmo26Fi0qGE3p2BG1IvVcA8h933kfw9Wey34OD_M7m9U57venUxgFHjUfd8anbni1eXkX7fbq7C0FW68mL8vh3ES-20WUe1WfBH6cpxAfzh3e7NqyKQPb8eHPKbkspOQ1a77-gBS8LG8kuHjsjQrtqQ81mgY8b47y0o2WKL-R"/>
+<div class="absolute -top-4 -right-8 text-primary font-handwriting text-3xl rotate-12">&lt;Hello World /&gt;</div>
+<div class="absolute bottom-0 -left-12 text-accent-pink font-handwriting text-3xl -rotate-12">Bug Hunter!</div>
+</div>
+<h1 class="text-6xl md:text-8xl font-playful font-bold mb-4 tracking-tighter">
+                Alex <span class="text-primary underline decoration-wavy decoration-accent-yellow">Dev</span>
+</h1>
+<p class="text-2xl font-handwriting max-w-lg mx-auto leading-relaxed">
+                Building cozy digital spaces with clean code and a sprinkle of magic. ✨
+            </p>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-icons text-4xl">expand_more</span>
+</div>
+</section>
+<section class="py-24 px-4 bg-accent-yellow/30 dark:bg-amber-900/10" id="about">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="polaroid dark:bg-slate-800 inline-block mx-auto md:mx-0">
+<div class="tape"></div>
+<img alt="Work Desk" class="w-full max-w-md aspect-square object-cover mb-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoyajx4hfeInTTyc5zhb8SeXlg7JZdkK4yQ8Y9iTEzuyGYGw7EUDNFTHrVFHC__yO7XASrCUHZOLBKzlqaN4VOnm4NwLYQzABrJk4c-Ioiq4bSgApP034wFh1zvmhpA1BA-rHLQANCdpu6lZ_h50Qgb1GDt3ARLIR5a-YiXwjj_w8ijTay3vvevQpr9R-lOf71CXnG3cOwJVDLvx9d9qFvdXUBCTYBYsJmo7D_f4WwGdaTVAhBOLydAu3b8T-fbH7_9jjnccV3zXWZ"/>
+<p class="font-handwriting text-2xl text-center text-slate-600 dark:text-slate-300">Coding at 2 AM vibes...</p>
+</div>
+<div class="absolute -bottom-8 -right-4 bg-white dark:bg-slate-700 p-4 scribbled-border shadow-lg rotate-3 font-handwriting text-xl border-2 border-slate-900">
+                    Studying CS &amp; Design
+                </div>
+</div>
+<div class="space-y-6">
+<h2 class="text-5xl font-playful font-bold mb-8">About <span class="italic underline decoration-accent-pink">Me</span></h2>
+<div class="prose prose-lg dark:prose-invert">
+<p class="font-display">I'm a computer science student who believes that technology should be as friendly as a handwritten note. My journey started with a fascination for how things work, and now I'm crafting experiences that blend functionality with personality.</p>
+<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
+<h3 class="font-bold text-primary mb-2">Location</h3>
+<p>Portland, OR</p>
+</div>
+<div class="p-6 bg-white dark:bg-slate-800 rounded-2xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
+<h3 class="font-bold text-primary mb-2">Interest</h3>
+<p>UI/UX &amp; Clouds</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-4 overflow-hidden" id="skills">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-5xl font-playful font-bold text-center mb-16">My <span class="text-accent-lavender-dark">Tech</span> Toolkit</h2>
+<div class="flex flex-wrap justify-center gap-12">
+<div class="group relative">
+<div class="w-32 h-32 bg-accent-mint flex items-center justify-center organic-shape group-hover:scale-110 transition-transform duration-500 cursor-help border-2 border-slate-900 dark:text-slate-900">
+<span class="font-bold text-lg">Python</span>
+</div>
+<div class="absolute -top-4 -right-4 bg-white dark:bg-slate-800 p-2 rounded-full border-2 border-slate-900 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">🐍</div>
+</div>
+<div class="group relative">
+<div class="w-40 h-40 bg-accent-pink flex items-center justify-center organic-shape group-hover:scale-110 transition-transform duration-500 cursor-help border-2 border-slate-900 dark:text-slate-900">
+<span class="font-bold text-xl">React JS</span>
+</div>
+<div class="absolute -bottom-4 -left-4 bg-white dark:bg-slate-800 p-2 rounded-full border-2 border-slate-900 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">⚛️</div>
+</div>
+<div class="group relative">
+<div class="w-36 h-36 bg-accent-yellow flex items-center justify-center organic-shape group-hover:scale-110 transition-transform duration-500 cursor-help border-2 border-slate-900 dark:text-slate-900">
+<span class="font-bold text-lg">AWS</span>
+</div>
+<div class="absolute top-1/2 -right-6 bg-white dark:bg-slate-800 p-2 rounded-full border-2 border-slate-900 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">☁️</div>
+</div>
+<div class="group relative">
+<div class="w-32 h-32 bg-accent-lavender flex items-center justify-center organic-shape group-hover:scale-110 transition-transform duration-500 cursor-help border-2 border-slate-900 dark:text-slate-900">
+<span class="font-bold text-lg">Tailwind</span>
+</div>
+<div class="absolute -top-2 left-0 bg-white dark:bg-slate-800 p-2 rounded-full border-2 border-slate-900 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">🎨</div>
+</div>
+<div class="group relative">
+<div class="w-36 h-36 bg-primary/40 flex items-center justify-center organic-shape group-hover:scale-110 transition-transform duration-500 cursor-help border-2 border-slate-900 dark:text-slate-900">
+<span class="font-bold text-lg">TypeScript</span>
+</div>
+</div>
+</div>
+<div class="mt-20 text-center font-handwriting text-3xl text-slate-500">
+                ...and always learning more! 📖
+            </div>
+</div>
+</section>
+<section class="py-24 px-4 bg-slate-100 dark:bg-slate-900/40" id="projects">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-5xl font-playful font-bold mb-16 text-right">Latest <span class="bg-primary px-4 py-1 -rotate-2 inline-block text-white rounded-lg">Creations</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative group">
+<div class="bg-white dark:bg-slate-800 p-6 border-2 border-slate-900 rounded-3xl shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] hover:shadow-[12px_12px_0px_0px_rgba(15,23,42,1)] transition-all transform hover:-translate-y-1">
+<div class="overflow-hidden rounded-xl mb-6 aspect-video border-2 border-slate-100 dark:border-slate-700">
+<img alt="Project Screenshot" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdTugLVQ46YzOkGIFJd6NdqhiqurGwtuYHI85DAFBgHIL8uHqA8xHSaSM3GTYL3DDqIJ0fQ1PkgWIRY9vACqrXFhI8EUCMDv8JkWhe6sS8Deqsqz1Zm16Vvme1K3EAllwTFOeZG1tLQK4MjNbyDzEGv5icpir0Gl3EImXpXMmuJvdnzu6eAZdVrF2e1MjeGY_hDuSp2DTRiY1FrlQZwKAhm3zi6P1LDXceWfquKjQ2LHjj3D9W61HPSLo0nLCVlHmpKAf47nxhikEY"/>
+</div>
+<h3 class="text-3xl font-playful font-bold mb-2">Cloud Garden</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-4">A smart irrigation system tracker built with React &amp; AWS IoT Core. Visualizing nature through data.</p>
+<div class="flex gap-2 mb-4">
+<span class="bg-accent-mint px-3 py-1 rounded-full text-sm border border-slate-900 dark:text-slate-900 font-bold">IoT</span>
+<span class="bg-accent-lavender px-3 py-1 rounded-full text-sm border border-slate-900 dark:text-slate-900 font-bold">AWS</span>
+</div>
+</div>
+<div class="absolute -top-6 -left-6 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-icons text-primary text-5xl">auto_awesome</span>
+</div>
+</div>
+<div class="relative group mt-8 md:mt-16">
+<div class="bg-white dark:bg-slate-800 p-6 border-2 border-slate-900 rounded-3xl shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] hover:shadow-[12px_12px_0px_0px_rgba(15,23,42,1)] transition-all transform hover:-translate-y-1">
+<div class="overflow-hidden rounded-xl mb-6 aspect-video border-2 border-slate-100 dark:border-slate-700">
+<img alt="Abstract App Design" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdv2YpFQDKPuIEjA1OoxZ8tUxrFSb6mA8gRMv6wXmwWHW32Tq7nW0BU6wgCPMZnaIwEjdR_aFFaYa4eKfMALyPO_-wCRxwlET8U7w9UDRUm3Qa7MZCfUEj-4jbEH670wCmRMwsV6cUktNlkFXkPuf5IO4IAU0BbYTgqF92zarP5hVmca2AYYkEN61R7LRp_FaCn1uIMX8fl8XN8W2OArwmFnByt940WMpSy_9QlTNI5W2wBZwIN6c7dxg4xdHqccoKRY_1gaqekS_Y"/>
+</div>
+<h3 class="text-3xl font-playful font-bold mb-2">Code Scribble</h3>
+<p class="text-slate-600 dark:text-slate-400 mb-4">A minimalist markdown editor that supports hand-drawn annotations. Bridging digital and analog.</p>
+<div class="flex gap-2 mb-4">
+<span class="bg-accent-yellow px-3 py-1 rounded-full text-sm border border-slate-900 dark:text-slate-900 font-bold">Electron</span>
+<span class="bg-accent-pink px-3 py-1 rounded-full text-sm border border-slate-900 dark:text-slate-900 font-bold">Canvas</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-4 text-center" id="contact">
+<div class="max-w-2xl mx-auto relative">
+<h2 class="text-6xl font-playful font-bold mb-8">Say <span class="text-primary italic">Hello!</span></h2>
+<p class="text-xl mb-12 font-handwriting">Let's build something beautiful together. Reach out for collabs or just a chat!</p>
+<div class="flex justify-center gap-8 mb-16">
+<a class="w-16 h-16 bg-white dark:bg-slate-800 flex items-center justify-center rounded-2xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-y-1 hover:shadow-none transition-all" href="#">
+<span class="material-icons text-2xl">mail</span>
+</a>
+<a class="w-16 h-16 bg-white dark:bg-slate-800 flex items-center justify-center rounded-2xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-y-1 hover:shadow-none transition-all" href="#">
+<span class="material-icons text-2xl">link</span>
+</a>
+<a class="w-16 h-16 bg-white dark:bg-slate-800 flex items-center justify-center rounded-2xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-y-1 hover:shadow-none transition-all" href="#">
+<span class="material-icons text-2xl">code</span>
+</a>
+</div>
+<div class="relative inline-block mt-8">
+<h3 class="text-4xl font-handwriting transform -rotate-2">Thanks for visiting!</h3>
+<div class="absolute -bottom-2 left-0 w-full h-1 bg-accent-pink rounded-full"></div>
+</div>
+</div>
+</section>
+<footer class="py-12 border-t border-slate-200 dark:border-slate-800 text-center font-playful opacity-60">
+<p>© 2024 Alex Dev • Built with caffeine and code</p>
+</footer>
+<div class="fixed top-1/4 right-10 pointer-events-none opacity-10">
+<svg class="animate-spin-slow" height="100" viewBox="0 0 100 100" width="100">
+<path d="M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="fixed bottom-1/4 left-10 pointer-events-none opacity-10">
+<svg height="80" viewBox="0 0 100 100" width="80">
+<circle cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="5,5" stroke-width="2"></circle>
+</svg>
+</div>
+<style>
+        .animate-spin-slow {
+            animation: spin 10s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+
+</body></html>
