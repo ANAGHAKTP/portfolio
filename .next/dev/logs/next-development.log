@@ -1,0 +1,1731 @@
+[00:00:37.699] Server  LOG     ✓ Ready in 22.8s
+[00:00:45.976] Server  LOG     ○ Compiling / ...
+[00:01:01.871] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:02.172] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Anagha_Po...">
+                      <SegmentTrieNode>
+                      <Home>
+                        <main className="relative">
+                          <nav>
+                          <section>
+                          <section>
+                          <section>
+                          <Skills>
+                            <section id="skills" className="jsx-d367ff...">
+                              <div className="jsx-d367ff...">
+                                <div
++                                 className="absolute top-0 left-0 text-slate-200 dark:text-slate-800 transform -rotat..."
+-                                 className="jsx-d367ff2da8cf789f absolute top-0 left-0 text-slate-200 dark:text-slate..."
+                                >
+                                  <span
++                                   className="material-icons text-9xl"
+-                                   className="jsx-d367ff2da8cf789f material-icons text-9xl"
+                                  >
++                                   auto_fix_high
+                                <h2
++                                 className="text-6xl font-playful font-bold text-center mb-20 relative z-10"
+-                                 className="jsx-d367ff2da8cf789f text-6xl font-playful font-bold text-center mb-20 re..."
+                                >
+                                  <span
++                                   className="inline-block transform -rotate-2 bg-slate-900 text-white px-4 py-1 skew..."
+-                                   className="jsx-d367ff2da8cf789f inline-block transform -rotate-2 bg-slate-900 text..."
+                                  >
++                                   Tech
+                                  ...
+                                <div
++                                 className="flex flex-wrap justify-center gap-10"
+-                                 className="jsx-d367ff2da8cf789f flex flex-wrap justify-center gap-10"
+                                >
+                                  <div
++                                   className="relative group rotate-2 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-2 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-mint border-2 border-slate-900 shadow-[6px_..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-mint border-2 border-s..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       Languages
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Python
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Java
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         C
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Flutter
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         PHP
+                                  <div
++                                   className="relative group -rotate-1 hover:z-20 hover:scale-105 transition-all dura..."
+-                                   className="jsx-d367ff2da8cf789f relative group -rotate-1 hover:z-20 hover:scale-10..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-pink border-2 border-slate-900 shadow-[6px_..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-pink border-2 border-s..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Frameworks & Libs"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Django
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Flask
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         React
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Node.js
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         NumPy
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Pandas
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Scikit-learn
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         TensorFlow
+                                  <div
++                                   className="relative group rotate-3 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-3 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-yellow border-2 border-slate-900 shadow-[6p..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-yellow border-2 border..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Data & Analytics"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Power BI
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Tableau
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Excel
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Matplotlib
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Seaborn
+                                  <div
++                                   className="relative group -rotate-2 hover:z-20 hover:scale-105 transition-all dura..."
+-                                   className="jsx-d367ff2da8cf789f relative group -rotate-2 hover:z-20 hover:scale-10..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-lavender border-2 border-slate-900 shadow-[..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-lavender border-2 bord..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Tools & Platforms"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Git
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         VS Code
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Jupyter
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Anaconda
+                                  <div
++                                   className="relative group rotate-1 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-1 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-primary/30 border-2 border-slate-900 shadow-[6px_6..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-primary/30 border-2 border-sl..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       Databases
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         SQL
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         MongoDB
+                                ...
+                              ...
+                          ...
+                    ...
+                  ...
+      ...
+
+[00:01:02.720] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:03.994] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Anagha_Po...">
+                      <SegmentTrieNode>
+                      <Home>
+                        <main className="relative">
+                          <nav>
+                          <section>
+                          <section>
+                          <section>
+                          <Skills>
+                            <section id="skills" className="jsx-d367ff...">
+                              <div className="jsx-d367ff...">
+                                <div
++                                 className="absolute top-0 left-0 text-slate-200 dark:text-slate-800 transform -rotat..."
+-                                 className="jsx-d367ff2da8cf789f absolute top-0 left-0 text-slate-200 dark:text-slate..."
+                                >
+                                  <span
++                                   className="material-icons text-9xl"
+-                                   className="jsx-d367ff2da8cf789f material-icons text-9xl"
+                                  >
++                                   auto_fix_high
+                                <h2
++                                 className="text-6xl font-playful font-bold text-center mb-20 relative z-10"
+-                                 className="jsx-d367ff2da8cf789f text-6xl font-playful font-bold text-center mb-20 re..."
+                                >
+                                  <span
++                                   className="inline-block transform -rotate-2 bg-slate-900 text-white px-4 py-1 skew..."
+-                                   className="jsx-d367ff2da8cf789f inline-block transform -rotate-2 bg-slate-900 text..."
+                                  >
++                                   Tech
+                                  ...
+                                <div
++                                 className="flex flex-wrap justify-center gap-10"
+-                                 className="jsx-d367ff2da8cf789f flex flex-wrap justify-center gap-10"
+                                >
+                                  <div
++                                   className="relative group rotate-2 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-2 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-mint border-2 border-slate-900 shadow-[6px_..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-mint border-2 border-s..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       Languages
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Python
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Java
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         C
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Flutter
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         PHP
+                                  <div
++                                   className="relative group -rotate-1 hover:z-20 hover:scale-105 transition-all dura..."
+-                                   className="jsx-d367ff2da8cf789f relative group -rotate-1 hover:z-20 hover:scale-10..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-pink border-2 border-slate-900 shadow-[6px_..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-pink border-2 border-s..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Frameworks & Libs"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Django
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Flask
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         React
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Node.js
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         NumPy
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Pandas
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Scikit-learn
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         TensorFlow
+                                  <div
++                                   className="relative group rotate-3 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-3 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-yellow border-2 border-slate-900 shadow-[6p..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-yellow border-2 border..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Data & Analytics"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Power BI
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Tableau
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Excel
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Matplotlib
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Seaborn
+                                  <div
++                                   className="relative group -rotate-2 hover:z-20 hover:scale-105 transition-all dura..."
+-                                   className="jsx-d367ff2da8cf789f relative group -rotate-2 hover:z-20 hover:scale-10..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-lavender border-2 border-slate-900 shadow-[..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-lavender border-2 bord..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Tools & Platforms"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Git
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         VS Code
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Jupyter
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Anaconda
+                                  <div
++                                   className="relative group rotate-1 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-1 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-primary/30 border-2 border-slate-900 shadow-[6px_6..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-primary/30 border-2 border-sl..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       Databases
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         SQL
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         MongoDB
+                                ...
+                              ...
+                          ...
+                    ...
+                  ...
+      ...
+
+[00:11:55.136] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:55.222] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:55.367] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Anagha_Po...">
+                      <SegmentTrieNode>
+                      <Home>
+                        <main className="relative">
+                          <nav>
+                          <section>
+                          <section>
+                          <section>
+                          <Skills>
+                            <section id="skills" className="jsx-d367ff...">
+                              <div className="jsx-d367ff...">
+                                <div
++                                 className="absolute top-0 left-0 text-slate-200 dark:text-slate-800 transform -rotat..."
+-                                 className="jsx-d367ff2da8cf789f absolute top-0 left-0 text-slate-200 dark:text-slate..."
+                                >
+                                  <span
++                                   className="material-icons text-9xl"
+-                                   className="jsx-d367ff2da8cf789f material-icons text-9xl"
+                                  >
++                                   auto_fix_high
+                                <h2
++                                 className="text-6xl font-playful font-bold text-center mb-20 relative z-10"
+-                                 className="jsx-d367ff2da8cf789f text-6xl font-playful font-bold text-center mb-20 re..."
+                                >
+                                  <span
++                                   className="inline-block transform -rotate-2 bg-slate-900 text-white px-4 py-1 skew..."
+-                                   className="jsx-d367ff2da8cf789f inline-block transform -rotate-2 bg-slate-900 text..."
+                                  >
++                                   Tech
+                                  ...
+                                <div
++                                 className="flex flex-wrap justify-center gap-10"
+-                                 className="jsx-d367ff2da8cf789f flex flex-wrap justify-center gap-10"
+                                >
+                                  <div
++                                   className="relative group rotate-2 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-2 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-mint border-2 border-slate-900 shadow-[6px_..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-mint border-2 border-s..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       Languages
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Python
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Java
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         C
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Flutter
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         PHP
+                                  <div
++                                   className="relative group -rotate-1 hover:z-20 hover:scale-105 transition-all dura..."
+-                                   className="jsx-d367ff2da8cf789f relative group -rotate-1 hover:z-20 hover:scale-10..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-pink border-2 border-slate-900 shadow-[6px_..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-pink border-2 border-s..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Frameworks & Libs"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Django
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Flask
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         React
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Node.js
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         NumPy
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Pandas
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Scikit-learn
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         TensorFlow
+                                  <div
++                                   className="relative group rotate-3 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-3 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-yellow border-2 border-slate-900 shadow-[6p..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-yellow border-2 border..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Data & Analytics"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Power BI
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Tableau
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Excel
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Matplotlib
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Seaborn
+                                  <div
++                                   className="relative group -rotate-2 hover:z-20 hover:scale-105 transition-all dura..."
+-                                   className="jsx-d367ff2da8cf789f relative group -rotate-2 hover:z-20 hover:scale-10..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-lavender border-2 border-slate-900 shadow-[..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-lavender border-2 bord..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Tools & Platforms"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Git
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         VS Code
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Jupyter
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Anaconda
+                                  <div
++                                   className="relative group rotate-1 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-1 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-primary/30 border-2 border-slate-900 shadow-[6px_6..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-primary/30 border-2 border-sl..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       Databases
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         SQL
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         MongoDB
+                                ...
+                              ...
+                          ...
+                    ...
+                  ...
+      ...
+
+[00:11:55.455] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Anagha_Po...">
+                      <SegmentTrieNode>
+                      <Home>
+                        <main className="relative">
+                          <nav>
+                          <section>
+                          <section>
+                          <section>
+                          <Skills>
+                            <section id="skills" className="jsx-d367ff...">
+                              <div className="jsx-d367ff...">
+                                <div
++                                 className="absolute top-0 left-0 text-slate-200 dark:text-slate-800 transform -rotat..."
+-                                 className="jsx-d367ff2da8cf789f absolute top-0 left-0 text-slate-200 dark:text-slate..."
+                                >
+                                  <span
++                                   className="material-icons text-9xl"
+-                                   className="jsx-d367ff2da8cf789f material-icons text-9xl"
+                                  >
++                                   auto_fix_high
+                                <h2
++                                 className="text-6xl font-playful font-bold text-center mb-20 relative z-10"
+-                                 className="jsx-d367ff2da8cf789f text-6xl font-playful font-bold text-center mb-20 re..."
+                                >
+                                  <span
++                                   className="inline-block transform -rotate-2 bg-slate-900 text-white px-4 py-1 skew..."
+-                                   className="jsx-d367ff2da8cf789f inline-block transform -rotate-2 bg-slate-900 text..."
+                                  >
++                                   Tech
+                                  ...
+                                <div
++                                 className="flex flex-wrap justify-center gap-10"
+-                                 className="jsx-d367ff2da8cf789f flex flex-wrap justify-center gap-10"
+                                >
+                                  <div
++                                   className="relative group rotate-2 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-2 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-mint border-2 border-slate-900 shadow-[6px_..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-mint border-2 border-s..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       Languages
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Python
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Java
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         C
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Flutter
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         PHP
+                                  <div
++                                   className="relative group -rotate-1 hover:z-20 hover:scale-105 transition-all dura..."
+-                                   className="jsx-d367ff2da8cf789f relative group -rotate-1 hover:z-20 hover:scale-10..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-pink border-2 border-slate-900 shadow-[6px_..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-pink border-2 border-s..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Frameworks & Libs"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Django
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Flask
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         React
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Node.js
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         NumPy
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Pandas
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Scikit-learn
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         TensorFlow
+                                  <div
++                                   className="relative group rotate-3 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-3 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-yellow border-2 border-slate-900 shadow-[6p..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-yellow border-2 border..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Data & Analytics"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Power BI
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Tableau
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Excel
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Matplotlib
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Seaborn
+                                  <div
++                                   className="relative group -rotate-2 hover:z-20 hover:scale-105 transition-all dura..."
+-                                   className="jsx-d367ff2da8cf789f relative group -rotate-2 hover:z-20 hover:scale-10..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-lavender border-2 border-slate-900 shadow-[..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-lavender border-2 bord..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Tools & Platforms"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Git
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         VS Code
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Jupyter
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Anaconda
+                                  <div
++                                   className="relative group rotate-1 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-1 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-primary/30 border-2 border-slate-900 shadow-[6px_6..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-primary/30 border-2 border-sl..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       Databases
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         SQL
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         MongoDB
+                                ...
+                              ...
+                          ...
+                    ...
+                  ...
+      ...
+
+[00:12:54.782] Server  LOG     ✓ Compiled in 1173ms
+[00:13:29.284] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:29.461] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:13:29.507] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/#contact" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Anagha_Po...">
+                      <SegmentTrieNode>
+                      <Home>
+                        <main className="relative">
+                          <nav>
+                          <section>
+                          <section>
+                          <section>
+                          <Skills>
+                            <section id="skills" className="jsx-d367ff...">
+                              <div className="jsx-d367ff...">
+                                <div
++                                 className="absolute top-0 left-0 text-slate-200 dark:text-slate-800 transform -rotat..."
+-                                 className="jsx-d367ff2da8cf789f absolute top-0 left-0 text-slate-200 dark:text-slate..."
+                                >
+                                  <span
++                                   className="material-icons text-9xl"
+-                                   className="jsx-d367ff2da8cf789f material-icons text-9xl"
+                                  >
++                                   auto_fix_high
+                                <h2
++                                 className="text-6xl font-playful font-bold text-center mb-20 relative z-10"
+-                                 className="jsx-d367ff2da8cf789f text-6xl font-playful font-bold text-center mb-20 re..."
+                                >
+                                  <span
++                                   className="inline-block transform -rotate-2 bg-slate-900 text-white px-4 py-1 skew..."
+-                                   className="jsx-d367ff2da8cf789f inline-block transform -rotate-2 bg-slate-900 text..."
+                                  >
++                                   Tech
+                                  ...
+                                <div
++                                 className="flex flex-wrap justify-center gap-10"
+-                                 className="jsx-d367ff2da8cf789f flex flex-wrap justify-center gap-10"
+                                >
+                                  <div
++                                   className="relative group rotate-2 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-2 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-mint border-2 border-slate-900 shadow-[6px_..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-mint border-2 border-s..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       Languages
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Python
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Java
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         C
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Flutter
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         PHP
+                                  <div
++                                   className="relative group -rotate-1 hover:z-20 hover:scale-105 transition-all dura..."
+-                                   className="jsx-d367ff2da8cf789f relative group -rotate-1 hover:z-20 hover:scale-10..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-pink border-2 border-slate-900 shadow-[6px_..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-pink border-2 border-s..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Frameworks & Libs"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Django
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Flask
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         React
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Node.js
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         NumPy
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Pandas
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Scikit-learn
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         TensorFlow
+                                  <div
++                                   className="relative group rotate-3 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-3 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-yellow border-2 border-slate-900 shadow-[6p..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-yellow border-2 border..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Data & Analytics"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Power BI
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Tableau
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Excel
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Matplotlib
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Seaborn
+                                  <div
++                                   className="relative group -rotate-2 hover:z-20 hover:scale-105 transition-all dura..."
+-                                   className="jsx-d367ff2da8cf789f relative group -rotate-2 hover:z-20 hover:scale-10..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-lavender border-2 border-slate-900 shadow-[..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-lavender border-2 bord..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Tools & Platforms"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Git
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         VS Code
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Jupyter
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Anaconda
+                                  <div
++                                   className="relative group rotate-1 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-1 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-primary/30 border-2 border-slate-900 shadow-[6px_6..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-primary/30 border-2 border-sl..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       Databases
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         SQL
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         MongoDB
+                                ...
+                              ...
+                          ...
+                    ...
+                  ...
+      ...
+
+[00:13:29.664] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <InnerScrollAndFocusHandler segmentPath={[...]} focusAndScrollRef={{apply:false, ...}}>
+      <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+        <LoadingBoundary name="/" loading={null}>
+          <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <InnerLayoutRouter url="/#contact" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} ...>
+                    <SegmentViewNode type="page" pagePath="/Anagha_Po...">
+                      <SegmentTrieNode>
+                      <Home>
+                        <main className="relative">
+                          <nav>
+                          <section>
+                          <section>
+                          <section>
+                          <Skills>
+                            <section id="skills" className="jsx-d367ff...">
+                              <div className="jsx-d367ff...">
+                                <div
++                                 className="absolute top-0 left-0 text-slate-200 dark:text-slate-800 transform -rotat..."
+-                                 className="jsx-d367ff2da8cf789f absolute top-0 left-0 text-slate-200 dark:text-slate..."
+                                >
+                                  <span
++                                   className="material-icons text-9xl"
+-                                   className="jsx-d367ff2da8cf789f material-icons text-9xl"
+                                  >
++                                   auto_fix_high
+                                <h2
++                                 className="text-6xl font-playful font-bold text-center mb-20 relative z-10"
+-                                 className="jsx-d367ff2da8cf789f text-6xl font-playful font-bold text-center mb-20 re..."
+                                >
+                                  <span
++                                   className="inline-block transform -rotate-2 bg-slate-900 text-white px-4 py-1 skew..."
+-                                   className="jsx-d367ff2da8cf789f inline-block transform -rotate-2 bg-slate-900 text..."
+                                  >
++                                   Tech
+                                  ...
+                                <div
++                                 className="flex flex-wrap justify-center gap-10"
+-                                 className="jsx-d367ff2da8cf789f flex flex-wrap justify-center gap-10"
+                                >
+                                  <div
++                                   className="relative group rotate-2 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-2 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-mint border-2 border-slate-900 shadow-[6px_..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-mint border-2 border-s..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       Languages
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Python
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Java
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         C
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Flutter
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         PHP
+                                  <div
++                                   className="relative group -rotate-1 hover:z-20 hover:scale-105 transition-all dura..."
+-                                   className="jsx-d367ff2da8cf789f relative group -rotate-1 hover:z-20 hover:scale-10..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-pink border-2 border-slate-900 shadow-[6px_..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-pink border-2 border-s..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Frameworks & Libs"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Django
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Flask
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         React
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Node.js
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         NumPy
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Pandas
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Scikit-learn
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         TensorFlow
+                                  <div
++                                   className="relative group rotate-3 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-3 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-yellow border-2 border-slate-900 shadow-[6p..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-yellow border-2 border..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Data & Analytics"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Power BI
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Tableau
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Excel
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Matplotlib
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Seaborn
+                                  <div
++                                   className="relative group -rotate-2 hover:z-20 hover:scale-105 transition-all dura..."
+-                                   className="jsx-d367ff2da8cf789f relative group -rotate-2 hover:z-20 hover:scale-10..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-accent-lavender border-2 border-slate-900 shadow-[..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-accent-lavender border-2 bord..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       {"Tools & Platforms"}
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Git
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         VS Code
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Jupyter
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         Anaconda
+                                  <div
++                                   className="relative group rotate-1 hover:z-20 hover:scale-105 transition-all durat..."
+-                                   className="jsx-d367ff2da8cf789f relative group rotate-1 hover:z-20 hover:scale-105..."
+                                  >
+                                    <div
++                                     className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdr..."
+-                                     className="jsx-d367ff2da8cf789f absolute -top-3 left-1/2 -translate-x-1/2 w-32 h..."
+                                    >
+                                    <div
++                                     className="p-6 rounded-2xl bg-primary/30 border-2 border-slate-900 shadow-[6px_6..."
+-                                     className="jsx-d367ff2da8cf789f p-6 rounded-2xl bg-primary/30 border-2 border-sl..."
+                                    >
+                                      <h3
++                                       className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 bor..."
+-                                       className="jsx-d367ff2da8cf789f text-3xl font-handwriting font-bold mb-6 text-..."
+                                      >
++                                       Databases
+                                      <div
++                                       className="flex flex-wrap gap-2 justify-center"
+-                                       className="jsx-d367ff2da8cf789f flex flex-wrap gap-2 justify-center"
+                                      >
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         SQL
+                                        <span
++                                         className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full ..."
+-                                         className="jsx-d367ff2da8cf789f inline-block bg-white dark:bg-slate-800 px-3..."
+                                        >
++                                         MongoDB
+                                ...
+                              ...
+                          ...
+                    ...
+                  ...
+      ...
+
