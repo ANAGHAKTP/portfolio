@@ -1,6 +1,7 @@
 import { Caveat, Gaegu, Quicksand } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
+import { Analytics } from "@vercel/analytics/next";
 
 const caveat = Caveat({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
         className={`${caveat.variable} ${gaegu.variable} ${quicksand.variable} antialiased bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 font-display`}
       >
         <Providers>{children}</Providers>
+        <Analytics />
       </body>
     </html>
   );
