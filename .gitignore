@@ -39,3 +39,19 @@ next-env.d.ts
 # project specific junk
 code.html
 screen.png
+
+# OS System Files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor Directories
+.vscode/
+.idea/
+
+# Logs and Temp Files
+*.log
+*.bak
+*.tmp
+*.swp
+

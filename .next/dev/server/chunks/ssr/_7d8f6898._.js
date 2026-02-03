@@ -243,7 +243,20 @@ const contactData = {
             url: "https://www.linkedin.com/in/anaghaktp/",
             icon: "linkedin"
         }
-    ]
+    ],
+    contactForm: {
+        action: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSe6Dmwliivy3_aCsUyd1y-wgYwoP9E5Pyyyl3PuP8ATGfSoQw/formResponse",
+        fieldIds: {
+            name: "entry.2005620554",
+            email: "entry.1045781291",
+            message: "entry.839337160"
+        },
+        hiddenFields: {
+            "fvv": "1",
+            "fbzx": "-5425246657841117183",
+            "pageHistory": "0"
+        }
+    }
 };
 }),
 "[project]/src/components/Skills.jsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {
@@ -264,15 +277,15 @@ function Skills() {
     const skillCategories = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["skillsData"];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         id: "skills",
-        className: "jsx-d367ff2da8cf789f" + " " + "py-32 px-4 bg-slate-50 dark:bg-slate-900/20 overflow-hidden",
+        className: "jsx-4e31faa19b41b75f" + " " + "py-32 px-4 bg-slate-50 dark:bg-slate-900/20 overflow-hidden",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "jsx-d367ff2da8cf789f" + " " + "max-w-6xl mx-auto relative",
+                className: "jsx-4e31faa19b41b75f" + " " + "max-w-6xl mx-auto relative",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "jsx-d367ff2da8cf789f" + " " + "absolute top-0 left-0 text-slate-200 dark:text-slate-800 transform -rotate-12 select-none pointer-events-none",
+                        className: "jsx-4e31faa19b41b75f" + " " + "absolute top-0 left-0 text-slate-200 dark:text-slate-800 transform -rotate-12 select-none pointer-events-none",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            className: "jsx-d367ff2da8cf789f" + " " + "material-icons text-9xl",
+                            className: "jsx-4e31faa19b41b75f" + " " + "material-icons text-9xl",
                             children: "auto_fix_high"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Skills.jsx",
@@ -285,11 +298,11 @@ function Skills() {
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "jsx-d367ff2da8cf789f" + " " + "text-6xl font-playful font-bold text-center mb-20 relative z-10",
+                        className: "jsx-4e31faa19b41b75f" + " " + "text-6xl font-playful font-bold text-center mb-20 relative z-10",
                         children: [
                             "My ",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "jsx-d367ff2da8cf789f" + " " + "inline-block transform -rotate-2 bg-slate-900 text-white px-4 py-1 skew-x-[-10deg]",
+                                className: "jsx-4e31faa19b41b75f" + " " + "inline-block transform -rotate-2 bg-slate-900 text-white px-4 py-1 skew-x-[-10deg]",
                                 children: "Tech"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Skills.jsx",
@@ -304,22 +317,22 @@ function Skills() {
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "jsx-d367ff2da8cf789f" + " " + "flex flex-wrap justify-center gap-10",
+                        className: "jsx-4e31faa19b41b75f" + " " + "flex flex-wrap justify-center gap-10",
                         children: skillCategories.map((category, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "jsx-d367ff2da8cf789f" + " " + `relative group ${category.rotate} hover:z-20 hover:scale-105 transition-all duration-300 ease-spring`,
+                                className: "jsx-4e31faa19b41b75f" + " " + `relative group ${category.rotate} hover:z-20 hover:scale-105 transition-all duration-300 ease-spring`,
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "jsx-d367ff2da8cf789f" + " " + "absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdrop-blur-sm transform rotate-1 shadow-sm z-10"
+                                        className: "jsx-4e31faa19b41b75f" + " " + "absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdrop-blur-sm transform rotate-1 shadow-sm z-10"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/Skills.jsx",
                                         lineNumber: 27,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "jsx-d367ff2da8cf789f" + " " + `p-6 rounded-2xl ${category.color} border-2 border-slate-900 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] min-w-[280px] max-w-xs`,
+                                        className: "jsx-4e31faa19b41b75f" + " " + `p-6 rounded-2xl ${category.color} border-2 border-slate-900 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] min-w-[280px] max-w-xs`,
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                className: "jsx-d367ff2da8cf789f" + " " + "text-3xl font-handwriting font-bold mb-6 text-center border-b-2 border-slate-900/20 pb-2",
+                                                className: "jsx-4e31faa19b41b75f" + " " + "text-3xl font-handwriting font-bold mb-6 text-center border-b-2 border-slate-900/20 pb-2",
                                                 children: category.title
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/Skills.jsx",
@@ -327,9 +340,9 @@ function Skills() {
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "jsx-d367ff2da8cf789f" + " " + "flex flex-wrap gap-2 justify-center",
+                                                className: "jsx-4e31faa19b41b75f" + " " + "flex flex-wrap gap-2 justify-center",
                                                 children: category.skills.map((skill, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "jsx-d367ff2da8cf789f" + " " + "inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full text-base font-playful font-bold border-2 border-slate-900 shadow-sm transform hover:-translate-y-1 transition-transform cursor-default",
+                                                        className: "jsx-4e31faa19b41b75f" + " " + "inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full text-base font-playful font-bold border-2 border-slate-900 shadow-sm transform hover:-translate-y-1 transition-transform cursor-default",
                                                         children: skill
                                                     }, idx, false, {
                                                         fileName: "[project]/src/components/Skills.jsx",
@@ -359,13 +372,13 @@ function Skills() {
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "jsx-d367ff2da8cf789f" + " " + "mt-24 text-center",
+                        className: "jsx-4e31faa19b41b75f" + " " + "mt-24 text-center",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "jsx-d367ff2da8cf789f" + " " + "font-handwriting text-3xl text-slate-500 inline-block relative",
+                            className: "jsx-4e31faa19b41b75f" + " " + "font-handwriting text-3xl text-slate-500 inline-block relative",
                             children: [
                                 "...constantly upgrading!",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "jsx-d367ff2da8cf789f" + " " + "absolute -right-8 -top-8 text-5xl animate-bounce",
+                                    className: "jsx-4e31faa19b41b75f" + " " + "absolute -right-8 -top-8 text-5xl animate-bounce",
                                     children: "🚀"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Skills.jsx",
@@ -390,8 +403,8 @@ function Skills() {
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                id: "d367ff2da8cf789f",
-                children: ".ease-spring.jsx-d367ff2da8cf789f{transition-timing-function:cubic-bezier(.34,1.56,.64,1)}"
+                id: "4e31faa19b41b75f",
+                children: ".ease-spring.jsx-4e31faa19b41b75f{transition-timing-function:cubic-bezier(.34,1.56,.64,1)}"
             }, void 0, false, void 0, this)
         ]
     }, void 0, true, {
@@ -565,111 +578,154 @@ function Contact() {
                             lineNumber: 18,
                             columnNumber: 21
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                            className: "bg-white dark:bg-slate-800 p-8 border-2 border-slate-900 rounded-3xl shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] text-left relative",
-                            onSubmit: (e)=>e.preventDefault(),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "relative",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-accent-yellow/50 backdrop-blur-sm border-2 border-slate-900 transform -rotate-1"
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
+                                    name: "hidden_iframe",
+                                    id: "hidden_iframe",
+                                    style: {
+                                        display: 'none'
+                                    },
+                                    onLoad: ()=>window.submitted && window.location.reload()
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/Contact.jsx",
                                     lineNumber: 57,
                                     columnNumber: 25
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "mb-4",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+                                    action: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["contactData"].contactForm.action,
+                                    target: "hidden_iframe",
+                                    method: "POST",
+                                    id: "mG61Hd",
+                                    onSubmit: ()=>{
+                                        window.submitted = true;
+                                        alert("Message Sent!");
+                                    },
+                                    className: "bg-white dark:bg-slate-800 p-8 border-2 border-slate-900 rounded-3xl shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] text-left relative",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            className: "block font-playful font-bold mb-1 text-lg",
-                                            children: "Name"
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-accent-yellow/50 backdrop-blur-sm border-2 border-slate-900 transform -rotate-1"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/Contact.jsx",
-                                            lineNumber: 60,
+                                            lineNumber: 66,
                                             columnNumber: 29
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                            type: "text",
-                                            className: "w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 focus:outline-none focus:border-primary transition-colors font-handwriting text-xl",
-                                            placeholder: "Your Name"
-                                        }, void 0, false, {
+                                        __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["contactData"].contactForm.hiddenFields && Object.entries(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["contactData"].contactForm.hiddenFields).map(([name, value])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                type: "hidden",
+                                                name: name,
+                                                value: value
+                                            }, name, false, {
+                                                fileName: "[project]/src/components/Contact.jsx",
+                                                lineNumber: 70,
+                                                columnNumber: 33
+                                            }, this)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "mb-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                    className: "block font-playful font-bold mb-1 text-lg",
+                                                    children: "Name"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/Contact.jsx",
+                                                    lineNumber: 74,
+                                                    columnNumber: 33
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                    name: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["contactData"].contactForm.fieldIds.name,
+                                                    type: "text",
+                                                    required: true,
+                                                    className: "w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 focus:outline-none focus:border-primary transition-colors font-handwriting text-xl",
+                                                    placeholder: "Your Name"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/Contact.jsx",
+                                                    lineNumber: 75,
+                                                    columnNumber: 33
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/src/components/Contact.jsx",
-                                            lineNumber: 61,
-                                            columnNumber: 29
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/Contact.jsx",
-                                    lineNumber: 59,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "mb-4",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            className: "block font-playful font-bold mb-1 text-lg",
-                                            children: "Email"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Contact.jsx",
-                                            lineNumber: 64,
-                                            columnNumber: 29
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                                            type: "email",
-                                            className: "w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 focus:outline-none focus:border-primary transition-colors font-handwriting text-xl",
-                                            placeholder: "your@email.com"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Contact.jsx",
-                                            lineNumber: 65,
-                                            columnNumber: 29
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/Contact.jsx",
-                                    lineNumber: 63,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "mb-6",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            className: "block font-playful font-bold mb-1 text-lg",
-                                            children: "Message"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Contact.jsx",
-                                            lineNumber: 68,
+                                            lineNumber: 73,
                                             columnNumber: 29
                                         }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                                            rows: "4",
-                                            className: "w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 focus:outline-none focus:border-primary transition-colors font-handwriting text-xl",
-                                            placeholder: "Write something nice..."
-                                        }, void 0, false, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "mb-4",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                    className: "block font-playful font-bold mb-1 text-lg",
+                                                    children: "Email"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/Contact.jsx",
+                                                    lineNumber: 84,
+                                                    columnNumber: 33
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                                    name: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["contactData"].contactForm.fieldIds.email,
+                                                    type: "email",
+                                                    required: true,
+                                                    className: "w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 focus:outline-none focus:border-primary transition-colors font-handwriting text-xl",
+                                                    placeholder: "your@email.com"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/Contact.jsx",
+                                                    lineNumber: 85,
+                                                    columnNumber: 33
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/src/components/Contact.jsx",
-                                            lineNumber: 69,
+                                            lineNumber: 83,
+                                            columnNumber: 29
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "mb-6",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                                    className: "block font-playful font-bold mb-1 text-lg",
+                                                    children: "Message"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/Contact.jsx",
+                                                    lineNumber: 94,
+                                                    columnNumber: 33
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                                                    name: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["contactData"].contactForm.fieldIds.message,
+                                                    rows: "4",
+                                                    required: true,
+                                                    className: "w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 focus:outline-none focus:border-primary transition-colors font-handwriting text-xl",
+                                                    placeholder: "Write something nice..."
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/Contact.jsx",
+                                                    lineNumber: 95,
+                                                    columnNumber: 33
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/Contact.jsx",
+                                            lineNumber: 93,
+                                            columnNumber: 29
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                            className: "w-full bg-primary text-white font-bold font-playful text-xl py-3 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-2",
+                                            children: [
+                                                "Send Message ",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "material-icons text-sm",
+                                                    children: "send"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/components/Contact.jsx",
+                                                    lineNumber: 104,
+                                                    columnNumber: 46
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/components/Contact.jsx",
+                                            lineNumber: 103,
                                             columnNumber: 29
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/Contact.jsx",
-                                    lineNumber: 67,
-                                    columnNumber: 25
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                    className: "w-full bg-primary text-white font-bold font-playful text-xl py-3 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-2",
-                                    children: [
-                                        "Send Message ",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "material-icons text-sm",
-                                            children: "send"
-                                        }, void 0, false, {
-                                            fileName: "[project]/src/components/Contact.jsx",
-                                            lineNumber: 72,
-                                            columnNumber: 42
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/src/components/Contact.jsx",
-                                    lineNumber: 71,
+                                    lineNumber: 58,
                                     columnNumber: 25
                                 }, this)
                             ]
@@ -692,20 +748,20 @@ function Contact() {
                             children: "Thanks for visiting!"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Contact.jsx",
-                            lineNumber: 78,
+                            lineNumber: 111,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "absolute -bottom-2 left-0 w-full h-1 bg-accent-pink rounded-full"
                         }, void 0, false, {
                             fileName: "[project]/src/components/Contact.jsx",
-                            lineNumber: 81,
+                            lineNumber: 114,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/Contact.jsx",
-                    lineNumber: 77,
+                    lineNumber: 110,
                     columnNumber: 17
                 }, this)
             ]

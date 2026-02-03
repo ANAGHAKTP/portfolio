@@ -10,7 +10,7 @@ export const heroData = {
 };
 
 export const aboutData = {
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBoyajx4hfeInTTyc5zhb8SeXlg7JZdkK4yQ8Y9iTEzuyGYGw7EUDNFTHrVFHC__yO7XASrCUHZOLBKzlqaN4VOnm4NwLYQzABrJk4c-Ioiq4bSgApP034wFh1zvmhpA1BA-rHLQANCdpu6lZ_h50Qgb1GDt3ARLIR5a-YiXwjj_w8ijTay3vvevQpr9R-lOf71CXnG3cOwJVDLvx9d9qFvdXUBCTYBYsJmo7D_f4WwGdaTVAhBOLydAu3b8T-fbH7_9jjnccV3zXWZ",
+    image: "https://lh3googleusercontent.com/aida-public/AB6AXuBoyajx4hfeInTTyc5zhb8SeXlg7JZdkK4yQ8Y9iTEzuyGYGw7EUDNFTHrVFHC__yO7XASrCUHZOLBKzlqaN4VOnm4NwLYQzABrJk4c-Ioiq4bSgApP034wFh1zvmhpA1BA-rHLQANCdpu6lZ_h50Qgb1GDt3ARLIR5a-YiXwjj_w8ijTay3vvevQpr9R-lOf71CXnG3cOwJVDLvx9d9qFvdXUBCTYBYsJmo7D_f4WwGdaTVAhBOLydAu3b8T-fbH7_9jjnccV3zXWZ",
     description: "AI & ML engineering student with hands-on experience in machine learning, data analysis, and full-stack development. Skilled in Python, MERN stack, data visualization, and model development. Active contributor to open-source communities (GSSoC, Hacktoberfest). Experienced in applying AI to real-world use cases including healthcare, cybersecurity, and telecom analytics.",
     location: "Payyanur, Kerala, India",
     interest: "AI, ML & Data Science",

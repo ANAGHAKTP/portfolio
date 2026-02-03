@@ -243,7 +243,20 @@ const contactData = {
             url: "https://www.linkedin.com/in/anaghaktp/",
             icon: "linkedin"
         }
-    ]
+    ],
+    contactForm: {
+        action: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSe6Dmwliivy3_aCsUyd1y-wgYwoP9E5Pyyyl3PuP8ATGfSoQw/formResponse",
+        fieldIds: {
+            name: "entry.2005620554",
+            email: "entry.1045781291",
+            message: "entry.839337160"
+        },
+        hiddenFields: {
+            "fvv": "1",
+            "fbzx": "-5425246657841117183",
+            "pageHistory": "0"
+        }
+    }
 };
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
@@ -267,11 +280,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$
 ;
 function Skills() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(5);
-    if ($[0] !== "d3e2d019e482086e133e745c5a09122e84c50552620a951e2efea94b2cd98e80") {
+    if ($[0] !== "acc0d5b4c4344474596f11b975596097c59bd3c5989b64016dd73a409af9b807") {
         for(let $i = 0; $i < 5; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "d3e2d019e482086e133e745c5a09122e84c50552620a951e2efea94b2cd98e80";
+        $[0] = "acc0d5b4c4344474596f11b975596097c59bd3c5989b64016dd73a409af9b807";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -467,12 +480,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$
 ;
 ;
 function Contact() {
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(12);
-    if ($[0] !== "cc37fd65efaacc05653be573b9ad37a423b047010ffaca806ae59c012e139fa8") {
-        for(let $i = 0; $i < 12; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(14);
+    if ($[0] !== "df159574eea1015725840767d7f224aefa46870c2e3d3ef2aaf6c02d85e05ee8") {
+        for(let $i = 0; $i < 14; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "cc37fd65efaacc05653be573b9ad37a423b047010ffaca806ae59c012e139fa8";
+        $[0] = "df159574eea1015725840767d7f224aefa46870c2e3d3ef2aaf6c02d85e05ee8";
     }
     let t0;
     let t1;
@@ -599,8 +612,13 @@ function Contact() {
     }
     let t5;
     if ($[6] === Symbol.for("react.memo_cache_sentinel")) {
-        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-accent-yellow/50 backdrop-blur-sm border-2 border-slate-900 transform -rotate-1"
+        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
+            name: "hidden_iframe",
+            id: "hidden_iframe",
+            style: {
+                display: "none"
+            },
+            onLoad: _ContactIframeOnLoad
         }, void 0, false, {
             fileName: "[project]/src/components/Contact.jsx",
             lineNumber: 47,
@@ -611,8 +629,25 @@ function Contact() {
         t5 = $[6];
     }
     let t6;
+    let t7;
     if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
         t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-accent-yellow/50 backdrop-blur-sm border-2 border-slate-900 transform -rotate-1"
+        }, void 0, false, {
+            fileName: "[project]/src/components/Contact.jsx",
+            lineNumber: 57,
+            columnNumber: 10
+        }, this);
+        t7 = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["contactData"].contactForm.hiddenFields && Object.entries(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["contactData"].contactForm.hiddenFields).map(_ContactAnonymous);
+        $[7] = t6;
+        $[8] = t7;
+    } else {
+        t6 = $[7];
+        t7 = $[8];
+    }
+    let t8;
+    if ($[9] === Symbol.for("react.memo_cache_sentinel")) {
+        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "mb-4",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -620,86 +655,24 @@ function Contact() {
                     children: "Name"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Contact.jsx",
-                    lineNumber: 54,
+                    lineNumber: 67,
                     columnNumber: 32
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                    name: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["contactData"].contactForm.fieldIds.name,
                     type: "text",
+                    required: true,
                     className: "w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 focus:outline-none focus:border-primary transition-colors font-handwriting text-xl",
                     placeholder: "Your Name"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Contact.jsx",
-                    lineNumber: 54,
+                    lineNumber: 67,
                     columnNumber: 105
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Contact.jsx",
-            lineNumber: 54,
-            columnNumber: 10
-        }, this);
-        $[7] = t6;
-    } else {
-        t6 = $[7];
-    }
-    let t7;
-    if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
-        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "mb-4",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                    className: "block font-playful font-bold mb-1 text-lg",
-                    children: "Email"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/Contact.jsx",
-                    lineNumber: 61,
-                    columnNumber: 32
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
-                    type: "email",
-                    className: "w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 focus:outline-none focus:border-primary transition-colors font-handwriting text-xl",
-                    placeholder: "your@email.com"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/Contact.jsx",
-                    lineNumber: 61,
-                    columnNumber: 106
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/components/Contact.jsx",
-            lineNumber: 61,
-            columnNumber: 10
-        }, this);
-        $[8] = t7;
-    } else {
-        t7 = $[8];
-    }
-    let t8;
-    if ($[9] === Symbol.for("react.memo_cache_sentinel")) {
-        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "mb-6",
-            children: [
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                    className: "block font-playful font-bold mb-1 text-lg",
-                    children: "Message"
-                }, void 0, false, {
-                    fileName: "[project]/src/components/Contact.jsx",
-                    lineNumber: 68,
-                    columnNumber: 32
-                }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
-                    rows: "4",
-                    className: "w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 focus:outline-none focus:border-primary transition-colors font-handwriting text-xl",
-                    placeholder: "Write something nice..."
-                }, void 0, false, {
-                    fileName: "[project]/src/components/Contact.jsx",
-                    lineNumber: 68,
-                    columnNumber: 108
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "[project]/src/components/Contact.jsx",
-            lineNumber: 68,
+            lineNumber: 67,
             columnNumber: 10
         }, this);
         $[9] = t8;
@@ -709,45 +682,31 @@ function Contact() {
     let t9;
     if ($[10] === Symbol.for("react.memo_cache_sentinel")) {
         t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "grid grid-cols-1 md:grid-cols-2 gap-12 items-center",
+            className: "mb-4",
             children: [
-                t4,
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
-                    className: "bg-white dark:bg-slate-800 p-8 border-2 border-slate-900 rounded-3xl shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] text-left relative",
-                    onSubmit: _ContactFormOnSubmit,
-                    children: [
-                        t5,
-                        t6,
-                        t7,
-                        t8,
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            className: "w-full bg-primary text-white font-bold font-playful text-xl py-3 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-2",
-                            children: [
-                                "Send Message ",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: "material-icons text-sm",
-                                    children: "send"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/components/Contact.jsx",
-                                    lineNumber: 75,
-                                    columnNumber: 548
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/components/Contact.jsx",
-                            lineNumber: 75,
-                            columnNumber: 279
-                        }, this)
-                    ]
-                }, void 0, true, {
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                    className: "block font-playful font-bold mb-1 text-lg",
+                    children: "Email"
+                }, void 0, false, {
                     fileName: "[project]/src/components/Contact.jsx",
-                    lineNumber: 75,
-                    columnNumber: 83
+                    lineNumber: 74,
+                    columnNumber: 32
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                    name: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["contactData"].contactForm.fieldIds.email,
+                    type: "email",
+                    required: true,
+                    className: "w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 focus:outline-none focus:border-primary transition-colors font-handwriting text-xl",
+                    placeholder: "your@email.com"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Contact.jsx",
+                    lineNumber: 74,
+                    columnNumber: 106
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/Contact.jsx",
-            lineNumber: 75,
+            lineNumber: 74,
             columnNumber: 10
         }, this);
         $[10] = t9;
@@ -756,7 +715,104 @@ function Contact() {
     }
     let t10;
     if ($[11] === Symbol.for("react.memo_cache_sentinel")) {
-        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "mb-6",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                    className: "block font-playful font-bold mb-1 text-lg",
+                    children: "Message"
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Contact.jsx",
+                    lineNumber: 81,
+                    columnNumber: 33
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
+                    name: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["contactData"].contactForm.fieldIds.message,
+                    rows: "4",
+                    required: true,
+                    className: "w-full bg-slate-50 dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-700 rounded-xl px-4 py-2 focus:outline-none focus:border-primary transition-colors font-handwriting text-xl",
+                    placeholder: "Write something nice..."
+                }, void 0, false, {
+                    fileName: "[project]/src/components/Contact.jsx",
+                    lineNumber: 81,
+                    columnNumber: 109
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/Contact.jsx",
+            lineNumber: 81,
+            columnNumber: 11
+        }, this);
+        $[11] = t10;
+    } else {
+        t10 = $[11];
+    }
+    let t11;
+    if ($[12] === Symbol.for("react.memo_cache_sentinel")) {
+        t11 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "grid grid-cols-1 md:grid-cols-2 gap-12 items-center",
+            children: [
+                t4,
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "relative",
+                    children: [
+                        t5,
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
+                            action: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["contactData"].contactForm.action,
+                            target: "hidden_iframe",
+                            method: "POST",
+                            id: "mG61Hd",
+                            onSubmit: _ContactFormOnSubmit,
+                            className: "bg-white dark:bg-slate-800 p-8 border-2 border-slate-900 rounded-3xl shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] text-left relative",
+                            children: [
+                                t6,
+                                t7,
+                                t8,
+                                t9,
+                                t10,
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                    className: "w-full bg-primary text-white font-bold font-playful text-xl py-3 rounded-xl border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-y-1 hover:shadow-none transition-all flex items-center justify-center gap-2",
+                                    children: [
+                                        "Send Message ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: "material-icons text-sm",
+                                            children: "send"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/components/Contact.jsx",
+                                            lineNumber: 88,
+                                            columnNumber: 673
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/components/Contact.jsx",
+                                    lineNumber: 88,
+                                    columnNumber: 404
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/src/components/Contact.jsx",
+                            lineNumber: 88,
+                            columnNumber: 114
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/Contact.jsx",
+                    lineNumber: 88,
+                    columnNumber: 84
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/Contact.jsx",
+            lineNumber: 88,
+            columnNumber: 11
+        }, this);
+        $[12] = t11;
+    } else {
+        t11 = $[12];
+    }
+    let t12;
+    if ($[13] === Symbol.for("react.memo_cache_sentinel")) {
+        t12 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
             className: "py-24 px-4 text-center",
             id: "contact",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -764,7 +820,7 @@ function Contact() {
                 children: [
                     t0,
                     t1,
-                    t9,
+                    t11,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "relative inline-block mt-16",
                         children: [
@@ -773,42 +829,58 @@ function Contact() {
                                 children: "Thanks for visiting!"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Contact.jsx",
-                                lineNumber: 82,
-                                columnNumber: 169
+                                lineNumber: 95,
+                                columnNumber: 170
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute -bottom-2 left-0 w-full h-1 bg-accent-pink rounded-full"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Contact.jsx",
-                                lineNumber: 82,
-                                columnNumber: 256
+                                lineNumber: 95,
+                                columnNumber: 257
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/Contact.jsx",
-                        lineNumber: 82,
-                        columnNumber: 124
+                        lineNumber: 95,
+                        columnNumber: 125
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/Contact.jsx",
-                lineNumber: 82,
+                lineNumber: 95,
                 columnNumber: 68
             }, this)
         }, void 0, false, {
             fileName: "[project]/src/components/Contact.jsx",
-            lineNumber: 82,
+            lineNumber: 95,
             columnNumber: 11
         }, this);
-        $[11] = t10;
+        $[13] = t12;
     } else {
-        t10 = $[11];
+        t12 = $[13];
     }
-    return t10;
+    return t12;
 }
 _c = Contact;
-function _ContactFormOnSubmit(e) {
-    return e.preventDefault();
+function _ContactAnonymous(t0) {
+    const [name, value] = t0;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+        type: "hidden",
+        name: name,
+        value: value
+    }, name, false, {
+        fileName: "[project]/src/components/Contact.jsx",
+        lineNumber: 104,
+        columnNumber: 10
+    }, this);
+}
+function _ContactFormOnSubmit() {
+    window.submitted = true;
+    alert("Message Sent!");
+}
+function _ContactIframeOnLoad() {
+    return window.submitted && window.location.reload();
 }
 function _ContactContactDataSocialsMap(social, index) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -829,12 +901,12 @@ function _ContactContactDataSocialsMap(social, index) {
                     clipRule: "evenodd"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Contact.jsx",
-                    lineNumber: 93,
+                    lineNumber: 114,
                     columnNumber: 499
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Contact.jsx",
-                lineNumber: 93,
+                lineNumber: 114,
                 columnNumber: 368
             }, this),
             social.platform === "LinkedIn" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -846,18 +918,18 @@ function _ContactContactDataSocialsMap(social, index) {
                     d: "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
                 }, void 0, false, {
                     fileName: "[project]/src/components/Contact.jsx",
-                    lineNumber: 93,
+                    lineNumber: 114,
                     columnNumber: 1439
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/Contact.jsx",
-                lineNumber: 93,
+                lineNumber: 114,
                 columnNumber: 1312
             }, this)
         ]
     }, index, true, {
         fileName: "[project]/src/components/Contact.jsx",
-        lineNumber: 93,
+        lineNumber: 114,
         columnNumber: 10
     }, this);
 }

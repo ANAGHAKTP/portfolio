@@ -314,7 +314,20 @@ const contactData = {
             url: "https://www.linkedin.com/in/anaghaktp/",
             icon: "linkedin"
         }
-    ]
+    ],
+    contactForm: {
+        action: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSe6Dmwliivy3_aCsUyd1y-wgYwoP9E5Pyyyl3PuP8ATGfSoQw/formResponse",
+        fieldIds: {
+            name: "entry.2005620554",
+            email: "entry.1045781291",
+            message: "entry.839337160"
+        },
+        hiddenFields: {
+            "fvv": "1",
+            "fbzx": "-5425246657841117183",
+            "pageHistory": "0"
+        }
+    }
 };
 }),
 "[project]/src/components/Hero.jsx [app-rsc] (ecmascript)", ((__turbopack_context__) => {
@@ -412,7 +425,7 @@ function Hero() {
                             __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["heroData"].name.split(" ")[0],
                             " ",
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-primary underline decoration-wavy decoration-accent-yellow",
+                                className: "text-primary",
                                 children: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$data$2f$portfolio$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["heroData"].name.split(" ").slice(1).join(" ")
                             }, void 0, false, {
                                 fileName: "[project]/src/components/Hero.jsx",
@@ -517,7 +530,7 @@ function About() {
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "absolute -bottom-8 -right-4 bg-white dark:bg-slate-700 p-4 scribbled-border shadow-lg rotate-3 font-handwriting text-xl border-2 border-slate-900",
+                            className: "absolute -bottom-8 -right-4 bg-white dark:bg-slate-700 p-4 scribble-border shadow-lg rotate-3 font-handwriting text-xl border-2 border-slate-900",
                             children: "AI & ML Engineer"
                         }, void 0, false, {
                             fileName: "[project]/src/components/About.jsx",
