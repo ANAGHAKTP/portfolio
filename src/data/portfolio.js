@@ -15,8 +15,8 @@ export const aboutData = {
     description: "AI & ML engineering student with hands-on experience in machine learning, data analysis, and full-stack development. Skilled in Python, MERN stack, data visualization, and model development. Active contributor to open-source communities (GSSoC, Hacktoberfest). Experienced in applying AI to real-world use cases including healthcare, cybersecurity, and telecom analytics.",
     location: "Payyanur, Kerala, India",
     interest: "AI, ML & Data Science",
-    birthDate: "27th March 2004",
-    email: "[anaghaktp@gmail.com]",
+    birthDate: "2nd August 2003",
+    email: "anaghaktp@gmail.com",
     phone: "+91 123 456 7890"
 };
 
