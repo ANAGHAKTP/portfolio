@@ -35,7 +35,7 @@ export default function About() {
                             className="bg-black text-white px-10 py-5 rounded-badge font-bold text-sm uppercase tracking-widest flex items-center space-x-4 w-fit hover:bg-forest transition-colors"
                         >
                             <span>Contact me</span>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                 <line x1="7" y1="17" x2="17" y2="7"></line>
                                 <polyline points="7 7 17 7 17 17"></polyline>
                             </svg>

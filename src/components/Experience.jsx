@@ -1,7 +1,7 @@
 import { experienceData, educationData } from "@/data/portfolio";
 
 const StarIcon = () => (
-    <svg width="24" height="24" viewBox="0 0 100 100" className="text-mustard">
+    <svg width="24" height="24" viewBox="0 0 100 100" className="text-mustard" aria-hidden="true">
         <path d="M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z" fill="currentColor" />
     </svg>
 );
