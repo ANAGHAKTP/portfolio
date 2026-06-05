@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { experienceData, educationData } from "@/data/portfolio";
 
 const StarIcon = () => (
