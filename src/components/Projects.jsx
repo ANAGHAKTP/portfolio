@@ -19,20 +19,20 @@ export default function Projects() {
                         <div key={index} className="group relative overflow-hidden rounded-3xl aspect-[16/10] bg-forest">
                             <Image
                                 alt={project.title}
-                                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0"
+                                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 grayscale-0 lg:grayscale lg:opacity-80 lg:group-hover:opacity-100 lg:group-hover:grayscale-0"
                                 src={project.image}
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 50vw"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-12">
-                                <span className="text-mustard font-sans text-xs font-bold uppercase tracking-widest mb-4">Project {index + 1}</span>
-                                <h3 className="text-4xl lg:text-5xl font-serif font-bold text-cream tracking-tight">{project.title}</h3>
-                                <p className="text-sm text-cream/60 mt-4 font-sans leading-relaxed max-w-md line-clamp-2">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 lg:p-12">
+                                <span className="text-mustard font-sans text-xs font-bold uppercase tracking-widest mb-2 lg:mb-4">Project {index + 1}</span>
+                                <h3 className="text-2xl lg:text-5xl font-serif font-bold text-cream tracking-tight">{project.title}</h3>
+                                <p className="text-xs lg:text-sm text-cream/60 mt-2 lg:mt-4 font-sans leading-relaxed max-w-md line-clamp-2">
                                     {project.description}
                                 </p>
-                                <div className="flex flex-wrap gap-2 mt-8">
+                                <div className="flex flex-wrap gap-2 mt-4 lg:mt-8">
                                     {project.tags.map((tag) => (
-                                        <span key={tag} className="text-[10px] font-bold bg-white text-black px-4 py-1.5 rounded-full uppercase tracking-widest">
+                                        <span key={tag} className="text-[9px] lg:text-[10px] font-bold bg-white text-black px-3 py-1 lg:px-4 lg:py-1.5 rounded-full uppercase tracking-widest">
                                             {tag}
                                         </span>
                                     ))}

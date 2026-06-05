@@ -1,8 +1,10 @@
+import { heroData } from "@/data/portfolio";
+
 export default function Navbar() {
     return (
         <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center py-8 px-8 lg:px-20 text-cream mix-blend-difference">
             <div className="text-2xl font-serif font-bold tracking-tight">
-                Anagha K T P
+                {heroData.name}
             </div>
 
             <div className="hidden md:flex items-center space-x-12 font-sans text-xs font-bold uppercase tracking-widest">

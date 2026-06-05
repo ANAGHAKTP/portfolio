@@ -16,10 +16,10 @@ export default function About() {
 
                     <div className="flex flex-wrap gap-3">
                         <span className="bg-mustard text-black px-8 py-2.5 rounded-badge font-bold text-xs uppercase tracking-widest">
-                            AI & ML Student
+                            {aboutData.interest}
                         </span>
                         <span className="border border-black/10 text-black px-8 py-2.5 rounded-badge font-bold text-xs uppercase tracking-widest">
-                            India
+                            {aboutData.location.split(", ").pop()}
                         </span>
                     </div>
 
@@ -43,42 +43,45 @@ export default function About() {
                     </div>
                 </div>
 
-                {/* Right side: Profile Photo in Frame */}
-                <div className="relative flex justify-center lg:justify-end lg:pr-20">
-                    <div className="relative w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
-                        <Image
-                            alt="Anagha Profile"
-                            className="w-full h-full object-cover"
-                            src={aboutData.image}
-                            fill
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                        {/* Circle overlay as seen in mockup */}
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 border-[25px] border-cream/10 rounded-full"></div>
+                {/* Right side: Profile Photo & Contact Stack */}
+                <div className="flex flex-col items-center lg:items-end gap-8 w-full max-w-sm mx-auto lg:mr-0">
+                    {/* Profile Photo in Frame */}
+                    <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-forest p-3 border-4 border-forest">
+                        <div className="relative w-full h-full rounded-xl overflow-hidden">
+                            <Image
+                                alt="Anagha Profile"
+                                className="w-full h-full object-cover"
+                                src={aboutData.image}
+                                fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                            />
+                            {/* Circle overlay as seen in mockup */}
+                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 border-[25px] border-cream/10 rounded-full"></div>
+                        </div>
 
-                        {/* Floating Contact Card on photo */}
-                        <div className="absolute bottom-6 right-6 left-6 bg-black text-white p-8 rounded-2xl shadow-2xl space-y-6">
-                            <h3 className="text-3xl font-serif italic border-b border-white/10 pb-4 tracking-tight">Contact</h3>
-                            <div className="space-y-4 text-xs font-bold uppercase tracking-[0.2em] opacity-80">
-                                <div className="flex items-center space-x-4">
-                                    <span className="w-2 h-2 rounded-full bg-mustard"></span>
-                                    <span>{aboutData.location}</span>
-                                </div>
-                                <div className="flex items-center space-x-4">
-                                    <span className="w-2 h-2 rounded-full bg-mustard"></span>
-                                    <span>{aboutData.email}</span>
-                                </div>
-                                <div className="flex items-center space-x-4">
-                                    <span className="w-2 h-2 rounded-full bg-mustard"></span>
-                                    <span>{aboutData.phone}</span>
-                                </div>
-                            </div>
+                        {/* Floating Date Pill on photo */}
+                        <div className="absolute top-4 right-4 bg-mustard text-black px-6 py-3 rounded-badge text-[10px] font-bold uppercase tracking-widest shadow-xl z-20">
+                            {aboutData.birthDate}
                         </div>
                     </div>
 
-                    {/* Date Pill */}
-                    <div className="absolute -top-6 -right-6 lg:right-10 bg-mustard text-black px-6 py-3 rounded-badge text-[10px] font-bold uppercase tracking-widest shadow-xl">
-                        {aboutData.birthDate}
+                    {/* Separate Contact Card below photo */}
+                    <div className="w-full bg-black text-white p-8 rounded-3xl shadow-2xl space-y-6">
+                        <h3 className="text-3xl font-serif italic border-b border-white/10 pb-4 tracking-tight">Contact</h3>
+                        <div className="space-y-4 text-xs font-bold uppercase tracking-[0.2em] opacity-80">
+                            <div className="flex items-center space-x-4">
+                                <span className="w-2 h-2 rounded-full bg-mustard"></span>
+                                <span>{aboutData.location}</span>
+                            </div>
+                            <div className="flex items-center space-x-4">
+                                <span className="w-2 h-2 rounded-full bg-mustard"></span>
+                                <span className="break-all">{aboutData.email}</span>
+                            </div>
+                            <div className="flex items-center space-x-4">
+                                <span className="w-2 h-2 rounded-full bg-mustard"></span>
+                                <span>{aboutData.phone}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -27,16 +27,45 @@
   }
 
   .animate-spin-slow {
-    animation: spin 12s linear infinite;
+    animation: spin 16s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-reverse-spin-slow {
+    animation: reverse-spin 20s linear infinite;
   }
 
   @keyframes spin {
     from {
       transform: rotate(0deg);
     }
-
     to {
       transform: rotate(360deg);
+    }
+  }
+
+  @keyframes reverse-spin {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) scale(1);
+    }
+    50% {
+      transform: translateY(-12px) scale(1.02);
     }
   }
 }
