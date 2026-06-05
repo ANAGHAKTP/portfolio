@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { aboutData, heroData } from "@/data/portfolio";
 
 export default function About() {
@@ -9,7 +10,7 @@ export default function About() {
                     <div className="space-y-4">
                         <p className="font-sans text-xs font-bold uppercase tracking-[0.4em] opacity-40">Get to know me</p>
                         <h2 className="text-7xl lg:text-[7rem] font-serif font-medium leading-[0.9] tracking-tighter">
-                            Hello, <br /> I'm {heroData.name.split(" ")[0]} !
+                            Hello, <br /> I&apos;m {heroData.name.split(" ")[0]} !
                         </h2>
                     </div>
 
@@ -45,10 +46,12 @@ export default function About() {
                 {/* Right side: Profile Photo in Frame */}
                 <div className="relative flex justify-center lg:justify-end lg:pr-20">
                     <div className="relative w-full max-w-sm aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl">
-                        <img
+                        <Image
                             alt="Anagha Profile"
                             className="w-full h-full object-cover"
                             src={aboutData.image}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         {/* Circle overlay as seen in mockup */}
                         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 border-[25px] border-cream/10 rounded-full"></div>

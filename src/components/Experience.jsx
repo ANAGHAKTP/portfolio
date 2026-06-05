@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { experienceData, educationData } from "@/data/portfolio";
 
 const StarIcon = () => (
@@ -83,10 +84,12 @@ export default function Experience() {
                         </div>
 
                         <div className="h-40 relative overflow-hidden rounded-2xl">
-                            <img
+                            <Image
                                 src="/projects/vision.png"
                                 className="w-full h-full object-cover grayscale opacity-20 group-hover:scale-110 transition-transform duration-1000"
                                 alt="Decorative"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 40vw"
                             />
                             <div className="absolute inset-0 border-[2px] border-black/5 rounded-2xl"></div>
                         </div>

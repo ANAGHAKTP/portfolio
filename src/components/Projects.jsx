@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { projectsData } from "@/data/portfolio";
 
 export default function Projects() {
@@ -16,10 +17,12 @@ export default function Projects() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     {projectsData.map((project, index) => (
                         <div key={index} className="group relative overflow-hidden rounded-3xl aspect-[16/10] bg-forest">
-                            <img
+                            <Image
                                 alt={project.title}
                                 className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0"
                                 src={project.image}
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-12">
                                 <span className="text-mustard font-sans text-xs font-bold uppercase tracking-widest mb-4">Project {index + 1}</span>

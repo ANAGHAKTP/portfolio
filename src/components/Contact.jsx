@@ -11,7 +11,7 @@ export default function Contact() {
                 </h2>
 
                 <p className="text-xl lg:text-2xl font-sans opacity-60 max-w-2xl mb-16 leading-relaxed">
-                    Let's build something beautiful together. Reach out for collabs or just a chat!
+                    Let&apos;s build something beautiful together. Reach out for collabs or just a chat!
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full items-start">

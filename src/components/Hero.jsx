@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { heroData } from "@/data/portfolio";
 
 export default function Hero() {
@@ -14,10 +15,13 @@ export default function Hero() {
                     </div>
 
                     <div className="w-full h-full rounded-2xl overflow-hidden relative group">
-                        <img
+                        <Image
                             alt="Anagha K T P"
                             className="w-full h-full object-cover transition-all duration-700"
                             src={heroData.avatar}
+                            fill
+                            priority
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         <div className="absolute inset-0 bg-orange-500/30 mix-blend-overlay"></div>
                     </div>
