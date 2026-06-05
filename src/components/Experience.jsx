@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { experienceData, educationData } from "@/data/portfolio";
 
 const StarIcon = () => (
@@ -18,81 +17,75 @@ export default function Experience() {
             </div>
 
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-20 relative z-10">
-                {/* Left Side: Timeline (Education & Experience) */}
-                <div className="lg:col-span-7 space-y-24">
-                    {/* Education */}
-                    <div className="space-y-16">
-                        <div className="flex items-center space-x-6">
-                            <span className="w-12 h-[1px] bg-mustard"></span>
-                            <h2 className="text-6xl font-serif font-medium uppercase tracking-tight">Education</h2>
-                        </div>
-                        <div className="border-l border-cream/10 ml-3 space-y-16">
-                            {educationData.map((edu, index) => (
-                                <div key={index} className="relative pl-12 group">
-                                    <div className="absolute -left-[12px] top-1 transition-transform group-hover:scale-125">
-                                        <StarIcon />
-                                    </div>
-                                    <div>
-                                        <span className="text-2xl font-serif font-bold italic text-mustard">{edu.year}</span>
-                                        <h3 className="text-3xl font-serif font-medium mt-2">{edu.institution}</h3>
-                                        <p className="text-sm font-sans font-bold uppercase tracking-widest opacity-40 mt-1">{edu.title}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                {/* Left Side: Timeline (Education) */}
+                <div className="lg:col-span-7 space-y-16">
+                    {/* Education Header */}
+                    <div className="flex items-center space-x-6">
+                        <span className="w-12 h-[1px] bg-mustard"></span>
+                        <h2 className="text-6xl font-serif font-medium uppercase tracking-tight animate-fade-in">Education</h2>
                     </div>
-
-                    {/* Experience */}
-                    <div className="space-y-16">
-                        <div className="flex items-center space-x-6">
-                            <span className="w-12 h-[1px] bg-mustard"></span>
-                            <h2 className="text-6xl font-serif font-medium uppercase tracking-tight">Experience</h2>
-                        </div>
-                        <div className="border-l border-cream/10 ml-3 space-y-16">
-                            {experienceData.map((exp, index) => (
-                                <div key={index} className="relative pl-12 group">
-                                    <div className="absolute -left-[12px] top-1 transition-transform group-hover:scale-125">
-                                        <StarIcon />
-                                    </div>
-                                    <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-                                        <div>
-                                            <span className="text-2xl font-serif font-bold italic text-mustard">{exp.period.split(" – ")[0]}</span>
-                                            <h3 className="text-3xl font-serif font-medium mt-2">{exp.title}</h3>
-                                            <p className="text-base font-sans font-bold uppercase tracking-widest opacity-40 mt-1">{exp.company}</p>
-                                        </div>
-                                    </div>
+                    {/* Education Timeline */}
+                    <div className="border-l border-cream/10 ml-3 space-y-16">
+                        {educationData.map((edu, index) => (
+                            <div key={index} className="relative pl-12 group">
+                                <div className="absolute -left-[12px] top-1 transition-transform group-hover:scale-125">
+                                    <StarIcon />
                                 </div>
-                            ))}
-                        </div>
+                                <div>
+                                    <span className="text-2xl font-serif font-bold italic text-mustard">{edu.year}</span>
+                                    <h3 className="text-3xl font-serif font-medium mt-2 group-hover:text-mustard transition-colors duration-300">
+                                        {edu.institution}
+                                    </h3>
+                                    <p className="text-sm font-sans font-bold uppercase tracking-widest opacity-40 mt-1">
+                                        {edu.title}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
-                {/* Right Side: Extra Content (Mustard UI Elements) */}
+                {/* Right Side: Redesigned Experience Column */}
                 <div className="lg:col-span-5 space-y-12">
-                    <div className="bg-mustard p-12 rounded-3xl text-black space-y-10 group hover:-translate-y-2 transition-transform duration-500">
-                        <div className="space-y-4">
-                            <p className="font-sans text-xs font-extrabold uppercase tracking-[0.3em] opacity-40">Extra Curriculum</p>
-                            <h2 className="text-5xl font-serif font-bold uppercase tracking-tighter leading-none">Soft Skills</h2>
-                        </div>
+                    {/* Experience Header */}
+                    <div className="flex items-center space-x-6">
+                        <span className="w-12 h-[1px] bg-mustard"></span>
+                        <h2 className="text-6xl font-serif font-medium uppercase tracking-tight">Experience</h2>
+                    </div>
 
-                        <div className="flex flex-wrap gap-3">
-                            {["#Creativity", "#Communication", "#Detail-oriented", "#Adaptability"].map((tag) => (
-                                <span key={tag} className="bg-black text-white px-6 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-widest">
-                                    {tag}
-                                </span>
-                            ))}
-                        </div>
+                    {/* Experience Cards Stack */}
+                    <div className="space-y-8">
+                        {experienceData.map((exp, index) => (
+                            <div 
+                                key={index} 
+                                className={`${exp.color} p-8 lg:p-10 rounded-[2rem] text-black space-y-6 transform hover:-translate-y-2 transition-all duration-500 hover:shadow-2xl flex flex-col justify-between relative group`}
+                            >
+                                <div className="space-y-3">
+                                    {/* Period Duration */}
+                                    <div className="inline-flex px-4 py-1.5 rounded-full border border-black/10 text-xs font-sans font-bold uppercase tracking-wider">
+                                        {exp.period}
+                                    </div>
+                                    
+                                    {/* Title & Company */}
+                                    <h3 className="text-3xl font-serif font-bold leading-tight pt-2">
+                                        {exp.title}
+                                    </h3>
+                                    <p className="text-sm font-sans font-extrabold uppercase tracking-widest opacity-60">
+                                        {exp.company}
+                                    </p>
+                                </div>
 
-                        <div className="h-40 relative overflow-hidden rounded-2xl">
-                            <Image
-                                src="/projects/vision.png"
-                                className="w-full h-full object-cover grayscale opacity-20 group-hover:scale-110 transition-transform duration-1000"
-                                alt="Decorative"
-                                fill
-                                sizes="(max-width: 1024px) 100vw, 40vw"
-                            />
-                            <div className="absolute inset-0 border-[2px] border-black/5 rounded-2xl"></div>
-                        </div>
+                                {/* Experience Bullet Points */}
+                                <ul className="space-y-3 pt-4 border-t border-black/15">
+                                    {exp.points.map((point, pIndex) => (
+                                        <li key={pIndex} className="text-sm font-sans font-semibold leading-relaxed flex items-start space-x-3 text-black/85">
+                                            <span className="text-black/80 mt-1.5">•</span>
+                                            <span>{point}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

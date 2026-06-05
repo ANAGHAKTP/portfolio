@@ -67,19 +67,40 @@ export default function Hero() {
 
             {/* Scroll Down Indicator */}
             <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-4 lg:hidden">
-                <div className="w-20 h-20 rounded-full bg-mustard flex items-center justify-center text-black font-sans text-[10px] font-bold text-center p-2 uppercase tracking-tighter">
-                    Scroll down
-                </div>
+                <a href="#about" className="w-24 h-24 rounded-full border border-cream/20 flex items-center justify-center relative group active:border-mustard/30">
+                    <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full animate-spin-slow pointer-events-none">
+                        <path id="circlePathMobile" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
+                        <text className="text-[8px] uppercase font-sans font-bold tracking-[0.18em] fill-cream">
+                            <textPath href="#circlePathMobile" startOffset="0%">
+                                Scroll down • Scroll down • 
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div className="w-7 h-7 rounded-full bg-mustard/10 flex items-center justify-center">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-mustard">
+                            <path d="M12 5v14M19 12l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </a>
             </div>
 
             {/* Desktop Scroll Indicator */}
-            <div className="absolute bottom-10 right-20 hidden lg:block">
-                <div className="w-32 h-32 rounded-full border border-cream/20 flex items-center justify-center relative animate-spin-slow">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Scroll down • Scroll down • </span>
+            <div className="absolute bottom-10 right-20 hidden lg:block z-20">
+                <a href="#about" className="w-32 h-32 rounded-full border border-cream/10 flex items-center justify-center relative group hover:border-mustard/30 transition-all duration-300">
+                    <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full animate-spin-slow pointer-events-none">
+                        <path id="circlePath" d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="transparent" />
+                        <text className="text-[7.5px] uppercase font-sans font-bold tracking-[0.2em] fill-cream group-hover:fill-mustard transition-colors duration-300">
+                            <textPath href="#circlePath" startOffset="0%">
+                                Scroll down • Scroll down • Scroll down • 
+                            </textPath>
+                        </text>
+                    </svg>
+                    <div className="w-8 h-8 rounded-full bg-mustard/10 group-hover:bg-mustard/20 flex items-center justify-center transition-all duration-300">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-mustard group-hover:translate-y-0.5 transition-transform duration-300">
+                            <path d="M12 5v14M19 12l-7 7-7-7" />
+                        </svg>
                     </div>
-                    <div className="w-1.5 h-1.5 bg-mustard rounded-full"></div>
-                </div>
+                </a>
             </div>
         </section>
     );

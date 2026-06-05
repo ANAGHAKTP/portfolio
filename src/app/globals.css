@@ -7,6 +7,11 @@
   --color-black: #1a1a1a;
   --color-primary: var(--color-mustard);
 
+  --color-accent-pink: #e39c8e;
+  --color-accent-yellow: #e0a653;
+  --color-accent-mint: #98ab95;
+  --color-accent-lavender: #a9a2bf;
+
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
 
