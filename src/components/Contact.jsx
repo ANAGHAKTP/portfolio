@@ -57,8 +57,9 @@ export default function Contact() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div className="space-y-2 text-left">
-                                    <label className="text-sm font-bold uppercase tracking-widest opacity-60">Name</label>
+                                    <label htmlFor="name-input" className="text-sm font-bold uppercase tracking-widest opacity-60">Name</label>
                                     <input
+                                        id="name-input"
                                         name={contactData.contactForm.fieldIds.name}
                                         type="text"
                                         required
@@ -67,8 +68,9 @@ export default function Contact() {
                                     />
                                 </div>
                                 <div className="space-y-2 text-left">
-                                    <label className="text-sm font-bold uppercase tracking-widest opacity-60">Email</label>
+                                    <label htmlFor="email-input" className="text-sm font-bold uppercase tracking-widest opacity-60">Email</label>
                                     <input
+                                        id="email-input"
                                         name={contactData.contactForm.fieldIds.email}
                                         type="email"
                                         required
@@ -78,8 +80,9 @@ export default function Contact() {
                                 </div>
                             </div>
                             <div className="space-y-2 text-left">
-                                <label className="text-sm font-bold uppercase tracking-widest opacity-60">Message</label>
+                                <label htmlFor="message-input" className="text-sm font-bold uppercase tracking-widest opacity-60">Message</label>
                                 <textarea
+                                    id="message-input"
                                     name={contactData.contactForm.fieldIds.message}
                                     rows="1"
                                     required
@@ -89,7 +92,7 @@ export default function Contact() {
                                 ></textarea>
                             </div>
                             <button className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4">
-                                Send Message <span className="material-icons">east</span>
+                                Send Message <span className="material-icons" aria-hidden="true">east</span>
                             </button>
                         </form>
                     </div>
