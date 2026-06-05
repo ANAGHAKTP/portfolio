@@ -1,74 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #8D7B68;
-  --color-background-light: #FDFBF7;
-  --color-background-dark: #2C2B29;
+  --color-forest: #1b211e;
+  --color-cream: #f5f1e3;
+  --color-mustard: #e09d37;
+  --color-black: #1a1a1a;
+  --color-primary: var(--color-mustard);
 
-  --color-accent-mint: #D3E4CD;
-  --color-accent-yellow: #FFF8E1;
-  --color-accent-pink: #F8E1E1;
-  --color-accent-lavender: #EBE0E0;
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
 
-  --font-handwriting: var(--font-handwriting);
-  --font-playful: var(--font-playful);
-  --font-display: var(--font-display);
-
-  --radius-xl: 2rem;
-  --radius-blob: 30% 70% 70% 30% / 30% 30% 70% 70%;
-}
-
-@layer components {
-  .scribble-border {
-    border: 2px solid theme('colors.slate.900');
-    /* Assuming black/slate-900 */
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-  }
-
-  .organic-shape {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-
-  .polaroid {
-    @apply bg-white p-4 pb-12 shadow-lg duration-300;
-    transform: rotate(-2deg);
-  }
-
-  .tape {
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(2px);
-    width: 100px;
-    height: 30px;
-    position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%) rotate(2deg);
-  }
-
-  .star-doodle {
-    position: absolute;
-    color: #FFD700;
-    font-size: 24px;
-    pointer-events: none;
-  }
+  --radius-xl: 1.5rem;
+  --radius-badge: 9999px;
 }
 
 @layer utilities {
-  .dark .scribble-border {
-    border-color: theme('colors.slate.100');
+  .text-outline {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
   }
 
   body {
     background-image: radial-gradient(#d1d5db 0.5px, transparent 0.5px);
     background-size: 24px 24px;
-  }
-
-  .dark body {
-    background-image: radial-gradient(#374151 0.5px, transparent 0.5px);
+    background-attachment: fixed;
   }
 
   .animate-spin-slow {
-    animation: spin 10s linear infinite;
+    animation: spin 12s linear infinite;
   }
 
   @keyframes spin {

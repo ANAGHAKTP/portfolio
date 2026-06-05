@@ -39,6 +39,8 @@ next-env.d.ts
 # project specific junk
 code.html
 screen.png
+output.txt
+*.jpg
 
 # OS System Files
 Thumbs.db

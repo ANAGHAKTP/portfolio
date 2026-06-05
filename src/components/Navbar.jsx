@@ -1,20 +1,20 @@
 export default function Navbar() {
-
     return (
-        <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md px-8 py-3 rounded-full border-2 border-slate-900 dark:border-slate-100 flex gap-8 font-playful text-lg shadow-lg">
-            <a className="hover:text-primary transition-colors" href="#about">
-                About
-            </a>
-            <a className="hover:text-primary transition-colors" href="#skills">
-                Stack
-            </a>
-            <a className="hover:text-primary transition-colors" href="#projects">
-                Work
-            </a>
-            <a className="hover:text-primary transition-colors" href="#contact">
-                Hello!
-            </a>
-            {/* Theme toggle removed */}
+        <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center py-8 px-8 lg:px-20 text-cream mix-blend-difference">
+            <div className="text-2xl font-serif font-bold tracking-tight">
+                Anagha K T P
+            </div>
+
+            <div className="hidden md:flex items-center space-x-12 font-sans text-xs font-bold uppercase tracking-widest">
+                <a href="#about" className="hover:opacity-60 transition-opacity">About me</a>
+                <a href="#projects" className="hover:opacity-60 transition-opacity">Work</a>
+                <a
+                    href="#contact"
+                    className="bg-mustard text-black px-8 py-3 rounded-badge hover:bg-orange-600 transition-all font-bold"
+                >
+                    Get in touch!
+                </a>
+            </div>
         </nav>
     );
 }

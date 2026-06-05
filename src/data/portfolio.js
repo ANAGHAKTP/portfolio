@@ -1,11 +1,12 @@
 export const heroData = {
     name: "Anagha K T P",
     title: "AI & Machine Learning Engineer",
-    tagline: "Building intelligent systems with data and code. 🤖",
+    tagline: "I love design and everything related to AI. I approach problems in a rational and pragmatic way and seek the simplest and most functional solutions possible.",
     avatar: "/hero-avatar.png",
-    floatingBadges: [
-        { text: "<Hello World />", position: "-top-4 -right-8", rotate: "rotate-12", color: "text-primary" },
-        { text: "Bug Hunter!", position: "bottom-0 -left-12", rotate: "-rotate-12", color: "text-accent-pink" }
+    socials: [
+        { platform: "BE", handle: "/anaghaktp", url: "https://www.behance.net/anaghaktp" },
+        { platform: "IG", handle: "@anagha.ktp", url: "https://www.instagram.com/anagha.ktp" },
+        { platform: "LI", handle: "/anaghaktp", url: "https://www.linkedin.com/in/anaghaktp" }
     ]
 };
 
@@ -14,7 +15,9 @@ export const aboutData = {
     description: "AI & ML engineering student with hands-on experience in machine learning, data analysis, and full-stack development. Skilled in Python, MERN stack, data visualization, and model development. Active contributor to open-source communities (GSSoC, Hacktoberfest). Experienced in applying AI to real-world use cases including healthcare, cybersecurity, and telecom analytics.",
     location: "Payyanur, Kerala, India",
     interest: "AI, ML & Data Science",
-    polaroidText: "Exploring AI frontiers..."
+    birthDate: "27th March 2004",
+    email: "[anaghaktp@gmail.com]",
+    phone: "+91 123 456 7890"
 };
 
 export const experienceData = [

@@ -1,35 +1,35 @@
 import { projectsData } from "@/data/portfolio";
 
 export default function Projects() {
-    const projects = projectsData;
-
     return (
-        <section className="py-24 px-4 bg-slate-100 dark:bg-slate-900/40" id="projects">
-            <div className="max-w-6xl mx-auto">
-                <h2 className="text-5xl font-playful font-bold mb-16 text-right">
-                    Latest <span className="bg-primary px-4 py-1 -rotate-2 inline-block text-white rounded-lg">Creations</span>
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {projects.map((project, index) => (
-                        <div key={index} className="relative group">
-                            <div className="bg-white dark:bg-slate-800 p-6 border-2 border-slate-900 rounded-3xl shadow-[8px_8px_0px_0px_rgba(15,23,42,1)] hover:shadow-[12px_12px_0px_0px_rgba(15,23,42,1)] transition-all transform hover:-translate-y-1 h-full flex flex-col">
-                                <div className={`relative h-48 mb-6 rounded-2xl border-2 border-slate-900 overflow-hidden ${project.color}`}>
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                    />
-                                </div>
-                                <h3 className="text-3xl font-playful font-bold mb-3">{project.title}</h3>
-                                <p className="text-slate-600 dark:text-slate-400 mb-6 flex-grow">
+        <section className="py-24 px-8 lg:px-20 bg-cream text-black relative" id="projects">
+            <div className="max-w-7xl mx-auto space-y-20">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+                    <div className="space-y-4">
+                        <p className="font-sans text-xs font-bold uppercase tracking-[0.4em] opacity-40">Portfolio</p>
+                        <h2 className="text-7xl lg:text-[8rem] font-serif font-medium leading-none tracking-tighter">
+                            Selected <br /> Works
+                        </h2>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    {projectsData.map((project, index) => (
+                        <div key={index} className="group relative overflow-hidden rounded-3xl aspect-[16/10] bg-forest">
+                            <img
+                                alt={project.title}
+                                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0"
+                                src={project.image}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-12">
+                                <span className="text-mustard font-sans text-xs font-bold uppercase tracking-widest mb-4">Project {index + 1}</span>
+                                <h3 className="text-4xl lg:text-5xl font-serif font-bold text-cream tracking-tight">{project.title}</h3>
+                                <p className="text-sm text-cream/60 mt-4 font-sans leading-relaxed max-w-md line-clamp-2">
                                     {project.description}
                                 </p>
-                                <div className="flex flex-wrap gap-2">
-                                    {project.tags.map((tag, tagIdx) => (
-                                        <span
-                                            key={tagIdx}
-                                            className={`px-3 py-1 rounded-full text-sm border border-slate-900 dark:text-slate-900 font-bold ${project.color}`}
-                                        >
+                                <div className="flex flex-wrap gap-2 mt-8">
+                                    {project.tags.map((tag) => (
+                                        <span key={tag} className="text-[10px] font-bold bg-white text-black px-4 py-1.5 rounded-full uppercase tracking-widest">
                                             {tag}
                                         </span>
                                     ))}

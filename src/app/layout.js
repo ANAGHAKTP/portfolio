@@ -1,30 +1,24 @@
-import { Caveat, Gaegu, Quicksand } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import { Analytics } from "@vercel/analytics/next";
 
-const caveat = Caveat({
+const serif = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-handwriting",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-serif",
   display: "swap",
 });
 
-const gaegu = Gaegu({
-  weight: ["400", "700"],
+const sans = Inter({
   subsets: ["latin"],
-  variable: "--font-playful",
-  display: "swap",
-});
-
-const quicksand = Quicksand({
-  subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-sans",
   display: "swap",
 });
 
 export const metadata = {
-  title: "Tech Portfolio | Digital Scrapbook",
-  description: "Portfolio of Anagha K T P",
+  title: "Anagha K T P | Portfolio",
+  description: "AI & ML Student Portfolio Website",
 };
 
 export default function RootLayout({ children }) {
@@ -34,7 +28,7 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
       </head>
       <body
-        className={`${caveat.variable} ${gaegu.variable} ${quicksand.variable} antialiased bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 font-display`}
+        className={`${serif.variable} ${sans.variable} antialiased bg-cream text-black transition-colors duration-300 font-sans`}
       >
         <Providers>{children}</Providers>
         <Analytics />

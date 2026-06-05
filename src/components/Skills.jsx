@@ -1,64 +1,86 @@
-"use client";
-
 import { skillsData } from "@/data/portfolio";
 
 export default function Skills() {
-    const skillCategories = skillsData;
-
     return (
-        <section className="py-32 px-4 bg-slate-50 dark:bg-slate-900/20 overflow-hidden" id="skills">
-            <div className="max-w-6xl mx-auto relative">
-                {/* Background decorative doodles */}
-                <div className="absolute top-0 left-0 text-slate-200 dark:text-slate-800 transform -rotate-12 select-none pointer-events-none">
-                    <span className="material-icons text-9xl">auto_fix_high</span>
-                </div>
+        <section className="bg-cream text-black py-24 px-8 lg:px-20 relative overflow-hidden" id="skills">
+            <div className="max-w-7xl mx-auto relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
+                    {/* Software Skills - Left Side */}
+                    <div className="lg:col-span-12 mb-12">
+                        <div className="space-y-4">
+                            <p className="font-sans text-xs font-bold uppercase tracking-[0.4em] opacity-40">My toolkit</p>
+                            <h2 className="text-6xl lg:text-[6rem] font-serif font-medium leading-none tracking-tighter">Software & Skills</h2>
+                        </div>
+                    </div>
 
-                <h2 className="text-6xl font-playful font-bold text-center mb-20 relative z-10">
-                    My <span className="inline-block transform -rotate-2 bg-slate-900 text-white px-4 py-1 skew-x-[-10deg]">Tech</span> Toolkit
-                </h2>
+                    <div className="lg:col-span-5 space-y-20">
+                        <div>
+                            <h3 className="text-xl font-sans font-bold uppercase tracking-widest opacity-40 mb-10">Software Expertise</h3>
+                            <div className="grid grid-cols-3 gap-6">
+                                {["Ps", "Ai", "Id", "Xd", "Pr", "Ae"].map((skill) => (
+                                    <div key={skill} className="aspect-square border border-black/10 flex flex-col items-center justify-center rounded-2xl group hover:bg-black transition-all duration-500">
+                                        <span className="text-4xl font-serif font-bold group-hover:text-white transition-colors">{skill}</span>
+                                        <span className="text-[10px] font-sans font-bold uppercase tracking-widest mt-2 opacity-0 group-hover:opacity-40 transition-opacity text-white">Advanced</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
 
-                <div className="flex flex-wrap justify-center gap-10">
-                    {skillCategories.map((category, index) => (
-                        <div
-                            key={index}
-                            className={`relative group ${category.rotate} hover:z-20 hover:scale-105 transition-all duration-300 ease-spring`}
-                        >
-                            {/* Tape Effect */}
-                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 backdrop-blur-sm transform rotate-1 shadow-sm z-10"></div>
+                        <div>
+                            <h3 className="text-xl font-sans font-bold uppercase tracking-widest opacity-40 mb-10">Design Disciplines</h3>
+                            <div className="flex flex-wrap gap-3">
+                                {["Packaging", "Visual design", "UI/UX design", "User Research", "Data Viz"].map((pill) => (
+                                    <span key={pill} className="border border-black/10 px-8 py-3 rounded-full font-sans font-bold text-[10px] uppercase tracking-widest hover:bg-mustard hover:border-mustard transition-colors">
+                                        {pill}
+                                    </span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
 
-                            {/* Card Body */}
-                            <div className={`p-6 rounded-2xl ${category.color} border-2 border-slate-900 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] min-w-[280px] max-w-xs`}>
-                                <h3 className="text-3xl font-handwriting font-bold mb-6 text-center border-b-2 border-slate-900/20 pb-2">
-                                    {category.title}
-                                </h3>
+                    {/* Coding skills - Right Side */}
+                    <div className="lg:col-span-7">
+                        <div className="bg-forest text-cream p-12 lg:p-20 rounded-[3rem] space-y-12 relative overflow-hidden group">
+                            {/* Background Resume text */}
+                            <div className="absolute top-0 right-[-14rem] pointer-events-none select-none rotate-90 opacity-10">
+                                <div className="text-[15rem] font-serif font-bold uppercase tracking-tighter text-outline">
+                                    Resume
+                                </div>
+                            </div>
 
-                                <div className="flex flex-wrap gap-2 justify-center">
-                                    {category.skills.map((skill, idx) => (
-                                        <span
-                                            key={idx}
-                                            className="inline-block bg-white dark:bg-slate-800 px-3 py-1.5 rounded-full text-base font-playful font-bold border-2 border-slate-900 shadow-sm transform hover:-translate-y-1 transition-transform cursor-default"
-                                        >
-                                            {skill}
-                                        </span>
+                            <h3 className="text-4xl font-serif italic text-mustard border-b border-cream/10 pb-8 relative z-10">Coding Skills</h3>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10 relative z-10">
+                                {["Python", "Java", "C / C++", "JavaScript", "React.js", "Next.js", "Node.js", "SQL", "Tailwind CSS", "TensorFlow"].map((skill) => (
+                                    <div key={skill} className="flex justify-between items-end border-b border-cream/5 pb-4 group/item">
+                                        <span className="text-xl font-serif font-medium group-hover/item:text-mustard transition-colors">{skill}</span>
+                                        <span className="text-[10px] font-sans font-bold uppercase tracking-[0.2em] opacity-40">Proficient</span>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="mt-16 pt-12 border-t border-cream/10 relative z-10">
+                                <h3 className="text-xl font-sans font-bold uppercase tracking-widest opacity-40 mb-10 text-center">Interests & Hobbies</h3>
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+                                    {[
+                                        { icon: "piano", label: "Music" },
+                                        { icon: "palette", label: "Craft" },
+                                        { icon: "brush", label: "Art" },
+                                        { icon: "pets", label: "Cats" }
+                                    ].map((hobby) => (
+                                        <div key={hobby.label} className="flex flex-col items-center space-y-4">
+                                            <div className="w-16 h-16 rounded-full border border-cream/10 flex items-center justify-center group-hover:border-mustard transition-colors">
+                                                <span className="material-icons text-mustard">{hobby.icon}</span>
+                                            </div>
+                                            <span className="text-[10px] font-sans font-bold uppercase tracking-widest">{hobby.label}</span>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
                         </div>
-                    ))}
-                </div>
-
-                <div className="mt-24 text-center">
-                    <p className="font-handwriting text-3xl text-slate-500 inline-block relative">
-                        ...constantly upgrading!
-                        <span className="absolute -right-8 -top-8 text-5xl animate-bounce">🚀</span>
-                    </p>
+                    </div>
                 </div>
             </div>
-            <style jsx>{`
-        .ease-spring {
-            transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-      `}</style>
         </section>
     );
 }
