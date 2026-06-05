@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { experienceData, educationData } from "@/data/portfolio";
 
 const StarIcon = () => (
@@ -55,7 +56,7 @@ export default function Experience() {
                                     </div>
                                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
                                         <div>
-                                            <span className="text-2xl font-serif font-bold italic text-mustard">{exp.period}</span>
+                                            <span className="text-2xl font-serif font-bold italic text-mustard">{exp.period.split(" – ")[0]}</span>
                                             <h3 className="text-3xl font-serif font-medium mt-2">{exp.title}</h3>
                                             <p className="text-base font-sans font-bold uppercase tracking-widest opacity-40 mt-1">{exp.company}</p>
                                         </div>
