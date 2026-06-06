@@ -1,67 +1,129 @@
-import Image from "next/image";
 import { heroData } from "@/data/portfolio";
 
 export default function Hero() {
     return (
-        <section className="min-h-screen grid grid-cols-1 lg:grid-cols-2 bg-forest text-cream overflow-hidden relative">
-            {/* Left side: Photo with overlay */}
-            <div className="relative flex items-center justify-center p-8 lg:p-20 order-2 lg:order-1">
-                <div className="relative w-full aspect-[4/5] max-w-sm">
-                    {/* Artistic Star shapes */}
-                    <div className="absolute -top-8 -left-8 text-mustard animate-pulse z-10">
-                        <svg width="60" height="60" viewBox="0 0 100 100">
-                            <path d="M50 0 L60 40 L100 50 L60 60 L50 100 L40 60 L0 50 L40 40 Z" fill="currentColor" />
-                        </svg>
-                    </div>
-
-                    <div className="w-full h-full rounded-2xl overflow-hidden relative group">
-                        <Image
-                            alt="Anagha K T P"
-                            className="w-full h-full object-cover transition-all duration-700"
-                            src={heroData.avatar}
-                            fill
-                            priority
-                            sizes="(max-width: 768px) 100vw, 50vw"
-                        />
-                        <div className="absolute inset-0 bg-orange-500/30 mix-blend-overlay"></div>
-                    </div>
-
-                    {/* Intro text on left side as seen in mockup */}
-                    <div className="absolute -bottom-16 -left-8 max-w-[280px] hidden lg:block">
-                        <p className="text-sm font-sans opacity-70 leading-relaxed italic">
-                            {heroData.tagline}
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            {/* Right side: Layered Typography */}
-            <div className="relative flex flex-col justify-center p-8 lg:p-20 order-1 lg:order-2">
-                <div className="relative">
-                    {/* Layered Echo effect */}
-                    <div className="absolute inset-0 top-[-4rem] lg:top-[-8rem] pointer-events-none select-none">
-                        <div className="text-[10rem] lg:text-[16rem] font-serif font-bold uppercase tracking-tighter leading-none text-outline opacity-10 translate-y-4">
-                            Portfolio
-                        </div>
-                        <div className="text-[10rem] lg:text-[16rem] font-serif font-bold uppercase tracking-tighter leading-none text-outline opacity-20 translate-y-8">
-                            Portfolio
-                        </div>
-                    </div>
-
-                    <h1 className="text-[10rem] lg:text-[16rem] font-serif font-bold uppercase tracking-tighter leading-none relative z-10">
-                        Portfolio
+        <section className="min-h-screen bg-forest text-cream overflow-hidden relative flex flex-col justify-center py-20 lg:py-28" id="home">
+            {/* Main Content Container */}
+            <div className="w-full max-w-7xl mx-auto px-8 lg:px-20 relative z-10 flex flex-col justify-center flex-grow">
+                
+                {/* Giant Title: PORTFOLIO with Star in O */}
+                <div className="relative mb-12 select-none">
+                    <h1 className="text-[12vw] lg:text-[9.5vw] font-serif font-bold uppercase tracking-tight leading-none text-cream flex items-center relative">
+                        PORTF
+                        <span className="relative inline-block">
+                            O
+                            <span className="absolute left-[38%] top-[32%] text-cream/40">
+                                <svg width="20" height="20" viewBox="0 0 100 100" className="w-[1.8vw] h-[1.8vw]">
+                                    <path d="M50 0 L58 42 L100 50 L58 58 L50 100 L42 58 L0 50 L42 42 Z" fill="currentColor" />
+                                </svg>
+                            </span>
+                        </span>
+                        LI
+                        <span className="relative inline-block">
+                            O
+                            <span className="absolute left-[38%] top-[32%] text-cream/40">
+                                <svg width="20" height="20" viewBox="0 0 100 100" className="w-[1.8vw] h-[1.8vw]">
+                                    <path d="M50 0 L58 42 L100 50 L58 58 L50 100 L42 58 L0 50 L42 42 Z" fill="currentColor" />
+                                </svg>
+                            </span>
+                        </span>
                     </h1>
                 </div>
 
-                <div className="mt-20 space-y-3 font-sans text-sm font-bold tracking-widest uppercase opacity-80">
-                    {heroData.socials.map((social) => (
-                        <div key={social.platform} className="flex items-center space-x-4">
-                            <span className="w-8 h-[1px] bg-cream/30"></span>
-                            <a href={social.url} target="_blank" rel="noopener noreferrer" className="hover:text-mustard transition-colors">
-                                {social.platform}: {social.handle}
-                            </a>
+                {/* Grid Container */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-end">
+                    
+                    {/* Left Column: Status, Name, Tagline & Metrics */}
+                    <div className="lg:col-span-7 flex flex-col space-y-6">
+                        {/* Status Badge */}
+                        <div className="inline-flex items-center space-x-2 bg-transparent border border-cream/20 px-4 py-1.5 rounded-full text-[9px] font-sans font-bold tracking-widest uppercase self-start">
+                            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span className="text-cream opacity-80">Open for Internships & Projects</span>
                         </div>
-                    ))}
+
+                        {/* Name & Title */}
+                        <div className="space-y-1">
+                            <h2 className="text-5xl lg:text-[4.5rem] font-serif font-medium text-cream tracking-tight leading-none">
+                                {heroData.name}
+                            </h2>
+                            <p className="text-xs lg:text-sm font-sans text-mustard font-bold tracking-[0.2em] uppercase pt-1">
+                                {heroData.title}
+                            </p>
+                        </div>
+
+                        {/* Tagline */}
+                        <p className="text-base lg:text-[1.1rem] font-serif italic text-cream/80 leading-relaxed max-w-xl pt-2">
+                            {heroData.tagline}
+                        </p>
+
+                        {/* Quick Metrics */}
+                        <div className="grid grid-cols-3 gap-6 pt-8 border-t border-cream/10 max-w-md">
+                            <div>
+                                <div className="text-3xl lg:text-4xl font-serif font-bold text-mustard">03</div>
+                                <div className="text-[9px] lg:text-[10px] font-sans uppercase tracking-widest text-cream/40 mt-1.5 font-bold">Internships</div>
+                            </div>
+                            <div>
+                                <div className="text-3xl lg:text-4xl font-serif font-bold text-mustard">06</div>
+                                <div className="text-[9px] lg:text-[10px] font-sans uppercase tracking-widest text-cream/40 mt-1.5 font-bold">Certificates</div>
+                            </div>
+                            <div>
+                                <div className="text-3xl lg:text-4xl font-serif font-bold text-mustard">05+</div>
+                                <div className="text-[9px] lg:text-[10px] font-sans uppercase tracking-widest text-cream/40 mt-1.5 font-bold">AI/ML Projects</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Column: Decorative Star & Social Links */}
+                    <div className="lg:col-span-5 flex flex-col items-center lg:items-end space-y-12 lg:space-y-16">
+                        
+                        {/* Custom multi-pointed background star shape */}
+                        <div className="relative w-56 h-56 lg:w-72 lg:h-72 flex items-center justify-center select-none pointer-events-none pr-0 lg:pr-12">
+                            {/* Spinning outer outline star */}
+                            <div className="text-[#8e8568]/30 animate-spin-slow">
+                                <svg width="260" height="260" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1">
+                                    <path d="M50 0 L55 35 L90 10 L65 45 L100 50 L65 55 L90 90 L55 65 L50 100 L45 65 L10 90 L35 55 L0 50 L35 45 L10 10 L45 35 Z" />
+                                </svg>
+                            </div>
+                            {/* Solid terracotta inner star */}
+                            <div className="absolute text-[#c86d44]/35 animate-pulse-slow">
+                                <svg width="90" height="90" viewBox="0 0 100 100">
+                                    <path d="M50 5 L60 38 L95 50 L60 62 L50 95 L40 62 L5 50 L40 38 Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        {/* Social Links block */}
+                        <div className="space-y-4 font-sans text-xs lg:text-sm font-bold tracking-widest uppercase self-start lg:self-end">
+                            {heroData.socials.map((social) => {
+                                // Match prefix format from mockup
+                                let prefix = "BE: ";
+                                let handle = "/ANAGHAKTP";
+                                if (social.platform.toLowerCase() === "behance") {
+                                    prefix = "BE: ";
+                                    handle = "/ANAGHAKTP";
+                                } else if (social.platform.toLowerCase() === "instagram") {
+                                    prefix = "IG: ";
+                                    handle = "@ANAGHA.KTP";
+                                } else if (social.platform.toLowerCase() === "linkedin") {
+                                    prefix = "LI: ";
+                                    handle = "/ANAGHAKTP";
+                                } else {
+                                    prefix = `${social.platform.toUpperCase().substring(0, 2)}: `;
+                                    handle = social.handle;
+                                }
+
+                                return (
+                                    <div key={social.platform} className="flex items-center space-x-6 group">
+                                        <span className="w-8 h-[1px] bg-cream/20 group-hover:w-12 group-hover:bg-mustard transition-all duration-300"></span>
+                                        <a href={social.url} target="_blank" rel="noopener noreferrer" className="hover:text-mustard transition-colors flex items-center">
+                                            <span className="opacity-40 mr-1.5">{prefix}</span>
+                                            <span>{handle}</span>
+                                        </a>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
                 </div>
             </div>
 
