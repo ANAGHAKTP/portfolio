@@ -59,10 +59,6 @@ export default function About() {
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 border-[25px] border-cream/10 rounded-full"></div>
                         </div>
 
-                        {/* Floating Date Pill on photo */}
-                        <div className="absolute top-4 right-4 bg-mustard text-black px-6 py-3 rounded-badge text-[10px] font-bold uppercase tracking-widest shadow-xl z-20">
-                            {aboutData.birthDate}
-                        </div>
                     </div>
 
                     {/* Separate Contact Card below photo */}
@@ -76,10 +72,6 @@ export default function About() {
                             <div className="flex items-center space-x-4">
                                 <span className="w-2 h-2 rounded-full bg-mustard"></span>
                                 <span className="break-all">{aboutData.email}</span>
-                            </div>
-                            <div className="flex items-center space-x-4">
-                                <span className="w-2 h-2 rounded-full bg-mustard"></span>
-                                <span>{aboutData.phone}</span>
                             </div>
                         </div>
                     </div>

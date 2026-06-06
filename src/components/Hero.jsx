@@ -107,6 +107,9 @@ export default function Hero() {
                                 } else if (social.platform.toLowerCase() === "linkedin") {
                                     prefix = "LI: ";
                                     handle = "/ANAGHAKTP";
+                                } else if (social.platform.toLowerCase() === "github") {
+                                    prefix = "GH: ";
+                                    handle = "/ANAGHAKTP";
                                 } else {
                                     prefix = `${social.platform.toUpperCase().substring(0, 2)}: `;
                                     handle = social.handle;
