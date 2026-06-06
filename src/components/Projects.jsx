@@ -3,8 +3,10 @@ import { projectsData } from "@/data/portfolio";
 
 export default function Projects() {
     return (
-        <section className="py-24 px-8 lg:px-20 bg-cream text-black relative" id="projects">
+        <section className="py-28 px-8 lg:px-20 bg-cream text-black relative" id="projects">
             <div className="max-w-7xl mx-auto space-y-20">
+                
+                {/* Section Header */}
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
                     <div className="space-y-4">
                         <p className="font-sans text-xs font-bold uppercase tracking-[0.4em] opacity-40">Portfolio</p>
@@ -14,30 +16,54 @@ export default function Projects() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                {/* Grid of Projects */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-24">
                     {projectsData.map((project, index) => (
-                        <div key={index} className="group relative overflow-hidden rounded-3xl aspect-[16/10] bg-forest">
-                            <Image
-                                alt={project.title}
-                                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 grayscale-0 lg:grayscale lg:opacity-80 lg:group-hover:opacity-100 lg:group-hover:grayscale-0"
-                                src={project.image}
-                                fill
-                                sizes="(max-width: 1024px) 100vw, 50vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6 lg:p-12">
-                                <span className="text-mustard font-sans text-xs font-bold uppercase tracking-widest mb-2 lg:mb-4">Project {index + 1}</span>
-                                <h3 className="text-2xl lg:text-5xl font-serif font-bold text-cream tracking-tight">{project.title}</h3>
-                                <p className="text-xs lg:text-sm text-cream/60 mt-2 lg:mt-4 font-sans leading-relaxed max-w-md line-clamp-2">
+                        <div key={index} className="group flex flex-col space-y-6 cursor-pointer">
+                            
+                            {/* Image Container */}
+                            <div className="relative overflow-hidden rounded-[2.5rem] aspect-[16/10] bg-forest border border-black/5 shadow-lg">
+                                <Image
+                                    alt={project.title}
+                                    className="w-full h-full object-cover transition-all duration-[1000ms] ease-out group-hover:scale-105 grayscale opacity-90 group-hover:opacity-100 group-hover:grayscale-0"
+                                    src={project.image}
+                                    fill
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                />
+                                <div className="absolute inset-0 bg-[#c86d44]/5 mix-blend-multiply pointer-events-none group-hover:opacity-0 transition-opacity duration-500"></div>
+                            </div>
+
+                            {/* Project Details Below Image */}
+                            <div className="space-y-3 px-2">
+                                <div className="flex items-center justify-between">
+                                    <span className="text-mustard font-sans text-xs font-bold uppercase tracking-[0.2em]">
+                                        Project 0{index + 1}
+                                    </span>
+                                </div>
+
+                                <h3 className="text-3xl lg:text-4xl font-serif font-bold text-black tracking-tight group-hover:text-mustard transition-colors flex items-center gap-2">
+                                    {project.title}
+                                    <span className="inline-block transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-mustard">
+                                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                                            <polyline points="7 7 17 7 17 17"></polyline>
+                                        </svg>
+                                    </span>
+                                </h3>
+
+                                <p className="text-sm text-black/60 font-sans leading-relaxed max-w-xl">
                                     {project.description}
                                 </p>
-                                <div className="flex flex-wrap gap-2 mt-4 lg:mt-8">
+
+                                <div className="flex flex-wrap gap-2 pt-2">
                                     {project.tags.map((tag) => (
-                                        <span key={tag} className="text-[9px] lg:text-[10px] font-bold bg-white text-black px-3 py-1 lg:px-4 lg:py-1.5 rounded-full uppercase tracking-widest">
+                                        <span key={tag} className="text-[9px] font-sans font-bold bg-forest text-cream px-4 py-1.5 rounded-full uppercase tracking-widest border border-forest/10 hover:bg-mustard hover:text-black transition-colors duration-300">
                                             {tag}
                                         </span>
                                     ))}
                                 </div>
                             </div>
+
                         </div>
                     ))}
                 </div>

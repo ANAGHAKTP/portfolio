@@ -69,9 +69,9 @@ export default function Skills() {
                             <h3 className="text-xl font-sans font-bold uppercase tracking-widest opacity-40 mb-10">Tools & Analytics</h3>
                             <div className="grid grid-cols-3 gap-6">
                                 {visualTools.slice(0, 9).map((tool) => (
-                                    <div key={tool.name} className="aspect-square border border-black/10 flex flex-col items-center justify-center rounded-2xl group hover:bg-black transition-all duration-500 cursor-default">
-                                        <span className="text-4xl font-serif font-bold group-hover:text-white transition-colors">{tool.abbr}</span>
-                                        <span className="text-[10px] font-sans font-bold uppercase tracking-widest mt-2 opacity-40 group-hover:text-cream/60 transition-colors text-center px-1 truncate max-w-full">{tool.name}</span>
+                                    <div key={tool.name} className="aspect-square border border-black/10 flex flex-col items-center justify-center rounded-2xl group bg-white hover:bg-forest hover:-translate-y-1 hover:border-forest/20 hover:shadow-md transition-all duration-500 cursor-default p-2">
+                                        <span className="text-4xl font-serif font-bold text-black group-hover:text-mustard transition-colors duration-300">{tool.abbr}</span>
+                                        <span className="text-[9px] font-sans font-bold uppercase tracking-widest mt-2 opacity-40 group-hover:opacity-85 group-hover:text-cream transition-colors duration-300 text-center px-1 truncate max-w-full">{tool.name}</span>
                                     </div>
                                 ))}
                             </div>

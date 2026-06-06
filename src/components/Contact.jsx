@@ -56,37 +56,40 @@ export default function Contact() {
                             ))}
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div className="space-y-2 text-left">
-                                    <label className="text-sm font-bold uppercase tracking-widest opacity-60">Name</label>
+                                <div className="space-y-2 text-left relative group">
+                                    <label className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">Name</label>
                                     <input
                                         name={contactData.contactForm.fieldIds.name}
                                         type="text"
                                         required
-                                        className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none focus:border-mustard transition-colors text-xl font-serif"
+                                        className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none text-xl font-serif text-cream placeholder-cream/20"
                                         placeholder="Your Name"
                                     />
+                                    <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-mustard group-focus-within:w-full transition-all duration-500"></span>
                                 </div>
-                                <div className="space-y-2 text-left">
-                                    <label className="text-sm font-bold uppercase tracking-widest opacity-60">Email</label>
+                                <div className="space-y-2 text-left relative group">
+                                    <label className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">Email</label>
                                     <input
                                         name={contactData.contactForm.fieldIds.email}
                                         type="email"
                                         required
-                                        className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none focus:border-mustard transition-colors text-xl font-serif"
+                                        className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none text-xl font-serif text-cream placeholder-cream/20"
                                         placeholder="your@email.com"
                                     />
+                                    <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-mustard group-focus-within:w-full transition-all duration-500"></span>
                                 </div>
                             </div>
-                            <div className="space-y-2 text-left">
-                                <label className="text-sm font-bold uppercase tracking-widest opacity-60">Message</label>
+                            <div className="space-y-2 text-left relative group">
+                                <label className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">Message</label>
                                 <textarea
                                     name={contactData.contactForm.fieldIds.message}
                                     rows="1"
                                     required
-                                    className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none focus:border-mustard transition-colors text-xl font-serif resize-none overflow-hidden"
+                                    className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none text-xl font-serif text-cream resize-none overflow-hidden placeholder-cream/20"
                                     placeholder="Write something nice..."
                                     onInput={(e) => { e.target.style.height = 'auto'; e.target.style.height = e.target.scrollHeight + 'px'; }}
                                 ></textarea>
+                                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-mustard group-focus-within:w-full transition-all duration-500"></span>
                             </div>
                             <button className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4">
                                 Send Message <span className="material-icons">east</span>
