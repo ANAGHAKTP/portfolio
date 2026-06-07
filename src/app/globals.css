@@ -31,20 +31,25 @@
     background-attachment: fixed;
   }
 
+  /* ⚡ Bolt: Add will-change to offload continuous animations to GPU compositor, preventing layout thrashing */
   .animate-spin-slow {
     animation: spin 16s linear infinite;
+    will-change: transform;
   }
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
+    will-change: transform;
   }
 
   .animate-pulse-slow {
     animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    will-change: opacity;
   }
 
   .animate-reverse-spin-slow {
     animation: reverse-spin 20s linear infinite;
+    will-change: transform;
   }
 
   @keyframes spin {
@@ -76,6 +81,7 @@
 
   .animate-marquee {
     animation: marquee 35s linear infinite;
+    will-change: transform;
   }
 
   @keyframes marquee {

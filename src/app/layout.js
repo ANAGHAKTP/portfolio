@@ -25,7 +25,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        {/* ⚡ Bolt: Preconnect to Google Fonts to reduce DNS/TLS handshake time */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* ⚡ Bolt: Add display=block to prevent Flash of Unstyled Text (FOUT) for icon fonts */}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=block" rel="stylesheet" />
       </head>
       <body
         className={`${serif.variable} ${sans.variable} antialiased bg-cream text-black transition-colors duration-300 font-sans`}
