@@ -25,7 +25,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        {/* ⚡ Bolt Optimization: Added preconnect for font domains to establish early connections, reducing DNS/TCP/TLS setup time. Added &display=swap to Material Icons to prevent FOIT (Flash of Invisible Text) and improve FCP. */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet" />
       </head>
       <body
         className={`${serif.variable} ${sans.variable} antialiased bg-cream text-black transition-colors duration-300 font-sans`}
