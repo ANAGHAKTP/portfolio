@@ -57,8 +57,9 @@ export default function Contact() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div className="space-y-2 text-left relative group">
-                                    <label className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">Name</label>
+                                    <label htmlFor="contact-name" className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">Name</label>
                                     <input
+                                        id="contact-name"
                                         name={contactData.contactForm.fieldIds.name}
                                         type="text"
                                         required
@@ -68,8 +69,9 @@ export default function Contact() {
                                     <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-mustard group-focus-within:w-full transition-all duration-500"></span>
                                 </div>
                                 <div className="space-y-2 text-left relative group">
-                                    <label className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">Email</label>
+                                    <label htmlFor="contact-email" className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">Email</label>
                                     <input
+                                        id="contact-email"
                                         name={contactData.contactForm.fieldIds.email}
                                         type="email"
                                         required
@@ -80,8 +82,9 @@ export default function Contact() {
                                 </div>
                             </div>
                             <div className="space-y-2 text-left relative group">
-                                <label className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">Message</label>
+                                <label htmlFor="contact-message" className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">Message</label>
                                 <textarea
+                                    id="contact-message"
                                     name={contactData.contactForm.fieldIds.message}
                                     rows="1"
                                     required
@@ -92,7 +95,7 @@ export default function Contact() {
                                 <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-mustard group-focus-within:w-full transition-all duration-500"></span>
                             </div>
                             <button className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4">
-                                Send Message <span className="material-icons">east</span>
+                                Send Message <span className="material-icons" aria-hidden="true">east</span>
                             </button>
                         </form>
                     </div>
