@@ -1,57 +1,60 @@
 import { skillsData, certificationsData } from "@/data/portfolio";
 
-export default function Skills() {
-    // Map tool names to visual abbreviations
-    const toolAbbreviations = {
-        "Python": "Py",
-        "TensorFlow": "Tf",
-        "Scikit-learn": "Sk",
-        "VS Code": "Vs",
-        "Jupyter": "Jp",
-        "SQL": "Sql",
-        "MongoDB": "Db",
-        "Power BI": "Bi",
-        "Tableau": "Tb",
-        "Git": "Gt",
-        "Anaconda": "Ac",
-        "Excel": "Xl",
-        "Matplotlib": "Mp",
-        "Seaborn": "Sn",
-        "React": "Re",
-        "Node.js": "Nd",
-        "NumPy": "Np",
-        "Pandas": "Pd"
-    };
+// ⚡ Bolt Optimization: Moved static data mapping, flattening, and filtering logic outside the render function.
+// This prevents expensive O(n) array operations and object re-creations on every render, improving runtime performance.
 
-    // Flatten databases, tools & platforms, and data & analytics for the visual grid
-    const visualTools = [];
-    skillsData.forEach(category => {
-        if (["Tools & Platforms", "Databases", "Data & Analytics"].includes(category.title)) {
-            category.skills.forEach(skill => {
-                if (toolAbbreviations[skill]) {
-                    visualTools.push({ name: skill, abbr: toolAbbreviations[skill] });
-                }
-            });
-        }
-    });
+// Map tool names to visual abbreviations
+const toolAbbreviations = {
+    "Python": "Py",
+    "TensorFlow": "Tf",
+    "Scikit-learn": "Sk",
+    "VS Code": "Vs",
+    "Jupyter": "Jp",
+    "SQL": "Sql",
+    "MongoDB": "Db",
+    "Power BI": "Bi",
+    "Tableau": "Tb",
+    "Git": "Gt",
+    "Anaconda": "Ac",
+    "Excel": "Xl",
+    "Matplotlib": "Mp",
+    "Seaborn": "Sn",
+    "React": "Re",
+    "Node.js": "Nd",
+    "NumPy": "Np",
+    "Pandas": "Pd"
+};
 
-    // Fallbacks if data doesn't match
-    if (visualTools.length === 0) {
-        visualTools.push(
-            { name: "TensorFlow", abbr: "Tf" },
-            { name: "VS Code", abbr: "Vs" },
-            { name: "Jupyter", abbr: "Jp" },
-            { name: "SQL", abbr: "Sql" },
-            { name: "MongoDB", abbr: "Db" },
-            { name: "Power BI", abbr: "Bi" }
-        );
+// Flatten databases, tools & platforms, and data & analytics for the visual grid
+const visualTools = [];
+skillsData.forEach(category => {
+    if (["Tools & Platforms", "Databases", "Data & Analytics"].includes(category.title)) {
+        category.skills.forEach(skill => {
+            if (toolAbbreviations[skill]) {
+                visualTools.push({ name: skill, abbr: toolAbbreviations[skill] });
+            }
+        });
     }
+});
 
-    // Languages and Frameworks categories for the list view
-    const codingCategories = skillsData.filter(cat => 
-        ["Languages", "Frameworks & Libs"].includes(cat.title)
+// Fallbacks if data doesn't match
+if (visualTools.length === 0) {
+    visualTools.push(
+        { name: "TensorFlow", abbr: "Tf" },
+        { name: "VS Code", abbr: "Vs" },
+        { name: "Jupyter", abbr: "Jp" },
+        { name: "SQL", abbr: "Sql" },
+        { name: "MongoDB", abbr: "Db" },
+        { name: "Power BI", abbr: "Bi" }
     );
+}
 
+// Languages and Frameworks categories for the list view
+const codingCategories = skillsData.filter(cat =>
+    ["Languages", "Frameworks & Libs"].includes(cat.title)
+);
+
+export default function Skills() {
     return (
         <section className="bg-cream text-black py-24 px-8 lg:px-20 relative overflow-hidden" id="skills">
             <div className="max-w-7xl mx-auto relative z-10">
