@@ -95,7 +95,7 @@ export default function Contact() {
                                 <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-mustard group-focus-within:w-full transition-all duration-500"></span>
                             </div>
                             <button className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4">
-                                Send Message <span className="material-icons">east</span>
+                                Send Message <span className="material-icons" aria-hidden="true">east</span>
                             </button>
                         </form>
                     </div>
