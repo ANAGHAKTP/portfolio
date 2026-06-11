@@ -51,6 +51,15 @@ const codingCategories = skillsData.filter(cat =>
     ["Languages", "Frameworks & Libs"].includes(cat.title)
 );
 
+// ⚡ Bolt: Hoisted static arrays outside component to prevent re-allocation on every render
+const DOMAINS = ["AI & Machine Learning", "Data Analytics", "Full-Stack Dev", "Computer Vision", "Model Deployment"];
+const HOBBIES = [
+    { icon: "analytics", label: "Analytics" },
+    { icon: "psychology", label: "Cognition" },
+    { icon: "brush", label: "Art" },
+    { icon: "pets", label: "Cats" }
+];
+
 export default function Skills() {
     return (
         <section className="bg-cream text-black py-24 px-8 lg:px-20 relative overflow-hidden" id="skills">
@@ -80,7 +89,7 @@ export default function Skills() {
                         <div>
                             <h3 className="text-xl font-sans font-bold uppercase tracking-widest opacity-40 mb-10">Domains & Methodologies</h3>
                             <div className="flex flex-wrap gap-3">
-                                {["AI & Machine Learning", "Data Analytics", "Full-Stack Dev", "Computer Vision", "Model Deployment"].map((pill) => (
+                                {DOMAINS.map((pill) => (
                                     <span key={pill} className="border border-black/10 px-8 py-3 rounded-full font-sans font-bold text-[10px] uppercase tracking-widest hover:bg-mustard hover:border-mustard transition-colors cursor-default">
                                         {pill}
                                     </span>
@@ -134,12 +143,7 @@ export default function Skills() {
                                 <div className="mt-16 pt-12 border-t border-cream/10">
                                     <h3 className="text-xl font-sans font-bold uppercase tracking-widest opacity-40 mb-10 text-center">Interests & Hobbies</h3>
                                     <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-                                        {[
-                                            { icon: "analytics", label: "Analytics" },
-                                            { icon: "psychology", label: "Cognition" },
-                                            { icon: "brush", label: "Art" },
-                                            { icon: "pets", label: "Cats" }
-                                        ].map((hobby) => (
+                                        {HOBBIES.map((hobby) => (
                                             <div key={hobby.label} className="flex flex-col items-center space-y-4">
                                                 <div className="w-16 h-16 rounded-full border border-cream/10 flex items-center justify-center hover:border-mustard transition-colors">
                                                     <span className="material-icons text-mustard">{hobby.icon}</span>
