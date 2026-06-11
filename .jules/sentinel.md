@@ -1,0 +1,4 @@
+## 2026-06-11 - Added security headers in Next.js config
+**Vulnerability:** The application was missing standard HTTP security headers (e.g., X-Frame-Options, Content-Security-Policy), which could expose it to clickjacking, MIME-type sniffing, and other common web vulnerabilities.
+**Learning:** Next.js applications need explicit configuration in `next.config.mjs` to enforce security headers across all routes. The idiomatic approach is to use the `/:path*` matcher instead of regex like `/(.*)` for the source pattern. Also, running `pnpm install` to resolve linting/building issues can unexpectedly generate and track `pnpm-lock.yaml`, violating line limits.
+**Prevention:** Always verify that Next.js configurations include standard security headers by default. Be cautious of side-effects from package manager commands like `pnpm install` and revert lockfile changes if they violate strict line-limit constraints.
