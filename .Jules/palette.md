@@ -1,0 +1,3 @@
+## 2024-05-18 - Seamless Form Submission Feedback
+**Learning:** Using `fetch` with `mode: 'no-cors'` to intercept Google Forms submission is a powerful pattern to prevent jarring redirects and keep the user in the app context. Combining this with `aria-live="polite"` on the status message ensures screen readers announce the state change cleanly without disrupting navigation.
+**Action:** Always intercept external form redirects to provide inline, accessible loading and success states instead of relying on default browser navigation behavior.
