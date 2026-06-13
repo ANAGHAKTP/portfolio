@@ -54,6 +54,8 @@ export default function About() {
                                 src={aboutData.image}
                                 fill
                                 sizes="(max-width: 768px) 100vw, 50vw"
+                                priority
+                                /* ⚡ Bolt: Added priority to above-the-fold image to improve LCP */
                             />
                             {/* Circle overlay as seen in mockup */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 border-[25px] border-cream/10 rounded-full"></div>
