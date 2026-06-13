@@ -2,7 +2,34 @@
 
 import { contactData } from "@/data/portfolio";
 
+import { useState } from 'react';
+
 export default function Contact() {
+    const [status, setStatus] = useState('idle'); // idle, submitting, success, error
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (status === 'submitting') return;
+
+        setStatus('submitting');
+        const form = e.target;
+        const formData = new FormData(form);
+
+        try {
+            await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors',
+            });
+            setStatus('success');
+            form.reset();
+            setTimeout(() => setStatus('idle'), 3000);
+        } catch (error) {
+            console.error('Submission error:', error);
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 3000);
+        }
+    };
     return (
         <section className="py-24 px-8 lg:px-20 bg-forest text-cream" id="contact">
             <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
@@ -47,7 +74,7 @@ export default function Contact() {
                         <form
                             action={contactData.contactForm.action}
                             method="POST"
-                            onSubmit={() => alert("Message Sent!")}
+                            onSubmit={handleSubmit}
                             className="space-y-8"
                         >
                             {/* Hidden Fields for Google Form */}
@@ -94,8 +121,15 @@ export default function Contact() {
                                 ></textarea>
                                 <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-mustard group-focus-within:w-full transition-all duration-500"></span>
                             </div>
-                            <button className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4">
-                                Send Message <span className="material-icons">east</span>
+                            <button
+                                type="submit"
+                                disabled={status === 'submitting'}
+                                className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4 disabled:opacity-70 disabled:cursor-not-allowed"
+                            >
+                                {status === 'idle' && <>Send Message <span className="material-icons">east</span></>}
+                                {status === 'submitting' && <>Sending... <span className="material-icons animate-spin">autorenew</span></>}
+                                {status === 'success' && <>Sent! <span className="material-icons text-green-700">check_circle</span></>}
+                                {status === 'error' && <>Error <span className="material-icons text-red-700">error</span></>}
                             </button>
                         </form>
                     </div>
