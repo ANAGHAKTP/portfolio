@@ -11,21 +11,39 @@ export default function Contact() {
         e.preventDefault();
         if (status === 'submitting') return;
 
-        setStatus('submitting');
         const form = e.target;
         const formData = new FormData(form);
+        const email = formData.get(contactData.contactForm.fieldIds.email);
+
+        // Basic email format validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email && !emailRegex.test(email.toString())) {
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 3000);
+            return;
+        }
+
+        setStatus('submitting');
+
+        // AbortController to prevent hanging connections (DoS mitigation)
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 8000);
 
         try {
             await fetch(form.action, {
                 method: 'POST',
                 body: formData,
                 mode: 'no-cors',
+                signal: controller.signal
             });
+            clearTimeout(timeoutId);
             setStatus('success');
             form.reset();
             setTimeout(() => setStatus('idle'), 3000);
         } catch (error) {
-            console.error('Submission error:', error);
+            clearTimeout(timeoutId);
+            // Sanitize error logging to avoid leaking details
+            console.error('Submission error occurred.');
             setStatus('error');
             setTimeout(() => setStatus('idle'), 3000);
         }
@@ -90,6 +108,7 @@ export default function Contact() {
                                         name={contactData.contactForm.fieldIds.name}
                                         type="text"
                                         required
+                                        maxLength={100}
                                         className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none text-xl font-serif text-cream placeholder-cream/20"
                                         placeholder="Your Name"
                                     />
@@ -102,6 +121,7 @@ export default function Contact() {
                                         name={contactData.contactForm.fieldIds.email}
                                         type="email"
                                         required
+                                        maxLength={150}
                                         className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none text-xl font-serif text-cream placeholder-cream/20"
                                         placeholder="your@email.com"
                                     />
@@ -115,6 +135,7 @@ export default function Contact() {
                                     name={contactData.contactForm.fieldIds.message}
                                     rows="1"
                                     required
+                                    maxLength={2000}
                                     className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none text-xl font-serif text-cream resize-none overflow-hidden placeholder-cream/20"
                                     placeholder="Write something nice..."
                                     onInput={(e) => { e.target.style.height = 'auto'; e.target.style.height = e.target.scrollHeight + 'px'; }}
