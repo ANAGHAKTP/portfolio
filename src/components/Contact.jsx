@@ -1,8 +1,37 @@
 "use client";
 
 import { contactData } from "@/data/portfolio";
+import { useState } from "react";
 
 export default function Contact() {
+    // ⚡ Bolt: Added state for background submission to prevent duplicate requests and improve perceived performance
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        const form = e.target;
+        const formData = new FormData(form);
+
+        try {
+            // ⚡ Bolt: Using fetch with 'no-cors' mode allows background submission to Google Forms
+            // This avoids a jarring full-page redirect to Google's success page.
+            await fetch(form.action, {
+                method: form.method,
+                body: formData,
+                mode: "no-cors",
+            });
+            alert("Message Sent!");
+            form.reset();
+        } catch (error) {
+            console.error("Submission failed", error);
+            alert("Failed to send message. Please try again later.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <section className="py-24 px-8 lg:px-20 bg-forest text-cream" id="contact">
             <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
@@ -47,7 +76,7 @@ export default function Contact() {
                         <form
                             action={contactData.contactForm.action}
                             method="POST"
-                            onSubmit={() => alert("Message Sent!")}
+                            onSubmit={handleSubmit}
                             className="space-y-8"
                         >
                             {/* Hidden Fields for Google Form */}
@@ -94,8 +123,11 @@ export default function Contact() {
                                 ></textarea>
                                 <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-mustard group-focus-within:w-full transition-all duration-500"></span>
                             </div>
-                            <button className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4">
-                                Send Message <span className="material-icons">east</span>
+                            <button
+                                disabled={isSubmitting}
+                                className={`w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4 ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}`}
+                            >
+                                {isSubmitting ? "Sending..." : "Send Message"} <span className="material-icons">east</span>
                             </button>
                         </form>
                     </div>
