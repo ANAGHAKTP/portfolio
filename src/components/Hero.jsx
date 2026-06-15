@@ -1,5 +1,31 @@
 import { heroData } from "@/data/portfolio";
 
+// ⚡ Bolt: Hoisted static socials formatting to prevent reallocation on every render
+const FORMATTED_SOCIALS = heroData.socials.map((social) => {
+    let prefix = "BE: ";
+    let handle = "/ANAGHAKTP";
+    const platformLower = social.platform.toLowerCase();
+
+    if (platformLower === "behance") {
+        prefix = "BE: ";
+        handle = "/ANAGHAKTP";
+    } else if (platformLower === "instagram") {
+        prefix = "IG: ";
+        handle = "@ANAGHA.KTP";
+    } else if (platformLower === "linkedin") {
+        prefix = "LI: ";
+        handle = "/ANAGHAKTP";
+    } else if (platformLower === "github") {
+        prefix = "GH: ";
+        handle = "/ANAGHAKTP";
+    } else {
+        prefix = `${social.platform.toUpperCase().substring(0, 2)}: `;
+        handle = social.handle || handle;
+    }
+
+    return { ...social, prefix, handle };
+});
+
 export default function Hero() {
     return (
         <section className="min-h-screen bg-forest text-cream overflow-hidden relative flex flex-col justify-center py-20 lg:py-28" id="home">
@@ -94,37 +120,15 @@ export default function Hero() {
 
                         {/* Social Links block */}
                         <div className="space-y-4 font-sans text-xs lg:text-sm font-bold tracking-widest uppercase self-start lg:self-end">
-                            {heroData.socials.map((social) => {
-                                // Match prefix format from mockup
-                                let prefix = "BE: ";
-                                let handle = "/ANAGHAKTP";
-                                if (social.platform.toLowerCase() === "behance") {
-                                    prefix = "BE: ";
-                                    handle = "/ANAGHAKTP";
-                                } else if (social.platform.toLowerCase() === "instagram") {
-                                    prefix = "IG: ";
-                                    handle = "@ANAGHA.KTP";
-                                } else if (social.platform.toLowerCase() === "linkedin") {
-                                    prefix = "LI: ";
-                                    handle = "/ANAGHAKTP";
-                                } else if (social.platform.toLowerCase() === "github") {
-                                    prefix = "GH: ";
-                                    handle = "/ANAGHAKTP";
-                                } else {
-                                    prefix = `${social.platform.toUpperCase().substring(0, 2)}: `;
-                                    handle = social.handle;
-                                }
-
-                                return (
-                                    <div key={social.platform} className="flex items-center space-x-6 group">
-                                        <span className="w-8 h-[1px] bg-cream/20 group-hover:w-12 group-hover:bg-mustard transition-all duration-300"></span>
-                                        <a href={social.url} target="_blank" rel="noopener noreferrer" className="hover:text-mustard transition-colors flex items-center">
-                                            <span className="opacity-40 mr-1.5">{prefix}</span>
-                                            <span>{handle}</span>
-                                        </a>
-                                    </div>
-                                );
-                            })}
+                            {FORMATTED_SOCIALS.map((social) => (
+                                <div key={social.platform} className="flex items-center space-x-6 group">
+                                    <span className="w-8 h-[1px] bg-cream/20 group-hover:w-12 group-hover:bg-mustard transition-all duration-300"></span>
+                                    <a href={social.url} target="_blank" rel="noopener noreferrer" className="hover:text-mustard transition-colors flex items-center">
+                                        <span className="opacity-40 mr-1.5">{social.prefix}</span>
+                                        <span>{social.handle}</span>
+                                    </a>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
