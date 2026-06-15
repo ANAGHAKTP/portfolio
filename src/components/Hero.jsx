@@ -136,8 +136,8 @@ export default function Hero() {
 
             {/* Scroll Down Indicator */}
             <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center space-y-4 lg:hidden">
-                <a href="#about" className="w-24 h-24 rounded-full border border-cream/20 flex items-center justify-center relative group active:border-mustard/30">
-                    <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full animate-spin-slow pointer-events-none">
+                <a href="#about" aria-label="Scroll down to About section" className="w-24 h-24 rounded-full border border-cream/20 flex items-center justify-center relative group active:border-mustard/30">
+                    <svg viewBox="0 0 100 100" aria-hidden="true" className="absolute inset-0 w-full h-full animate-spin-slow pointer-events-none">
                         <path id="circlePathMobile" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
                         <text className="text-[8px] uppercase font-sans font-bold tracking-[0.18em] fill-cream">
                             <textPath href="#circlePathMobile" startOffset="0%">
@@ -155,8 +155,8 @@ export default function Hero() {
 
             {/* Desktop Scroll Indicator */}
             <div className="absolute bottom-10 right-20 hidden lg:block z-20">
-                <a href="#about" className="w-32 h-32 rounded-full border border-cream/10 flex items-center justify-center relative group hover:border-mustard/30 transition-all duration-300">
-                    <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full animate-spin-slow pointer-events-none">
+                <a href="#about" aria-label="Scroll down to About section" className="w-32 h-32 rounded-full border border-cream/10 flex items-center justify-center relative group hover:border-mustard/30 transition-all duration-300">
+                    <svg viewBox="0 0 100 100" aria-hidden="true" className="absolute inset-0 w-full h-full animate-spin-slow pointer-events-none">
                         <path id="circlePath" d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="transparent" />
                         <text className="text-[7.5px] uppercase font-sans font-bold tracking-[0.2em] fill-cream group-hover:fill-mustard transition-colors duration-300">
                             <textPath href="#circlePath" startOffset="0%">
