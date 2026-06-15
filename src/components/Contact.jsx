@@ -90,6 +90,7 @@ export default function Contact() {
                                         name={contactData.contactForm.fieldIds.name}
                                         type="text"
                                         required
+                                        maxLength={100}
                                         className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none text-xl font-serif text-cream placeholder-cream/20"
                                         placeholder="Your Name"
                                     />
@@ -102,6 +103,7 @@ export default function Contact() {
                                         name={contactData.contactForm.fieldIds.email}
                                         type="email"
                                         required
+                                        maxLength={254}
                                         className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none text-xl font-serif text-cream placeholder-cream/20"
                                         placeholder="your@email.com"
                                     />
@@ -115,6 +117,7 @@ export default function Contact() {
                                     name={contactData.contactForm.fieldIds.message}
                                     rows="1"
                                     required
+                                    maxLength={2000}
                                     className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none text-xl font-serif text-cream resize-none overflow-hidden placeholder-cream/20"
                                     placeholder="Write something nice..."
                                     onInput={(e) => { e.target.style.height = 'auto'; e.target.style.height = e.target.scrollHeight + 'px'; }}
