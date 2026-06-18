@@ -4,6 +4,11 @@ import { contactData } from "@/data/portfolio";
 
 import { useState } from 'react';
 
+// ⚡ Bolt: Hoisted static Object.entries computation to prevent array allocation on every re-render
+const hiddenFieldsEntries = contactData.contactForm.hiddenFields
+    ? Object.entries(contactData.contactForm.hiddenFields)
+    : [];
+
 export default function Contact() {
     const [status, setStatus] = useState('idle'); // idle, submitting, success, error
 
@@ -78,7 +83,7 @@ export default function Contact() {
                             className="space-y-8"
                         >
                             {/* Hidden Fields for Google Form */}
-                            {contactData.contactForm.hiddenFields && Object.entries(contactData.contactForm.hiddenFields).map(([name, value]) => (
+                            {hiddenFieldsEntries.map(([name, value]) => (
                                 <input key={name} type="hidden" name={name} value={value} />
                             ))}
 
