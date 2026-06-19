@@ -4,6 +4,11 @@ import { contactData } from "@/data/portfolio";
 
 import { useState } from 'react';
 
+// ⚡ Bolt: Hoisted static configuration array to prevent unnecessary allocation and computation during client-side re-renders
+const HIDDEN_FIELDS = contactData.contactForm.hiddenFields
+    ? Object.entries(contactData.contactForm.hiddenFields)
+    : [];
+
 export default function Contact() {
     const [status, setStatus] = useState('idle'); // idle, submitting, success, error
 
@@ -78,7 +83,7 @@ export default function Contact() {
                             className="space-y-8"
                         >
                             {/* Hidden Fields for Google Form */}
-                            {contactData.contactForm.hiddenFields && Object.entries(contactData.contactForm.hiddenFields).map(([name, value]) => (
+                            {HIDDEN_FIELDS.map(([name, value]) => (
                                 <input key={name} type="hidden" name={name} value={value} />
                             ))}
 
