@@ -2,3 +2,7 @@
 **Vulnerability:** External API forms (Google Forms integration) lack client-side input validation/limits.
 **Learning:** Due to the absence of a backend and the use of mode: "no-cors" with direct form submission, there are no payload size protections, which could lead to excessively large payload submissions resulting in resource exhaustion.
 **Prevention:** Always enforce client-side `maxLength` attributes on inputs and textareas that interact with external unvalidated endpoints.
+## 2024-05-24 - [Add Security Headers to Next.js App]
+**Vulnerability:** Missing `Content-Security-Policy` and exposing the `X-Powered-By` header in the Next.js app.
+**Learning:** Next.js uses an `X-Powered-By` header by default, which can leak framework information, and missing CSP headers make apps susceptible to XSS. Next.js supports custom headers directly in `next.config.mjs` including toggling off the powered by header.
+**Prevention:** In Next.js configuration `next.config.mjs`, use `poweredByHeader: false` and return a `Content-Security-Policy` header in the `headers()` async function that whitelists resources used by the app (like `docs.google.com` for forms and Vercel Analytics).
