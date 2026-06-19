@@ -126,8 +126,9 @@ export default function Contact() {
                             </div>
                             <button
                                 type="submit"
-                                disabled={status === 'submitting'}
-                                className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4 disabled:opacity-70 disabled:cursor-not-allowed"
+                                aria-disabled={status === 'submitting'}
+                                aria-live="polite"
+                                className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4 aria-disabled:opacity-70 aria-disabled:cursor-not-allowed"
                             >
                                 {status === 'idle' && <>Send Message <span className="material-icons">east</span></>}
                                 {status === 'submitting' && <>Sending... <span className="material-icons animate-spin">autorenew</span></>}
