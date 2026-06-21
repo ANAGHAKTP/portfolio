@@ -28,7 +28,8 @@ export default function Projects() {
                                     className="w-full h-full object-cover transition-all duration-[1000ms] ease-out group-hover:scale-105 grayscale opacity-90 group-hover:opacity-100 group-hover:grayscale-0"
                                     src={project.image}
                                     fill
-                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    // ⚡ Bolt: Added 640px cap to prevent oversized images on large displays
+                                    sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 640px"
                                 />
                                 <div className="absolute inset-0 bg-[#c86d44]/5 mix-blend-multiply pointer-events-none group-hover:opacity-0 transition-opacity duration-500"></div>
                             </div>

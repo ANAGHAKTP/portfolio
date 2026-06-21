@@ -53,7 +53,8 @@ export default function About() {
                                 className="w-full h-full object-cover"
                                 src={aboutData.image}
                                 fill
-                                sizes="(max-width: 768px) 100vw, 50vw"
+                                // ⚡ Bolt: Added 384px cap to prevent oversized images on large displays
+                                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 384px"
                             />
                             {/* Circle overlay as seen in mockup */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 border-[25px] border-cream/10 rounded-full"></div>
