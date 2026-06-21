@@ -1,7 +1,20 @@
 /** @type {import('next').NextConfig} */
+
+const cspHeader = `
+    default-src 'self';
+    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://va.vercel-scripts.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    img-src 'self' blob: data:;
+    font-src 'self' https://fonts.gstatic.com;
+    connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com https://docs.google.com;
+    form-action 'self' https://docs.google.com;
+    frame-ancestors 'none';
+    upgrade-insecure-requests;
+`
+
 const nextConfig = {
-  /* config options here */
   reactCompiler: true,
+  poweredByHeader: false,
   async headers() {
     return [
       {
@@ -27,6 +40,10 @@ const nextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=(), browsing-topics=()",
           },
+          {
+            key: 'Content-Security-Policy',
+            value: cspHeader.replace(/\n/g, '').replace(/\s{2,}/g, ' ').trim()
+          }
         ],
       },
     ];
