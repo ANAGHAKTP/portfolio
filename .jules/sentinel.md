@@ -1,4 +1,4 @@
-## 2024-06-17 - Client-side form limits missing
-**Vulnerability:** External API forms (Google Forms integration) lack client-side input validation/limits.
-**Learning:** Due to the absence of a backend and the use of mode: "no-cors" with direct form submission, there are no payload size protections, which could lead to excessively large payload submissions resulting in resource exhaustion.
-**Prevention:** Always enforce client-side `maxLength` attributes on inputs and textareas that interact with external unvalidated endpoints.
+## 2024-06-18 - CSP and Information Leakage Fix
+**Vulnerability:** The application was missing a Content-Security-Policy (CSP) header, which left it vulnerable to XSS attacks. In addition, it was exposing the `X-Powered-By: Next.js` header, leading to potential tech stack information leakage.
+**Learning:** Next.js allows configuring custom headers natively in `next.config.mjs`, but requires the `poweredByHeader: false` flag to explicitly disable the framework footprint. Crafting the CSP requires careful inclusion of Vercel tracking scripts (`va.vercel-scripts.com`, `vitals.vercel-insights.com`), Google Fonts, and Google Forms (`docs.google.com`) without breaking functionality.
+**Prevention:** During project scaffolding, ensure that a strict CSP baseline is established alongside disabling framework identification headers like `X-Powered-By`. Always verify external domain dependencies like analytics and external form submissions.
