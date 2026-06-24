@@ -23,12 +23,13 @@ export default function Projects() {
                             
                             {/* Image Container */}
                             <div className="relative overflow-hidden rounded-[2.5rem] aspect-[16/10] bg-forest border border-black/5 shadow-lg">
+                                {/* ⚡ Bolt: Appended a fixed pixel cap (640px, half of max-w-7xl) to sizes prop to prevent generating massively oversized images on high-resolution displays */}
                                 <Image
                                     alt={project.title}
                                     className="w-full h-full object-cover transition-all duration-[1000ms] ease-out group-hover:scale-105 grayscale opacity-90 group-hover:opacity-100 group-hover:grayscale-0"
                                     src={project.image}
                                     fill
-                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 640px"
                                 />
                                 <div className="absolute inset-0 bg-[#c86d44]/5 mix-blend-multiply pointer-events-none group-hover:opacity-0 transition-opacity duration-500"></div>
                             </div>
