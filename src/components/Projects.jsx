@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { projectsData } from "@/data/portfolio";
 
@@ -19,18 +21,30 @@ export default function Projects() {
                 {/* Grid of Projects */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-24">
                     {projectsData.map((project, index) => (
-                        <div key={index} className="group flex flex-col space-y-6 cursor-pointer">
+                        <div
+                            key={index}
+                            className="group flex flex-col space-y-6 cursor-pointer focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-forest focus-visible:ring-offset-8 focus-visible:ring-offset-cream rounded-2xl p-2 -m-2"
+                            tabIndex={0}
+                            role="button"
+                            onKeyDown={(e) => {
+                                if (e.key === 'Enter' || e.key === ' ') {
+                                    e.preventDefault();
+                                    // Normally navigation would happen here
+                                }
+                            }}
+                            aria-label={`View details for ${project.title}`}
+                        >
                             
                             {/* Image Container */}
                             <div className="relative overflow-hidden rounded-[2.5rem] aspect-[16/10] bg-forest border border-black/5 shadow-lg">
                                 <Image
                                     alt={project.title}
-                                    className="w-full h-full object-cover transition-all duration-[1000ms] ease-out group-hover:scale-105 grayscale opacity-90 group-hover:opacity-100 group-hover:grayscale-0"
+                                    className="w-full h-full object-cover transition-all duration-[1000ms] ease-out group-hover:scale-105 group-focus-visible:scale-105 grayscale opacity-90 group-hover:opacity-100 group-focus-visible:opacity-100 group-hover:grayscale-0 group-focus-visible:grayscale-0"
                                     src={project.image}
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 50vw"
                                 />
-                                <div className="absolute inset-0 bg-[#c86d44]/5 mix-blend-multiply pointer-events-none group-hover:opacity-0 transition-opacity duration-500"></div>
+                                <div className="absolute inset-0 bg-[#c86d44]/5 mix-blend-multiply pointer-events-none group-hover:opacity-0 group-focus-visible:opacity-0 transition-opacity duration-500"></div>
                             </div>
 
                             {/* Project Details Below Image */}
@@ -41,9 +55,9 @@ export default function Projects() {
                                     </span>
                                 </div>
 
-                                <h3 className="text-3xl lg:text-4xl font-serif font-bold text-black tracking-tight group-hover:text-mustard transition-colors flex items-center gap-2">
+                                <h3 className="text-3xl lg:text-4xl font-serif font-bold text-black tracking-tight group-hover:text-mustard group-focus-visible:text-mustard transition-colors flex items-center gap-2">
                                     {project.title}
-                                    <span className="inline-block transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
+                                    <span className="inline-block transform group-hover:translate-x-1 group-focus-visible:translate-x-1 group-hover:-translate-y-1 group-focus-visible:-translate-y-1 transition-transform duration-300">
                                         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-mustard">
                                             <line x1="7" y1="17" x2="17" y2="7"></line>
                                             <polyline points="7 7 17 7 17 17"></polyline>
