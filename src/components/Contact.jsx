@@ -2,21 +2,32 @@
 
 import { contactData } from "@/data/portfolio";
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export default function Contact() {
-    const [status, setStatus] = useState('idle'); // idle, submitting, success, error
+    const [status, setStatus] = useState('idle'); // idle, submitting, success, error, rate-limit
+    const lastSubmitTime = useRef(0);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (status === 'submitting') return;
 
+        // 🛡️ Sentinel: Enforce client-side rate limit (60 seconds) to mitigate DoS
+        const now = Date.now();
+        if (now - lastSubmitTime.current < 60000) {
+            setStatus('rate-limit');
+            setTimeout(() => setStatus('idle'), 3000);
+            return;
+        }
+
         setStatus('submitting');
         const form = e.target;
         const formData = new FormData(form);
+        lastSubmitTime.current = now;
 
         try {
-            await fetch(form.action, {
+            // 🛡️ Sentinel: Use direct action URL to prevent DOM clobbering via injected "action" inputs
+            await fetch(contactData.contactForm.action, {
                 method: 'POST',
                 body: formData,
                 mode: 'no-cors',
@@ -126,15 +137,16 @@ export default function Contact() {
                             </div>
                             <button
                                 type="submit"
-                                aria-disabled={status === 'submitting'}
+                                aria-disabled={status === 'submitting' || status === 'rate-limit'}
                                 aria-live="polite"
-                                onClick={(e) => status === 'submitting' && e.preventDefault()}
+                                onClick={(e) => (status === 'submitting' || status === 'rate-limit') && e.preventDefault()}
                                 className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4 aria-disabled:opacity-70 aria-disabled:cursor-not-allowed"
                             >
                                 {status === 'idle' && <>Send Message <span className="material-icons">east</span></>}
                                 {status === 'submitting' && <>Sending... <span className="material-icons animate-spin">autorenew</span></>}
                                 {status === 'success' && <>Sent! <span className="material-icons text-green-700">check_circle</span></>}
                                 {status === 'error' && <>Error <span className="material-icons text-red-700">error</span></>}
+                                {status === 'rate-limit' && <>Rate Limited <span className="material-icons text-orange-600">timer</span></>}
                             </button>
                         </form>
                     </div>
