@@ -22,13 +22,14 @@ export default function Projects() {
                         <div key={index} className="group flex flex-col space-y-6 cursor-pointer">
                             
                             {/* Image Container */}
+                            {/* ⚡ Bolt: Appended max-width pixel cap to `sizes` to prevent Next.js from generating massively oversized images on high-res displays inside fixed-width grid containers */}
                             <div className="relative overflow-hidden rounded-[2.5rem] aspect-[16/10] bg-forest border border-black/5 shadow-lg">
                                 <Image
                                     alt={project.title}
                                     className="w-full h-full object-cover transition-all duration-[1000ms] ease-out group-hover:scale-105 grayscale opacity-90 group-hover:opacity-100 group-hover:grayscale-0"
                                     src={project.image}
                                     fill
-                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    sizes="(max-width: 1024px) 100vw, 640px"
                                 />
                                 <div className="absolute inset-0 bg-[#c86d44]/5 mix-blend-multiply pointer-events-none group-hover:opacity-0 transition-opacity duration-500"></div>
                             </div>
