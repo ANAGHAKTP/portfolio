@@ -46,6 +46,7 @@ export default function About() {
                 {/* Right side: Profile Photo & Contact Stack */}
                 <div className="flex flex-col items-center lg:items-end gap-8 w-full max-w-sm mx-auto lg:mr-0">
                     {/* Profile Photo in Frame */}
+                    {/* ⚡ Bolt: Appended max-width pixel cap to `sizes` to prevent Next.js from generating massively oversized images on high-res displays inside fixed-width grid containers */}
                     <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-forest p-3 border-4 border-forest">
                         <div className="relative w-full h-full rounded-xl overflow-hidden">
                             <Image
@@ -53,7 +54,7 @@ export default function About() {
                                 className="w-full h-full object-cover"
                                 src={aboutData.image}
                                 fill
-                                sizes="(max-width: 768px) 100vw, 50vw"
+                                sizes="(max-width: 768px) 100vw, 384px"
                             />
                             {/* Circle overlay as seen in mockup */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 border-[25px] border-cream/10 rounded-full"></div>
