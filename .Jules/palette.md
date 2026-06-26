@@ -1,3 +1,3 @@
-## 2024-06-17 - Hidden circular text paths for screen readers
-**Learning:** Screen readers often parse circular SVG `<textPath>` text literally, which can result in confusing output for users depending on the text structure and context.
-**Action:** Always hide decorative circular SVG text (or SVGs acting as decorative text/icons within buttons/links) with `aria-hidden="true"` and provide a descriptive `aria-label` on the parent interactive element instead.
+## 2023-10-27 - Remove False Affordances in Cards
+**Learning:** Adding `cursor-pointer` to generic `div` containers (like Project cards) that lack real interactive event handlers or semantic interactive tags (`<button>`, `<a>`) creates a false affordance. This confuses keyboard and screen reader users who expect to be able to interact with the element but cannot.
+**Action:** Only apply cursor-pointer and hover-state transformation cues (like arrows moving) to elements that are actually interactive.
