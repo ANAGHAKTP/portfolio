@@ -1,6 +1,3 @@
-## 2024-10-27 - [Lockfile Noise in PRs]
-**Learning:** Running `pnpm install` or other commands that trigger lockfile generation can create massive noise (like a 4000+ line `pnpm-lock.yaml`) in PRs that are meant to be small and focused.
-**Action:** Always verify `git status` before committing and avoid staging auto-generated lockfiles unless explicitly intended, especially when constrained by a strict line-limit rule.
-## 2024-11-20 - Static Data in Components
-**Learning:** Hardcoding static dictionaries or array manipulation rules inside the render loop of functional React components can cause unnecessary allocation and computation during re-renders, impacting client-side performance.
-**Action:** Move static data objects, configuration mapping structures, and pure filtering or flattening operations that only rely on constant imports outside of the component function.
+## 2024-05-24 - Uncapped Relative Image Sizes Lead to Wasted Bandwidth
+**Learning:** In Next.js, using relative `vw` units inside `sizes` (e.g. `sizes="100vw"`) on an image constrained by a max-width container (e.g. `max-w-sm` or a grid column) without providing an absolute pixel fallback causes Next.js to serve massively oversized images on ultra-high-resolution screens, wasting bandwidth and impacting performance.
+**Action:** When an image is within a constrained container, always append an absolute pixel cap to the end of the `sizes` string (e.g. `sizes="(max-width: 1024px) 100vw, 640px"`) corresponding to the maximum possible rendered size of the image on the screen.
