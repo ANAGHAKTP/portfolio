@@ -19,7 +19,7 @@ export default function Projects() {
                 {/* Grid of Projects */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-24">
                     {projectsData.map((project, index) => (
-                        <div key={index} className="group flex flex-col space-y-6 cursor-pointer">
+                        <div key={index} className="group flex flex-col space-y-6">
                             
                             {/* Image Container */}
                             <div className="relative overflow-hidden rounded-[2.5rem] aspect-[16/10] bg-forest border border-black/5 shadow-lg">
@@ -43,12 +43,6 @@ export default function Projects() {
 
                                 <h3 className="text-3xl lg:text-4xl font-serif font-bold text-black tracking-tight group-hover:text-mustard transition-colors flex items-center gap-2">
                                     {project.title}
-                                    <span className="inline-block transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
-                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="text-mustard">
-                                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                                            <polyline points="7 7 17 7 17 17"></polyline>
-                                        </svg>
-                                    </span>
                                 </h3>
 
                                 <p className="text-sm text-black/60 font-sans leading-relaxed max-w-xl">
