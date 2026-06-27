@@ -19,7 +19,7 @@ export default function Projects() {
                 {/* Grid of Projects */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-24">
                     {projectsData.map((project, index) => (
-                        <div key={index} className="group flex flex-col space-y-6 cursor-pointer">
+                        <div key={index} className="group flex flex-col space-y-6">
                             
                             {/* Image Container */}
                             <div className="relative overflow-hidden rounded-[2.5rem] aspect-[16/10] bg-forest border border-black/5 shadow-lg">
