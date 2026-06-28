@@ -10,3 +10,7 @@
 **Vulnerability:** The application was passing the raw `error` object directly to `console.error` in the generic catch block for form submission.
 **Learning:** Raw error objects can contain internal stack traces, API keys (if poorly configured), or internal module names that shouldn't be exposed to the end-user via their browser console.
 **Prevention:** Sanitize error outputs in `catch` blocks before logging, using generic string messages for client-side environments.
+## 2025-02-27 - DOM-based form action hijacking
+**Vulnerability:** The application was using the `action` attribute from the DOM form element (`form.action`) for the `fetch` submission endpoint.
+**Learning:** Relying on DOM attributes for sensitive operations (like API endpoints) can be risky, as malicious scripts or browser extensions could modify the DOM (DOM-based form action hijacking) to exfiltrate user data to an attacker-controlled endpoint.
+**Prevention:** Always use a trusted, server-side or hardcoded configuration source for critical endpoint URLs in client-side code instead of trusting DOM state.
