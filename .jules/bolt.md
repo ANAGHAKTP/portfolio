@@ -4,3 +4,7 @@
 ## 2024-11-20 - Static Data in Components
 **Learning:** Hardcoding static dictionaries or array manipulation rules inside the render loop of functional React components can cause unnecessary allocation and computation during re-renders, impacting client-side performance.
 **Action:** Move static data objects, configuration mapping structures, and pure filtering or flattening operations that only rely on constant imports outside of the component function.
+
+## 2026-06-28 - [Next.js Image sizes prop in bounded containers]
+**Learning:** Using relative `vw` units in the `next/image` `sizes` prop inside fixed-width layout containers causes the browser to download massively oversized images on high-resolution displays because the browser calculates `vw` based on the entire viewport, not the container.
+**Action:** When using the `sizes` prop in a layout with a max-width, always append a fixed pixel cap (e.g. `sizes="..., 640px"`) representing the container's maximum size to optimize bandwidth and LCP.
