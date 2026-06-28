@@ -15,17 +15,25 @@ export default function Contact() {
         const form = e.target;
         const formData = new FormData(form);
 
+        // 🛡️ Sentinel: Enforce a timeout to prevent client-side resource exhaustion
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 8000);
+
         try {
             await fetch(form.action, {
                 method: 'POST',
                 body: formData,
                 mode: 'no-cors',
+                signal: controller.signal,
             });
+            clearTimeout(timeoutId);
             setStatus('success');
             form.reset();
             setTimeout(() => setStatus('idle'), 3000);
         } catch (error) {
-            console.error('Submission error:', error);
+            clearTimeout(timeoutId);
+            // 🛡️ Sentinel: Sanitize error logging to avoid leaking internal details
+            console.error('Submission error: The request failed or timed out.');
             setStatus('error');
             setTimeout(() => setStatus('idle'), 3000);
         }
