@@ -146,7 +146,7 @@ export default function Skills() {
                                         {HOBBIES.map((hobby) => (
                                             <div key={hobby.label} className="flex flex-col items-center space-y-4">
                                                 <div className="w-16 h-16 rounded-full border border-cream/10 flex items-center justify-center hover:border-mustard transition-colors">
-                                                    <span className="material-icons text-mustard">{hobby.icon}</span>
+                                                    <span className="material-icons text-mustard" aria-hidden="true">{hobby.icon}</span>
                                                 </div>
                                                 <span className="text-[10px] font-sans font-bold uppercase tracking-widest">{hobby.label}</span>
                                             </div>

@@ -131,10 +131,10 @@ export default function Contact() {
                                 onClick={(e) => status === 'submitting' && e.preventDefault()}
                                 className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4 aria-disabled:opacity-70 aria-disabled:cursor-not-allowed"
                             >
-                                {status === 'idle' && <>Send Message <span className="material-icons">east</span></>}
-                                {status === 'submitting' && <>Sending... <span className="material-icons animate-spin">autorenew</span></>}
-                                {status === 'success' && <>Sent! <span className="material-icons text-green-700">check_circle</span></>}
-                                {status === 'error' && <>Error <span className="material-icons text-red-700">error</span></>}
+                                {status === 'idle' && <>Send Message <span className="material-icons" aria-hidden="true">east</span></>}
+                                {status === 'submitting' && <>Sending... <span className="material-icons animate-spin" aria-hidden="true">autorenew</span></>}
+                                {status === 'success' && <>Sent! <span className="material-icons text-green-700" aria-hidden="true">check_circle</span></>}
+                                {status === 'error' && <>Error <span className="material-icons text-red-700" aria-hidden="true">error</span></>}
                             </button>
                         </form>
                     </div>
