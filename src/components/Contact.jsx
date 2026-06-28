@@ -54,7 +54,7 @@ export default function Contact() {
                     <div className="space-y-12 text-left">
                         <div className="space-y-4">
                             <h3 className="text-3xl font-serif font-bold text-mustard uppercase italic">Email</h3>
-                            <a href={`mailto:${contactData.email}`} className="text-4xl lg:text-5xl font-serif font-medium hover:text-mustard transition-colors break-all">
+                            <a href={`mailto:${contactData.email}`} className="text-4xl lg:text-5xl font-serif font-medium hover:text-mustard focus-visible:text-mustard focus-visible:outline-2 focus-visible:outline-mustard focus-visible:outline-offset-8 rounded-sm transition-colors break-all">
                                 {contactData.email}
                             </a>
                         </div>
@@ -65,7 +65,7 @@ export default function Contact() {
                                 {contactData.socials.map((social, index) => (
                                     <a
                                         key={index}
-                                        className="text-2xl font-sans font-bold hover:text-mustard transition-colors border-b-2 border-transparent hover:border-mustard pb-1"
+                                        className="text-2xl font-sans font-bold hover:text-mustard focus-visible:text-mustard focus-visible:outline-2 focus-visible:outline-mustard focus-visible:outline-offset-8 rounded-sm transition-colors border-b-2 border-transparent hover:border-mustard focus-visible:border-mustard pb-1"
                                         href={social.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -137,7 +137,7 @@ export default function Contact() {
                                 aria-disabled={status === 'submitting'}
                                 aria-live="polite"
                                 onClick={(e) => status === 'submitting' && e.preventDefault()}
-                                className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 transition-all flex items-center justify-center gap-4 aria-disabled:opacity-70 aria-disabled:cursor-not-allowed"
+                                className="w-full lg:w-max bg-mustard text-black font-bold py-6 px-16 rounded-badge text-lg hover:opacity-90 focus-visible:opacity-90 focus-visible:outline-2 focus-visible:outline-mustard focus-visible:outline-offset-4 transition-all flex items-center justify-center gap-4 aria-disabled:opacity-70 aria-disabled:cursor-not-allowed"
                             >
                                 {status === 'idle' && <>Send Message <span className="material-icons" aria-hidden="true">east</span></>}
                                 {status === 'submitting' && <>Sending... <span className="material-icons animate-spin" aria-hidden="true">autorenew</span></>}

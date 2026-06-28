@@ -8,11 +8,11 @@ export default function Navbar() {
             </div>
 
             <div className="hidden md:flex items-center space-x-12 font-sans text-xs font-bold uppercase tracking-widest">
-                <a href="#about" className="hover:opacity-60 transition-opacity">About me</a>
-                <a href="#projects" className="hover:opacity-60 transition-opacity">Work</a>
+                <a href="#about" className="hover:opacity-60 focus-visible:opacity-60 focus-visible:outline-2 focus-visible:outline-mustard focus-visible:outline-offset-4 rounded-sm transition-all">About me</a>
+                <a href="#projects" className="hover:opacity-60 focus-visible:opacity-60 focus-visible:outline-2 focus-visible:outline-mustard focus-visible:outline-offset-4 rounded-sm transition-all">Work</a>
                 <a
                     href="#contact"
-                    className="bg-mustard text-black px-8 py-3 rounded-badge hover:bg-orange-600 transition-all font-bold"
+                    className="bg-mustard text-black px-8 py-3 rounded-badge hover:bg-orange-600 focus-visible:bg-orange-600 focus-visible:outline-2 focus-visible:outline-mustard focus-visible:outline-offset-4 transition-all font-bold"
                 >
                     Get in touch!
                 </a>

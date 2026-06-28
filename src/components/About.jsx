@@ -32,7 +32,7 @@ export default function About() {
                     <div className="pt-4">
                         <a
                             href={aboutData.linkedin || "#"}
-                            className="bg-black text-white px-10 py-5 rounded-badge font-bold text-sm uppercase tracking-widest flex items-center space-x-4 w-fit hover:bg-forest transition-colors"
+                            className="bg-black text-white px-10 py-5 rounded-badge font-bold text-sm uppercase tracking-widest flex items-center space-x-4 w-fit hover:bg-forest focus-visible:bg-forest focus-visible:outline-2 focus-visible:outline-mustard focus-visible:outline-offset-4 transition-colors"
                         >
                             <span>Contact me</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
