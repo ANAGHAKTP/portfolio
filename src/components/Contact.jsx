@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 export default function Contact() {
     const [status, setStatus] = useState('idle'); // idle, submitting, success, error
+    const [messageLength, setMessageLength] = useState(0);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -92,7 +93,9 @@ export default function Contact() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                 <div className="space-y-2 text-left relative group">
-                                    <label htmlFor="name" className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">Name</label>
+                                    <label htmlFor="name" className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">
+                                        Name<span className="text-mustard ml-1" aria-hidden="true">*</span>
+                                    </label>
                                     <input
                                         id="name"
                                         name={contactData.contactForm.fieldIds.name}
@@ -105,7 +108,9 @@ export default function Contact() {
                                     <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-mustard group-focus-within:w-full transition-all duration-500"></span>
                                 </div>
                                 <div className="space-y-2 text-left relative group">
-                                    <label htmlFor="email" className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">Email</label>
+                                    <label htmlFor="email" className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">
+                                        Email<span className="text-mustard ml-1" aria-hidden="true">*</span>
+                                    </label>
                                     <input
                                         id="email"
                                         name={contactData.contactForm.fieldIds.email}
@@ -119,7 +124,14 @@ export default function Contact() {
                                 </div>
                             </div>
                             <div className="space-y-2 text-left relative group">
-                                <label htmlFor="message" className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">Message</label>
+                                <div className="flex justify-between items-end">
+                                    <label htmlFor="message" className="text-sm font-bold uppercase tracking-widest opacity-60 group-focus-within:text-mustard transition-colors duration-300">
+                                        Message<span className="text-mustard ml-1" aria-hidden="true">*</span>
+                                    </label>
+                                    <span className="text-[10px] font-sans font-bold uppercase tracking-widest opacity-40">
+                                        {messageLength} / 2000
+                                    </span>
+                                </div>
                                 <textarea
                                     id="message"
                                     name={contactData.contactForm.fieldIds.message}
@@ -128,6 +140,7 @@ export default function Contact() {
                                     maxLength={2000}
                                     className="w-full bg-transparent border-b border-cream/20 py-4 focus:outline-none text-xl font-serif text-cream resize-none overflow-hidden placeholder-cream/20"
                                     placeholder="Write something nice..."
+                                    onChange={(e) => setMessageLength(e.target.value.length)}
                                     onInput={(e) => { e.target.style.height = 'auto'; e.target.style.height = e.target.scrollHeight + 'px'; }}
                                 ></textarea>
                                 <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-mustard group-focus-within:w-full transition-all duration-500"></span>
