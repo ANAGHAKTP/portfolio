@@ -4,3 +4,7 @@
 ## 2025-06-27 - Ligature Icon Accessibility
 **Learning:** Font-based ligature icons (like `material-icons`) read out their literal text values (e.g., "east", "check_circle") to screen readers if not properly hidden.
 **Action:** Always add `aria-hidden="true"` to `material-icons` ligatures (or any ligature-based icon implementation) and ensure the parent interactive element has a descriptive `aria-label` or visible text alternative.
+
+## 2024-06-30 - Screen Reader Parsing of Fragmented Text
+**Learning:** Highly stylized typography (like splitting a word with SVGs) causes screen readers to read the text in broken fragments (e.g., "PORTF O LI O").
+**Action:** Always wrap visual text fragments in `aria-hidden="true"` and provide a complete `.sr-only` text alternative for assistive technologies to ensure clear pronunciation.
