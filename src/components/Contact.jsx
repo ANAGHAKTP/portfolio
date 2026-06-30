@@ -20,7 +20,8 @@ export default function Contact() {
         const timeoutId = setTimeout(() => controller.abort(), 8000);
 
         try {
-            await fetch(form.action, {
+            // 🛡️ Sentinel: Use trusted config source for action instead of DOM attribute to prevent hijacking
+            await fetch(contactData.contactForm.action, {
                 method: 'POST',
                 body: formData,
                 mode: 'no-cors',
