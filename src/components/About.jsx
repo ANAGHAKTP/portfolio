@@ -48,12 +48,13 @@ export default function About() {
                     {/* Profile Photo in Frame */}
                     <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-forest p-3 border-4 border-forest">
                         <div className="relative w-full h-full rounded-xl overflow-hidden">
+                            {/* ⚡ Bolt: Added pixel cap fallback to `sizes` to prevent generating massive images since container is capped at max-w-sm (384px) */}
                             <Image
                                 alt="Anagha Profile"
                                 className="w-full h-full object-cover"
                                 src={aboutData.image}
                                 fill
-                                sizes="(max-width: 768px) 100vw, 50vw"
+                                sizes="(max-width: 768px) 100vw, 384px"
                             />
                             {/* Circle overlay as seen in mockup */}
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 border-[25px] border-cream/10 rounded-full"></div>
