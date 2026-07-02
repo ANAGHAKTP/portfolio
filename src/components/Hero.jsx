@@ -35,22 +35,25 @@ export default function Hero() {
                 {/* Giant Title: PORTFOLIO with Star in O */}
                 <div className="relative mb-12 select-none">
                     <h1 className="text-[12vw] lg:text-[9.5vw] font-serif font-bold uppercase tracking-tight leading-none text-cream flex items-center relative">
-                        PORTF
-                        <span className="relative inline-block">
-                            O
-                            <span className="absolute left-[38%] top-[32%] text-cream/40">
-                                <svg width="20" height="20" viewBox="0 0 100 100" className="w-[1.8vw] h-[1.8vw]">
-                                    <path d="M50 0 L58 42 L100 50 L58 58 L50 100 L42 58 L0 50 L42 42 Z" fill="currentColor" />
-                                </svg>
+                        <span className="sr-only">PORTFOLIO</span>
+                        <span aria-hidden="true" className="flex items-center">
+                            PORTF
+                            <span className="relative inline-block">
+                                O
+                                <span className="absolute left-[38%] top-[32%] text-cream/40">
+                                    <svg width="20" height="20" viewBox="0 0 100 100" className="w-[1.8vw] h-[1.8vw]">
+                                        <path d="M50 0 L58 42 L100 50 L58 58 L50 100 L42 58 L0 50 L42 42 Z" fill="currentColor" />
+                                    </svg>
+                                </span>
                             </span>
-                        </span>
-                        LI
-                        <span className="relative inline-block">
-                            O
-                            <span className="absolute left-[38%] top-[32%] text-cream/40">
-                                <svg width="20" height="20" viewBox="0 0 100 100" className="w-[1.8vw] h-[1.8vw]">
-                                    <path d="M50 0 L58 42 L100 50 L58 58 L50 100 L42 58 L0 50 L42 42 Z" fill="currentColor" />
-                                </svg>
+                            LI
+                            <span className="relative inline-block">
+                                O
+                                <span className="absolute left-[38%] top-[32%] text-cream/40">
+                                    <svg width="20" height="20" viewBox="0 0 100 100" className="w-[1.8vw] h-[1.8vw]">
+                                        <path d="M50 0 L58 42 L100 50 L58 58 L50 100 L42 58 L0 50 L42 42 Z" fill="currentColor" />
+                                    </svg>
+                                </span>
                             </span>
                         </span>
                     </h1>
