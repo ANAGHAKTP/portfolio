@@ -16,6 +16,25 @@ export default function Contact() {
         const form = e.target;
         const formData = new FormData(form);
 
+        // 🛡️ Sentinel: Strict email validation
+        const emailField = formData.get(contactData.contactForm.fieldIds.email);
+        if (emailField && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.toString())) {
+            console.error('Submission error: Invalid email format.');
+            setStatus('error');
+            setTimeout(() => setStatus('idle'), 3000);
+            return;
+        }
+
+        // 🛡️ Sentinel: Basic XSS sanitization (converting < and > to HTML entities)
+        const sanitizedData = new FormData();
+        for (const [key, value] of formData.entries()) {
+            if (typeof value === 'string') {
+                sanitizedData.append(key, value.replace(/</g, '&lt;').replace(/>/g, '&gt;'));
+            } else {
+                sanitizedData.append(key, value);
+            }
+        }
+
         // 🛡️ Sentinel: Enforce a timeout to prevent client-side resource exhaustion
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 8000);
@@ -24,7 +43,7 @@ export default function Contact() {
             // 🛡️ Sentinel: Use trusted config source for action instead of DOM attribute to prevent hijacking
             await fetch(contactData.contactForm.action, {
                 method: 'POST',
-                body: formData,
+                body: sanitizedData,
                 mode: 'no-cors',
                 signal: controller.signal,
             });
